@@ -1,0 +1,14 @@
+{
+  "name": "ds-interview-prep-ebook",
+  "version": "2.1.0",
+  "description": "Data Science Interview Prep — Ebook 02 (revised). A focused revision guide for statistics & probability, Python, SQL, data cleaning & preprocessing, and machine learning fundamentals.",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve .",
+    "build:pdf": "node build/build-pdf.mjs",
+    "preview": "npx --yes serve ."
+  },
+  "author": "@data.science.beginners",
+  "license": "UNLICENSED",
+  "type": "module"
+}

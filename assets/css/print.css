@@ -1,0 +1,52 @@
+/* ============================================================
+   PRINT / PDF RULES
+   A5 pages, no browser margins — the visible page frame is
+   drawn by .page itself.
+   ============================================================ */
+
+@page {
+  size: A5;
+  margin: 0;
+}
+
+@media print {
+  body,
+  body.screen {
+    background: #05081A;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  .screen-only { display: none !important; }
+
+  .page {
+    width: 148mm;
+    height: 210mm;
+    min-height: 210mm;
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page:last-of-type {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* keep card blocks whole */
+  .topic,
+  .formula,
+  .q,
+  .toc a,
+  .check-card,
+  .diagram,
+  .career .row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a { color: inherit; text-decoration: none; }
+}

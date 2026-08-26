@@ -1,0 +1,2123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Data Science Interview Prep — @data.science.beginners · Ebook 02</title>
+<meta name="description" content="A focused revision guide for statistics & probability, Python, SQL, data cleaning & preprocessing, and machine learning fundamentals." />
+<meta name="author" content="@data.science.beginners" />
+<meta name="keywords" content="data science, interview prep, statistics, probability, python, sql, machine learning, ebook, revision, @data.science.beginners" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/print.css" media="all" />
+</head>
+<body class="screen">
+<p class="screen-hint screen-only">Preview · Print (⌘/Ctrl-P) for a clean A5 PDF · or run <code>npm run build:pdf</code></p>
+
+<!-- ============================================================
+     1 · COVER
+     ============================================================ -->
+<section class="page" data-section="s0" id="cover">
+  <div class="cover">
+    <div class="cover__top">
+      <span>@data.science.beginners</span>
+      <span>Ebook 02</span>
+    </div>
+
+    <div class="cover__mark" aria-hidden="true">
+      <svg viewBox="0 0 120 120" width="120" height="120" fill="none">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4CE0D6"/>
+            <stop offset="1" stop-color="#7A5CFF"/>
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="42" r="8" fill="url(#lg1)"/>
+        <circle cx="30" cy="82" r="6" fill="url(#lg1)"/>
+        <circle cx="90" cy="82" r="6" fill="url(#lg1)"/>
+        <circle cx="45" cy="62" r="4" fill="#4CE0D6"/>
+        <circle cx="75" cy="62" r="4" fill="#4CE0D6"/>
+        <path d="M60 42 L30 82 M60 42 L90 82 M60 42 L45 62 M60 42 L75 62 M30 82 L45 62 M90 82 L75 62 M45 62 L75 62" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.2"/>
+        <text x="60" y="112" text-anchor="middle" fill="#F0F4FF" font-family="Inter" font-weight="800" font-size="11" letter-spacing="1.5">DATA SCIENCE</text>
+      </svg>
+    </div>
+
+    <div>
+      <h1 class="cover__title">DATA SCIENCE<br/><span class="hl">INTERVIEW PREP.</span></h1>
+      <p class="cover__sub">A focused revision guide for statistics &amp; probability, Python, SQL, data cleaning &amp; preprocessing, and machine learning fundamentals.</p>
+      <div class="chips">
+        <span class="chip">Must-learn topics</span>
+        <span class="chip">Formulas + rules</span>
+        <span class="chip">Interview questions</span>
+      </div>
+    </div>
+
+    <div class="cover__foot">
+      <div>
+        <div style="color:var(--ink);font-weight:700;font-size:12px;letter-spacing:0.06em;">@data.science.beginners</div>
+        <div style="margin-top:2mm;">Edition 02 · Revised</div>
+      </div>
+      <div class="r">
+        <div>5 core sections</div>
+        <div style="margin-top:2mm;">Interview-focused</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2 · HOW TO USE
+     ============================================================ -->
+<section class="page" data-section="s0" id="how-to-use">
+  <header class="page-head">
+    <span class="pill">How to use</span>
+    <span>Revision guide</span>
+  </header>
+
+  <h1 class="page-title">Study only <span class="hl">what matters.</span></h1>
+  <p class="page-lede">This book is designed for fast interview preparation, not long-form theory.</p>
+
+  <div style="display:flex;flex-direction:column;gap:5mm;margin-top:4mm;">
+    <div class="topic" style="min-height:0;">
+      <div class="topic__meta">Every section contains only</div>
+      <div class="topic__desc">
+        → The <em class="em">topics</em> you are expected to know.<br/>
+        → The <em class="em">formulas, rules, syntax, or query patterns</em> worth remembering.<br/>
+        → The <em class="em">interview questions</em> you should be able to answer clearly.
+      </div>
+    </div>
+
+    <div class="topic" style="min-height:0;">
+      <div class="topic__meta">Formulas vs syntax patterns</div>
+      <div class="topic__desc">For Statistics, Probability, Preprocessing, and Machine Learning, formulas are shown directly. For Python and SQL, the equivalent is syntax patterns, complexity rules, and query templates.</div>
+    </div>
+
+    <div class="topic" style="min-height:0;">
+      <div class="topic__meta">Self-test with the questions</div>
+      <div class="topic__desc">Use the interview questions as a self-test. Speak your answer out loud <em class="em">before</em> checking notes elsewhere. If you cannot explain it in plain words, add that topic back to your revision list.</div>
+    </div>
+
+    <div class="callout">
+      <strong>Revision rule</strong>Know the idea → know the rule → explain it without jargon.
+    </div>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">How to use</span>
+    <span class="fnum">02</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     3 · CONTENTS
+     ============================================================ -->
+<section class="page" data-section="s0" id="contents">
+  <header class="page-head">
+    <span class="pill">Contents</span>
+    <span>5 sections</span>
+  </header>
+
+  <h1 class="page-title">What to <span class="hl">master.</span></h1>
+  <p class="page-lede">Sections are self-contained. Start where your gaps are largest.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <a href="#s1-cover">
+      <span class="toc__id">S01</span>
+      <span class="toc__title">Statistics &amp; Probability
+        <small>Descriptive statistics, probability, distributions, inference, hypothesis testing</small>
+      </span>
+      <span class="toc__pg">04</span>
+    </a>
+    <a href="#s2-cover">
+      <span class="toc__id">S02</span>
+      <span class="toc__title">Python Programming
+        <small>Core language, data structures, functions, OOP, iterators, errors, performance</small>
+      </span>
+      <span class="toc__pg">15</span>
+    </a>
+    <a href="#s3-cover">
+      <span class="toc__id">S03</span>
+      <span class="toc__title">SQL for Data
+        <small>Filtering, aggregation, joins, CTEs, windows, NULLs, performance, transactions</small>
+      </span>
+      <span class="toc__pg">24</span>
+    </a>
+    <a href="#s4-cover">
+      <span class="toc__id">S04</span>
+      <span class="toc__title">Data Cleaning &amp; Preprocessing
+        <small>Missing data, outliers, encoding, scaling, leakage, pipelines</small>
+      </span>
+      <span class="toc__pg">34</span>
+    </a>
+    <a href="#s5-cover">
+      <span class="toc__id">S05</span>
+      <span class="toc__title">Machine Learning Fundamentals
+        <small>Learning setup, core models, metrics, validation, regularization, tuning</small>
+      </span>
+      <span class="toc__pg">42</span>
+    </a>
+    <a href="#final-review">
+      <span class="toc__id">END</span>
+      <span class="toc__title">Final review, rapid-fire &amp; careers
+        <small>Checklists, model answers, career outcomes</small>
+      </span>
+      <span class="toc__pg">56</span>
+    </a>
+  </nav>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Contents</span>
+    <span class="fnum">03</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     SECTION 1 · STATISTICS & PROBABILITY
+     ============================================================ -->
+<section class="page" data-section="s1" id="s1-cover">
+  <div class="section-divider">
+    <div class="eyebrow">Section 01</div>
+    <div class="kicker">Math you must explain</div>
+    <h1>STATISTICS &amp; <span class="hl">PROBABILITY</span></h1>
+    <p>Foundation for uncertainty, inference, experiments, and model evaluation.</p>
+  </div>
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Interview Prep</span>
+    <span class="fnum">04</span>
+  </footer>
+</section>
+
+<!-- 1A · Statistics topics -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Statistics</span><span>Topics to learn</span></header>
+  <h1 class="page-title">Core descriptive <span class="hl">statistics</span></h1>
+  <p class="page-lede">Know how to summarize a dataset before you try to model it.</p>
+
+  <div class="grid">
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Mean, median &amp; mode</h3>
+      <p class="topic__desc">Central tendency; when the mean is sensitive to outliers and when median is safer.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Range, variance &amp; standard deviation</h3>
+      <p class="topic__desc">Spread, units, and why standard deviation is easier to interpret than variance.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Percentiles, quartiles &amp; IQR</h3>
+      <p class="topic__desc">Position within a distribution; useful for thresholds and outlier detection.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Skewness &amp; distribution shape</h3>
+      <p class="topic__desc">Symmetric vs left/right skew; effect on mean, median, and transformations.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Covariance &amp; correlation</h3>
+      <p class="topic__desc">Direction vs standardized strength of linear association; correlation is not causation.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Sampling &amp; sampling bias</h3>
+      <p class="topic__desc">Population vs sample, random sampling, representativeness, survivorship/selection bias.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Law of Large Numbers</h3>
+      <p class="topic__desc">Why sample averages stabilize as sample size grows.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:70%"></span></span><span class="bar-val">70%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Central Limit Theorem</h3>
+      <p class="topic__desc">Why sampling distributions of means become approximately normal under broad conditions.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Statistics</span>
+    <span class="fnum">05</span>
+  </footer>
+</section>
+
+<!-- 1B · Probability topics -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Probability</span><span>Topics to learn</span></header>
+  <h1 class="page-title">Probability + <span class="hl">inference</span></h1>
+  <p class="page-lede">These are the concepts behind uncertainty, experiments, and statistical tests.</p>
+
+  <div class="grid">
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Events, sample space &amp; complements</h3>
+      <p class="topic__desc">Mutually exclusive events, unions, intersections, and complements.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Conditional probability</h3>
+      <p class="topic__desc">Probability of A given B and why conditioning changes the sample space.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Independence</h3>
+      <p class="topic__desc">Difference between independent events and mutually exclusive events.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Bayes theorem</h3>
+      <p class="topic__desc">Updating prior belief using evidence; prior, likelihood, posterior.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Random variables &amp; expectation</h3>
+      <p class="topic__desc">Discrete vs continuous variables; expected value and variance.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Common distributions</h3>
+      <p class="topic__desc">Bernoulli, Binomial, Normal, Poisson, Exponential; know when each applies.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Confidence intervals</h3>
+      <p class="topic__desc">Point estimate, margin of error, confidence level, standard error.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Hypothesis testing</h3>
+      <p class="topic__desc">Null/alternative, p-value, alpha, Type I/II errors, statistical power.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">Common tests</h3>
+      <p class="topic__desc">z-test, t-test, chi-square test, ANOVA; understand assumptions and use cases.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div>
+    </article>
+    <article class="topic">
+      <div class="topic__meta">Interview priority</div>
+      <h3 class="topic__title">A/B testing basics</h3>
+      <p class="topic__desc">Randomization, control/treatment, effect size, significance, practical significance.</p>
+      <div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Probability</span>
+    <span class="fnum">06</span>
+  </footer>
+</section>
+
+<!-- 1C · Statistics formulas 1/2 -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Statistics</span><span>Formula sheet · 1 / 2</span></header>
+  <h1 class="page-title">Descriptive <span class="hl">formulas.</span></h1>
+  <p class="page-lede">The formulas most often expected in analytics and data-science interviews.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Arithmetic <span class="hl">mean</span></h3>
+      <div class="formula__body">μ = (1/N) Σ xᵢ</div>
+      <p class="formula__note">Population notation shown; sample mean is x̄ = Σxᵢ / n.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Weighted <span class="hl">mean</span></h3>
+      <div class="formula__body">x̄_w = Σ(wᵢ · xᵢ) / Σ wᵢ</div>
+      <p class="formula__note">Use when observations contribute with different weights.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Population <span class="hl">variance</span></h3>
+      <div class="formula__body">σ² = (1/N) Σ (xᵢ − μ)²</div>
+      <p class="formula__note">Sample variance commonly uses n−1 in the denominator (Bessel's correction).</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Standard <span class="hl">deviation</span></h3>
+      <div class="formula__body">σ = √σ²</div>
+      <p class="formula__note">Spread expressed in the original unit of the variable.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Statistics</span>
+    <span class="fnum">07</span>
+  </footer>
+</section>
+
+<!-- 1D · Statistics formulas 2/2 -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Statistics</span><span>Formula sheet · 2 / 2</span></header>
+  <h1 class="page-title">Descriptive <span class="hl">formulas.</span> continued</h1>
+  <p class="page-lede">Standardization, spread of the middle 50%, and linear-association measures.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Z-<span class="hl">score</span></h3>
+      <div class="formula__body">z = (x − μ) / σ</div>
+      <p class="formula__note">Number of standard deviations an observation is from the mean.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title"><span class="hl">IQR</span></h3>
+      <div class="formula__body">IQR = Q₃ − Q₁</div>
+      <p class="formula__note">Common outlier fences: Q₁ − 1.5·IQR and Q₃ + 1.5·IQR.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title"><span class="hl">Covariance</span></h3>
+      <div class="formula__body">Cov(X, Y) = E[(X − μₓ)(Y − μᵧ)]</div>
+      <p class="formula__note">Sign gives direction; magnitude depends on units.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Pearson <span class="hl">correlation</span></h3>
+      <div class="formula__body">r = Cov(X, Y) / (σₓ · σᵧ)</div>
+      <p class="formula__note">Bounded in [−1, +1]; measures linear association only.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Statistics</span>
+    <span class="fnum">08</span>
+  </footer>
+</section>
+
+<!-- 1E · Probability formulas 1/3 -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Probability</span><span>Formula sheet · 1 / 3</span></header>
+  <h1 class="page-title">Probability <span class="hl">formulas.</span></h1>
+  <p class="page-lede">Memorize the structure and, more importantly, know when each identity applies.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Complement <span class="hl">rule</span></h3>
+      <div class="formula__body">P(Aᶜ) = 1 − P(A)</div>
+      <p class="formula__note">Useful when the complement is easier to compute.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Addition <span class="hl">rule</span></h3>
+      <div class="formula__body">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</div>
+      <p class="formula__note">For mutually exclusive events, the intersection term is zero.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Conditional <span class="hl">probability</span></h3>
+      <div class="formula__body">P(A | B) = P(A ∩ B) / P(B)</div>
+      <p class="formula__note">Requires P(B) &gt; 0.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Independence <span class="hl">rule</span></h3>
+      <div class="formula__body">P(A ∩ B) = P(A) · P(B)</div>
+      <p class="formula__note">This equality characterizes independent events.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Probability</span>
+    <span class="fnum">09</span>
+  </footer>
+</section>
+
+<!-- 1F · Probability formulas 2/3 -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Probability</span><span>Formula sheet · 2 / 3</span></header>
+  <h1 class="page-title">Probability <span class="hl">formulas.</span> continued</h1>
+  <p class="page-lede">Bayes updating, expectation, and the workhorse Binomial distribution.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Bayes <span class="hl">theorem</span></h3>
+      <div class="formula__body">P(A | B) = P(B | A) · P(A) / P(B)</div>
+      <p class="formula__note">Posterior ∝ likelihood × prior.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Expected <span class="hl">value</span></h3>
+      <div class="formula__body">E[X] = Σ x · P(X = x)</div>
+      <p class="formula__note">For continuous X, replace the sum with an integral over the PDF.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Binomial <span class="hl">PMF</span></h3>
+      <div class="formula__body">P(X = k) = C(n, k) · pᵏ · (1 − p)ⁿ⁻ᵏ</div>
+      <p class="formula__note">n independent Bernoulli trials with constant success probability p.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Standard <span class="hl">error</span> of the mean</h3>
+      <div class="formula__body">SE(x̄) = s / √n</div>
+      <p class="formula__note">Uncertainty of the estimated mean decreases with √n.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Probability</span>
+    <span class="fnum">10</span>
+  </footer>
+</section>
+
+<!-- 1G · Probability formulas 3/3 (now full — added Poisson, Normal, Exponential, CI, test statistic) -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Probability</span><span>Formula sheet · 3 / 3</span></header>
+  <h1 class="page-title">Distributions &amp; <span class="hl">inference</span></h1>
+  <p class="page-lede">The three distributions most often invoked, plus the workhorse test statistic.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Normal <span class="hl">PDF</span></h3>
+      <div class="formula__body">f(x) = 1 / (σ√(2π)) · exp(−(x − μ)² / (2σ²))</div>
+      <p class="formula__note">Symmetric bell curve; 68 / 95 / 99.7 % within ±1 / ±2 / ±3 σ.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Poisson <span class="hl">PMF</span></h3>
+      <div class="formula__body">P(X = k) = e⁻λ · λᵏ / k!</div>
+      <p class="formula__note">Counts of rare events in a fixed interval; mean = variance = λ.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Exponential <span class="hl">PDF</span></h3>
+      <div class="formula__body">f(x) = λ · e⁻ᵏˣ,  x ≥ 0</div>
+      <p class="formula__note">Waiting time between Poisson events; memoryless.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">Confidence <span class="hl">interval</span></h3>
+      <div class="formula__body">estimate ± critical value · SE</div>
+      <p class="formula__note">Critical value is z* or t* depending on assumptions and sample size.</p>
+    </article>
+    <article class="formula" style="grid-column:1 / -1;min-height:0;">
+      <div class="formula__meta">Formula / rule</div>
+      <h3 class="formula__title">One-sample <span class="hl">t</span>-statistic</h3>
+      <div class="formula__body">t = (x̄ − μ₀) / (s / √n)</div>
+      <p class="formula__note">Compare observed sample mean with a hypothesized mean. Under H₀ and normality, follows a t-distribution with n−1 degrees of freedom.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Probability</span>
+    <span class="fnum">11</span>
+  </footer>
+</section>
+
+<!-- 1H · Statistics interview questions -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Statistics</span><span>Interview questions</span></header>
+  <h1 class="page-title">Statistics questions <span class="hl">— I</span></h1>
+  <p class="page-lede">Answer these aloud without notes. If you cannot explain one clearly, add that topic back to your revision list.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">When would you use the <em class="em">median</em> instead of the <em class="em">mean</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">What is the difference between <em class="em">variance</em> and <em class="em">standard deviation</em>?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Explain the <em class="em">Central Limit Theorem</em> in simple words.</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">What is the difference between a <em class="em">population</em> and a <em class="em">sample</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">What is <em class="em">sampling bias</em>? Give a realistic example.</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What does a <em class="em">95 % confidence interval</em> actually mean?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What is the difference between <em class="em">correlation</em> and <em class="em">covariance</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">Why does <em class="em">correlation not imply causation</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What happens to the <em class="em">standard error</em> when the sample size increases?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">How would you identify <em class="em">outliers</em> using the IQR method?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Statistics</span>
+    <span class="fnum">12</span>
+  </footer>
+</section>
+
+<!-- 1I · Probability interview questions (renamed correctly!) -->
+<section class="page" data-section="s1">
+  <header class="page-head"><span class="pill">S1 · Probability</span><span>Interview questions</span></header>
+  <h1 class="page-title">Probability questions <span class="hl">— II</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">conditional probability</em> and <em class="em">joint probability</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">How are <em class="em">independent</em> events different from <em class="em">mutually exclusive</em> events?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Explain <em class="em">Bayes theorem</em> with a practical example.</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">When would you expect a <em class="em">Binomial</em> distribution?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">When is a <em class="em">Poisson</em> distribution useful?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What is a <em class="em">p-value</em>, and what does it <em class="em">not</em> tell you?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">Explain <em class="em">Type I</em> and <em class="em">Type II</em> errors.</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">What is <em class="em">statistical power</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">When would you choose a <em class="em">t-test</em>, <em class="em">chi-square test</em>, or <em class="em">ANOVA</em>?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">In an A/B test, why can a result be <em class="em">statistically significant but not practically useful</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S1 · Probability</span>
+    <span class="fnum">13</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     SECTION 2 · PYTHON
+     ============================================================ -->
+<section class="page" data-section="s2" id="s2-cover">
+  <div class="section-divider">
+    <div class="eyebrow">Section 02</div>
+    <div class="kicker">Core language + patterns</div>
+    <h1>PYTHON <span class="hl">PROGRAMMING</span></h1>
+    <p>The language patterns data roles expect you to write and explain without searching.</p>
+  </div>
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Interview Prep</span>
+    <span class="fnum">14</span>
+  </footer>
+</section>
+
+<!-- 2A · Python foundations -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Topics · foundations</span></header>
+  <h1 class="page-title">Python topics — <span class="hl">foundations</span></h1>
+  <p class="page-lede">Be comfortable writing these from memory and explaining their trade-offs.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Built-in data types</h3><p class="topic__desc">int, float, bool, str, None; type conversion and truthiness.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Lists, tuples, sets &amp; dicts</h3><p class="topic__desc">Ordering, uniqueness, mutability, hashing, lookup behavior.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Indexing &amp; slicing</h3><p class="topic__desc">Positive/negative indices, slice syntax, copying implications.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Conditionals &amp; loops</h3><p class="topic__desc">if/elif/else, for, while, break, continue, range.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Comprehensions</h3><p class="topic__desc">List, set, and dictionary comprehensions with conditions.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Functions</h3><p class="topic__desc">Parameters, return values, default arguments, *args, **kwargs.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Scope (LEGB)</h3><p class="topic__desc">Local, enclosing, global, built-in.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Modules &amp; environments</h3><p class="topic__desc">import, packages, __name__, virtual environments, dependency isolation.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">15</span>
+  </footer>
+</section>
+
+<!-- 2B · Python depth 1/2 -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Depth · 1 / 2</span></header>
+  <h1 class="page-title">Python topics — <span class="hl">interview depth</span></h1>
+  <p class="page-lede">These topics separate "can script" from "understands Python".</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Mutability &amp; object identity</h3><p class="topic__desc">Mutable vs immutable objects; == versus is.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Shallow vs deep copy</h3><p class="topic__desc">Nested references and copy.copy vs copy.deepcopy.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Exceptions</h3><p class="topic__desc">try/except/else/finally, raising custom exceptions.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Iterators &amp; generators</h3><p class="topic__desc">iter(), next(), yield, lazy evaluation, memory benefits.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Decorators</h3><p class="topic__desc">Functions wrapping functions; @syntax and common use cases.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Context managers</h3><p class="topic__desc">with statement, resource cleanup, __enter__/__exit__.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">16</span>
+  </footer>
+</section>
+
+<!-- 2C · Python depth 2/2 -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Depth · 2 / 2</span></header>
+  <h1 class="page-title">Python topics — <span class="hl">interview depth</span> continued</h1>
+  <p class="page-lede">Where analysts become engineers: OOP, complexity, and data-work patterns.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">OOP basics</h3><p class="topic__desc">Classes, instances, inheritance, composition, methods, properties.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Complexity basics</h3><p class="topic__desc">Big-O for list/dict/set operations, sorting, nested loops.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Python for data work</h3><p class="topic__desc">NumPy vectorization, pandas selection, avoiding slow row-by-row loops.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Type hints &amp; dataclasses</h3><p class="topic__desc">typing, Optional, list[int], @dataclass; readability + tooling.</p><div class="topic__bar"><span class="bar"><span style="width:70%"></span></span><span class="bar-val">70%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">GIL basics</h3><p class="topic__desc">Why CPU-bound threads do not scale like multiprocessing in CPython.</p><div class="topic__bar"><span class="bar"><span style="width:65%"></span></span><span class="bar-val">65%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Standard-library toolkit</h3><p class="topic__desc">collections (Counter, defaultdict), itertools, pathlib, logging.</p><div class="topic__bar"><span class="bar"><span style="width:70%"></span></span><span class="bar-val">70%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">17</span>
+  </footer>
+</section>
+
+<!-- 2D · Python patterns 1/3 (with code!) -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Patterns · 1 / 3</span></header>
+  <h1 class="page-title">Python <span class="hl">patterns.</span></h1>
+  <p class="page-lede">For Python, "formula" means reusable syntax and complexity patterns you should know cold.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">List <span class="hl">comprehension</span></h3>
+      <div class="formula__body">[f(x) for x in items if cond(x)]</div>
+      <p class="formula__note">Compact transform + filter. Prefer over `map + filter` for readability.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Dict <span class="hl">comprehension</span></h3>
+      <div class="formula__body">{k: f(v) for k, v in pairs}</div>
+      <p class="formula__note">Useful for remapping and lookup creation.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Generator <span class="hl">expression</span></h3>
+      <div class="formula__body">total = sum(x * x for x in nums)</div>
+      <p class="formula__note">Lazy; produces values on demand — no full list is built.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Enumerate &amp; <span class="hl">zip</span></h3>
+      <div class="formula__body">for i, (a, b) in enumerate(zip(xs, ys)):
+    ...</div>
+      <p class="formula__note">Prefer enumerate over manual index counters; zip stops at the shortest iterable.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">18</span>
+  </footer>
+</section>
+
+<!-- 2E · Python patterns 2/3 -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Patterns · 2 / 3</span></header>
+  <h1 class="page-title">Python <span class="hl">patterns.</span> continued</h1>
+  <p class="page-lede">Safe resource handling, flexible function signatures, and short generators/decorators.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Safe file <span class="hl">handling</span></h3>
+      <div class="formula__body">with open(path) as f:
+    text = f.read()</div>
+      <p class="formula__note">Context manager guarantees the file is closed even on exception.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Exception <span class="hl">handling</span></h3>
+      <div class="formula__body">try:
+    n = int(x)
+except ValueError:
+    n = 0
+finally:
+    log.info("done")</div>
+      <p class="formula__note">Catch specific exceptions; avoid bare `except`.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Flexible <span class="hl">function</span></h3>
+      <div class="formula__body">def f(a, *args, **kwargs):
+    ...</div>
+      <p class="formula__note">Collect extra positional and keyword arguments.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Simple <span class="hl">generator</span></h3>
+      <div class="formula__body">def read_lines(path):
+    with open(path) as f:
+        for line in f:
+            yield line.rstrip()</div>
+      <p class="formula__note">Constant memory over huge files — the caller pulls one line at a time.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">19</span>
+  </footer>
+</section>
+
+<!-- 2F · Python patterns 3/3 -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Patterns · 3 / 3</span></header>
+  <h1 class="page-title">Python <span class="hl">patterns.</span> continued</h1>
+  <p class="page-lede">Decorators, complexity rules, and a vectorized pandas contrast.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Timing <span class="hl">decorator</span></h3>
+      <div class="formula__body">from functools import wraps
+def timed(fn):
+    @wraps(fn)
+    def w(*a, **kw):
+        t = time.perf_counter()
+        r = fn(*a, **kw)
+        log.info(f"{fn.__name__} {time.perf_counter()-t:.3f}s")
+        return r
+    return w</div>
+      <p class="formula__note">@wraps preserves the wrapped function's name and docstring.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Complexity</div>
+      <h3 class="formula__title">Lookup <span class="hl">costs</span></h3>
+      <div class="formula__body">x in list   → O(n)
+x in set    → O(1) avg
+d[key]      → O(1) avg
+sorted(xs)  → O(n log n)  (Timsort)
+nested loop → O(n²)</div>
+      <p class="formula__note">Reach for a set/dict whenever you need "does this exist?".</p>
+    </article>
+    <article class="formula" style="grid-column:1 / -1;min-height:0;">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Vectorize instead of <span class="hl">loop</span></h3>
+      <div class="formula__body"># slow:
+df["margin"] = [p - c for p, c in zip(df.price, df.cost)]
+# fast (vectorized in C):
+df["margin"] = df["price"] - df["cost"]</div>
+      <p class="formula__note">In pandas / NumPy, avoid Python-level iteration for row-wise arithmetic — the vectorized form is usually 10–100× faster.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">20</span>
+  </footer>
+</section>
+
+<!-- 2G · Python questions I -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Interview questions</span></header>
+  <h1 class="page-title">Python questions <span class="hl">— I</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between a <em class="em">list</em> and a <em class="em">tuple</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">When would you use a <em class="em">set</em> instead of a list?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Why are <em class="em">dictionary lookups</em> usually fast?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">What is the difference between <em class="em">==</em> and <em class="em">is</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">Explain <em class="em">mutable</em> vs <em class="em">immutable</em> objects with examples.</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What is the danger of using a <em class="em">mutable default argument</em> in a function?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What are <em class="em">*args</em> and <em class="em">**kwargs</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">Explain Python's <em class="em">LEGB</em> scope rule.</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What is the difference between <em class="em">shallow copy</em> and <em class="em">deep copy</em>?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">What does <em class="em">if __name__ == "__main__"</em> do?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">21</span>
+  </footer>
+</section>
+
+<!-- 2H · Python questions II -->
+<section class="page" data-section="s2">
+  <header class="page-head"><span class="pill">S2 · Python</span><span>Interview questions</span></header>
+  <h1 class="page-title">Python questions <span class="hl">— II</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between an <em class="em">iterable</em>, an <em class="em">iterator</em>, and a <em class="em">generator</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">Why can a <em class="em">generator</em> use less memory than a list?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">What is a <em class="em">decorator</em>? Give a realistic use case.</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">Why would you use a <em class="em">context manager</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">Explain the purpose of <em class="em">try / except / else / finally</em>.</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What is the difference between <em class="em">inheritance</em> and <em class="em">composition</em>?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What is the average complexity of <em class="em">list membership</em> vs <em class="em">set membership</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">Why is <em class="em">vectorized NumPy / pandas</em> code often faster than Python loops?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What is the <em class="em">GIL</em> at a high level?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">When would you choose <em class="em">multiprocessing</em> over <em class="em">threading</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S2 · Python</span>
+    <span class="fnum">22</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     SECTION 3 · SQL
+     ============================================================ -->
+<section class="page" data-section="s3" id="s3-cover">
+  <div class="section-divider">
+    <div class="eyebrow">Section 03</div>
+    <div class="kicker">Query logic + windows</div>
+    <h1>SQL FOR <span class="hl">DATA</span></h1>
+    <p>The query patterns analysts and data scientists are repeatedly tested on.</p>
+  </div>
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Interview Prep</span>
+    <span class="fnum">23</span>
+  </footer>
+</section>
+
+<!-- 3A · SQL core querying -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Topics · core querying</span></header>
+  <h1 class="page-title">SQL topics — <span class="hl">core querying</span></h1>
+  <p class="page-lede">You should be able to write these without relying on autocomplete.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">SELECT &amp; aliases</h3><p class="topic__desc">Column selection, expressions, AS, DISTINCT.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">WHERE filtering</h3><p class="topic__desc">Comparison operators, IN, BETWEEN, LIKE, boolean logic.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">ORDER BY &amp; LIMIT</h3><p class="topic__desc">Sorting, top/bottom records, deterministic ordering.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Aggregations</h3><p class="topic__desc">COUNT, SUM, AVG, MIN, MAX; COUNT(*) vs COUNT(column).</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">GROUP BY</h3><p class="topic__desc">Aggregate by dimensions; grouping granularity.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">HAVING</h3><p class="topic__desc">Filter after aggregation; distinction from WHERE.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">CASE WHEN</h3><p class="topic__desc">Conditional categories, flags, conditional aggregation.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">NULL handling</h3><p class="topic__desc">IS NULL, COALESCE, NULLIF, three-valued logic.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Date &amp; time</h3><p class="topic__desc">DATE_TRUNC, DATEDIFF/AGE, EXTRACT; timezone awareness.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">String functions</h3><p class="topic__desc">CONCAT, SUBSTRING, LOWER/UPPER, LIKE, regexp.</p><div class="topic__bar"><span class="bar"><span style="width:70%"></span></span><span class="bar-val">70%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">24</span>
+  </footer>
+</section>
+
+<!-- 3B · SQL depth 1/2 -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Depth · 1 / 2</span></header>
+  <h1 class="page-title">SQL topics — <span class="hl">interview depth</span></h1>
+  <p class="page-lede">Most SQL interviews become difficult here.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Joins</h3><p class="topic__desc">INNER, LEFT, RIGHT, FULL, CROSS; join keys and row multiplication.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Self joins</h3><p class="topic__desc">Compare rows within the same table; hierarchies and pairs.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Anti-joins</h3><p class="topic__desc">LEFT JOIN … WHERE right.id IS NULL, or NOT EXISTS.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Subqueries</h3><p class="topic__desc">Scalar, correlated, IN / EXISTS patterns.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">CTEs</h3><p class="topic__desc">WITH clauses for readable multi-step queries; recursive CTE awareness.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Window functions</h3><p class="topic__desc">OVER, PARTITION BY, ORDER BY; ROW_NUMBER, RANK, DENSE_RANK.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">25</span>
+  </footer>
+</section>
+
+<!-- 3C · SQL depth 2/2 -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Depth · 2 / 2</span></header>
+  <h1 class="page-title">SQL topics — <span class="hl">interview depth</span> continued</h1>
+  <p class="page-lede">Rolling metrics, set operations, physical layer + the classics.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">LAG &amp; LEAD</h3><p class="topic__desc">Previous/next-row comparisons, growth, gaps, session logic.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Running &amp; rolling metrics</h3><p class="topic__desc">Cumulative sums, moving averages, rolling counts.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Set operations</h3><p class="topic__desc">UNION, UNION ALL, INTERSECT, EXCEPT.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Keys &amp; normalization</h3><p class="topic__desc">Primary/foreign keys, uniqueness, basic 1NF/2NF/3NF intuition.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Indexes &amp; plans</h3><p class="topic__desc">Why indexes help reads, can hurt writes, and do not fix every query.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Transactions &amp; ACID</h3><p class="topic__desc">Atomicity, Consistency, Isolation, Durability.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic" style="grid-column:1 / -1;"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Classic interview problems</h3><p class="topic__desc">Duplicates, nth highest, top-N per group, retention, consecutive dates (gaps-and-islands).</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">26</span>
+  </footer>
+</section>
+
+<!-- 3D · SQL patterns 1/3 -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Patterns · 1 / 3</span></header>
+  <h1 class="page-title">SQL patterns &amp; <span class="hl">templates.</span></h1>
+  <p class="page-lede">These patterns solve a large percentage of practical SQL interview tasks.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Rule</div>
+      <h3 class="formula__title">Logical <span class="hl">query order</span></h3>
+      <div class="formula__body">FROM / JOIN
+→ WHERE
+→ GROUP BY
+→ HAVING
+→ SELECT (aliases created here)
+→ DISTINCT
+→ ORDER BY
+→ LIMIT</div>
+      <p class="formula__note">Explains why SELECT aliases are not available in WHERE.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Conditional <span class="hl">aggregation</span></h3>
+      <div class="formula__body">SUM(CASE WHEN status = 'paid'
+         THEN 1 ELSE 0 END) AS paid_count</div>
+      <p class="formula__note">Count records meeting a condition inside a group.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Safe <span class="hl">denominator</span></h3>
+      <div class="formula__body">SELECT numerator
+       / NULLIF(denominator, 0) AS ratio</div>
+      <p class="formula__note">Avoid divide-by-zero errors; the result is NULL when denom is 0.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Null <span class="hl">fallback</span></h3>
+      <div class="formula__body">COALESCE(preferred, fallback, 'unknown')</div>
+      <p class="formula__note">Return the first non-NULL expression.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">27</span>
+  </footer>
+</section>
+
+<!-- 3E · SQL patterns 2/3 -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Patterns · 2 / 3</span></header>
+  <h1 class="page-title">SQL patterns &amp; <span class="hl">templates.</span> continued</h1>
+  <p class="page-lede">Window functions carry a big share of interview questions.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Top-<span class="hl">N per group</span></h3>
+      <div class="formula__body">WITH ranked AS (
+  SELECT *,
+    ROW_NUMBER() OVER (
+      PARTITION BY category
+      ORDER BY revenue DESC) AS rn
+  FROM products)
+SELECT * FROM ranked WHERE rn &lt;= 3;</div>
+      <p class="formula__note">Wrap in a CTE, then filter on rn.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Rank with <span class="hl">ties</span></h3>
+      <div class="formula__body">RANK()       -- 1, 2, 2, 4
+DENSE_RANK() -- 1, 2, 2, 3
+ROW_NUMBER() -- 1, 2, 3, 4</div>
+      <p class="formula__note">Know the gap behavior between RANK and DENSE_RANK.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Previous <span class="hl">row</span></h3>
+      <div class="formula__body">LAG(metric) OVER (
+  PARTITION BY user_id
+  ORDER BY event_date) AS prev</div>
+      <p class="formula__note">Compare a row with its previous period.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Running <span class="hl">total</span></h3>
+      <div class="formula__body">SUM(amount) OVER (
+  PARTITION BY user_id
+  ORDER BY txn_date
+  ROWS UNBOUNDED PRECEDING) AS cum</div>
+      <p class="formula__note">Cumulative metric by ordered rows.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">28</span>
+  </footer>
+</section>
+
+<!-- 3F · SQL patterns 3/3 -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Patterns · 3 / 3</span></header>
+  <h1 class="page-title">SQL patterns &amp; <span class="hl">templates.</span> continued</h1>
+  <p class="page-lede">Duplicates, existence, anti-joins, set operations, gaps-and-islands.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Find <span class="hl">duplicates</span></h3>
+      <div class="formula__body">SELECT key, COUNT(*)
+FROM t
+GROUP BY key
+HAVING COUNT(*) &gt; 1;</div>
+      <p class="formula__note">Classic duplicate detection pattern.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Anti-<span class="hl">join</span></h3>
+      <div class="formula__body">SELECT u.*
+FROM users u
+LEFT JOIN orders o
+  ON o.user_id = u.id
+WHERE o.user_id IS NULL;</div>
+      <p class="formula__note">Users who never ordered. Often clearer than NOT IN with NULLs.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">UNION vs <span class="hl">UNION ALL</span></h3>
+      <div class="formula__body">UNION      -- removes duplicates
+UNION ALL  -- keeps every row (cheaper)</div>
+      <p class="formula__note">UNION ALL is preferred when you know rows are unique.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Pattern</div>
+      <h3 class="formula__title">Gaps-and-<span class="hl">islands</span></h3>
+      <div class="formula__body">SELECT user_id,
+       MIN(day) AS start,
+       MAX(day) AS end
+FROM (
+  SELECT *,
+    day - ROW_NUMBER() OVER (
+      PARTITION BY user_id
+      ORDER BY day) * INTERVAL '1 day' AS grp
+  FROM active_days) x
+GROUP BY user_id, grp;</div>
+      <p class="formula__note">Streaks of consecutive dates.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">29</span>
+  </footer>
+</section>
+
+<!-- 3G · SQL worked example -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Worked example</span></header>
+  <h1 class="page-title">Worked example — <span class="hl">top-3 per category.</span></h1>
+  <p class="page-lede">A tiny schema, the query, and the shape of the result.</p>
+
+  <div class="fgrid">
+    <article class="formula">
+      <div class="formula__meta">Schema</div>
+      <h3 class="formula__title">products</h3>
+      <div class="formula__body">id  | category | name       | revenue
+----+----------+------------+--------
+ 1  | shoes    | runner v2  |    920
+ 2  | shoes    | trail x    |    880
+ 3  | shoes    | flat 05    |    410
+ 4  | shoes    | canvas     |    390
+ 5  | bags     | tote       |    650
+ 6  | bags     | duffel     |    420
+ 7  | bags     | sling      |    380</div>
+      <p class="formula__note">7 products across 2 categories.</p>
+    </article>
+    <article class="formula">
+      <div class="formula__meta">Query</div>
+      <h3 class="formula__title">Top 3 <span class="hl">per category</span></h3>
+      <div class="formula__body">WITH ranked AS (
+  SELECT id, category, name, revenue,
+         ROW_NUMBER() OVER (
+           PARTITION BY category
+           ORDER BY revenue DESC) AS rn
+  FROM products)
+SELECT id, category, name, revenue
+FROM ranked
+WHERE rn &lt;= 3
+ORDER BY category, rn;</div>
+      <p class="formula__note">Swap ROW_NUMBER for DENSE_RANK if you want ties to share a rank.</p>
+    </article>
+    <article class="formula" style="grid-column:1 / -1;min-height:0;">
+      <div class="formula__meta">Result</div>
+      <h3 class="formula__title">Expected <span class="hl">output</span></h3>
+      <div class="formula__body">id | category | name      | revenue
+---+----------+-----------+--------
+ 5 | bags     | tote      |    650
+ 6 | bags     | duffel    |    420
+ 7 | bags     | sling     |    380
+ 1 | shoes    | runner v2 |    920
+ 2 | shoes    | trail x   |    880
+ 3 | shoes    | flat 05   |    410</div>
+      <p class="formula__note">Six rows — the top three per category, ordered by rank inside each partition.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">30</span>
+  </footer>
+</section>
+
+<!-- 3H · SQL Q I -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Interview questions</span></header>
+  <h1 class="page-title">SQL questions <span class="hl">— I</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">WHERE</em> and <em class="em">HAVING</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">What is the difference between an <em class="em">INNER JOIN</em> and a <em class="em">LEFT JOIN</em>?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Why can a join unexpectedly <em class="em">increase the number of rows</em>?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">What is the difference between <em class="em">COUNT(*)</em> and <em class="em">COUNT(column)</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">How does SQL treat <em class="em">NULL</em> in comparisons?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What is the difference between <em class="em">UNION</em> and <em class="em">UNION ALL</em>?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">When would you use a <em class="em">CTE</em> instead of a subquery?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">What is a <em class="em">correlated subquery</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">Explain the <em class="em">logical execution order</em> of a SELECT query.</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">What is the purpose of <em class="em">COALESCE</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">31</span>
+  </footer>
+</section>
+
+<!-- 3I · SQL Q II -->
+<section class="page" data-section="s3">
+  <header class="page-head"><span class="pill">S3 · SQL</span><span>Interview questions</span></header>
+  <h1 class="page-title">SQL questions <span class="hl">— II</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">ROW_NUMBER</em>, <em class="em">RANK</em>, and <em class="em">DENSE_RANK</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">Write the approach for the <em class="em">top 3 products per category</em>.</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">How would you calculate a <em class="em">running total</em>?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">How would you compare a row with the <em class="em">previous month</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">How would you identify and remove <em class="em">duplicate rows</em>?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">How would you find the <em class="em">second-highest salary</em>?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What is an <em class="em">index</em> and when can it help?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">Why can <em class="em">too many indexes</em> be a problem?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What are the <em class="em">ACID</em> properties?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">What is the difference between a <em class="em">primary key</em> and a <em class="em">foreign key</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S3 · SQL</span>
+    <span class="fnum">32</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     SECTION 4 · DATA CLEANING & PREPROCESSING
+     ============================================================ -->
+<section class="page" data-section="s4" id="s4-cover">
+  <div class="section-divider">
+    <div class="eyebrow">Section 04</div>
+    <div class="kicker">Quality before modeling</div>
+    <h1>DATA <span class="hl">CLEANING &amp; PREPROCESSING</span></h1>
+    <p>The steps that make raw data safe, consistent, and usable before modeling.</p>
+  </div>
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Interview Prep</span>
+    <span class="fnum">33</span>
+  </footer>
+</section>
+
+<!-- 4A · Cleaning topics -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Cleaning</span><span>Topics to learn</span></header>
+  <h1 class="page-title">Cleaning topics — <span class="hl">first checks</span></h1>
+  <p class="page-lede">These are the first checks you should make on almost any dataset.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Schema &amp; profiling</h3><p class="topic__desc">Shape, column types, cardinality, ranges, summary statistics, uniqueness.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Missing values</h3><p class="topic__desc">Detection, percentage missing, missingness patterns, MCAR / MAR / MNAR awareness.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Duplicates</h3><p class="topic__desc">Exact vs business-key duplicates; keep-first / keep-last rules.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Data types</h3><p class="topic__desc">Numeric parsing, categories, booleans, date/time, timezone handling.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">String cleaning</h3><p class="topic__desc">Whitespace, casing, punctuation, regex, canonical categories.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Outliers</h3><p class="topic__desc">Detection vs treatment; IQR, z-score, domain thresholds, winsorization.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Data validation</h3><p class="topic__desc">Range checks, allowed values, uniqueness, referential integrity.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Data leakage</h3><p class="topic__desc">Information unavailable at prediction time leaking into features or preprocessing.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Cleaning</span>
+    <span class="fnum">34</span>
+  </footer>
+</section>
+
+<!-- 4B · Preprocessing topics -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Preprocessing</span><span>Topics to learn</span></header>
+  <h1 class="page-title">Preprocessing topics — <span class="hl">discipline</span></h1>
+  <p class="page-lede">Know what needs to be fitted on training data and how transformations affect models.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Train / val / test split</h3><p class="topic__desc">Split before fitting preprocessing to prevent leakage.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Imputation</h3><p class="topic__desc">Mean/median/mode, constant, model-based imputation, missing indicators.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Scaling</h3><p class="topic__desc">Standardization, min-max, robust scaling; which models care.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Categorical encoding</h3><p class="topic__desc">One-hot, ordinal, frequency/target encoding and leakage risk.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Transformations</h3><p class="topic__desc">log1p, power transforms, clipping; skew reduction and variance stabilization.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Feature creation</h3><p class="topic__desc">Dates, ratios, interactions, bins, counts, domain features.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Class imbalance</h3><p class="topic__desc">Stratification, class weights, over/undersampling, threshold choice.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Pipelines</h3><p class="topic__desc">Fit/transform discipline, reproducibility, consistent training and inference.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Feature selection</h3><p class="topic__desc">Filter/wrapper/embedded approaches; remove leakage and redundant features.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">High-cardinality cats</h3><p class="topic__desc">Rare grouping, hashing, target encoding with proper validation.</p><div class="topic__bar"><span class="bar"><span style="width:80%"></span></span><span class="bar-val">80%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Preprocessing</span>
+    <span class="fnum">35</span>
+  </footer>
+</section>
+
+<!-- 4C · Preprocessing formulas 1/3 -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Preprocessing</span><span>Formula sheet · 1 / 3</span></header>
+  <h1 class="page-title">Cleaning + preprocessing <span class="hl">formulas.</span></h1>
+  <p class="page-lede">These formulas recur in EDA, feature preparation, and interview questions.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Missing <span class="hl">percentage</span></h3><div class="formula__body">missing% = missing_count / total_rows × 100</div><p class="formula__note">Use per column and inspect patterns, not just totals.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">IQR outlier <span class="hl">fences</span></h3><div class="formula__body">lower = Q₁ − 1.5 · IQR
+upper = Q₃ + 1.5 · IQR</div><p class="formula__note">A heuristic, not a universal definition of "bad data".</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Z-<span class="hl">score</span></h3><div class="formula__body">z = (x − μ) / σ</div><p class="formula__note">Often flag |z| &gt; 3 for roughly normal variables.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Standardization</span></h3><div class="formula__body">x′ = (x − μ_train) / σ_train</div><p class="formula__note">Fit μ and σ on training data only.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Preprocessing</span>
+    <span class="fnum">36</span>
+  </footer>
+</section>
+
+<!-- 4D · Preprocessing formulas 2/3 -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Preprocessing</span><span>Formula sheet · 2 / 3</span></header>
+  <h1 class="page-title">Cleaning + preprocessing <span class="hl">formulas.</span> continued</h1>
+  <p class="page-lede">Scaling, robust scaling, transforms, and simple encoders.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Min-max <span class="hl">scaling</span></h3><div class="formula__body">x′ = (x − min_train) / (max_train − min_train)</div><p class="formula__note">Maps training range approximately to 0 – 1.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Robust <span class="hl">scaling</span></h3><div class="formula__body">x′ = (x − median_train) / IQR_train</div><p class="formula__note">More resistant to strong outliers.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Log <span class="hl">transform</span></h3><div class="formula__body">x′ = log(1 + x)</div><p class="formula__note">Common for right-skewed non-negative variables.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Frequency <span class="hl">encoding</span></h3><div class="formula__body">enc(c) = count(c) / N</div><p class="formula__note">Replace category by observed frequency; fit using training data.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Preprocessing</span>
+    <span class="fnum">37</span>
+  </footer>
+</section>
+
+<!-- 4E · Preprocessing formulas 3/3 (sklearn Pipeline snippet) -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Preprocessing</span><span>Formula sheet · 3 / 3</span></header>
+  <h1 class="page-title">Imbalance + a <span class="hl">real pipeline.</span></h1>
+  <p class="page-lede">Two class-imbalance formulas and the pipeline that keeps everything leakage-safe.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Class-weight <span class="hl">heuristic</span></h3><div class="formula__body">w_c = N / (K · N_c)</div><p class="formula__note">Inverse-frequency style class weighting. K = number of classes.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">SMOTE <span class="hl">interpolation</span></h3><div class="formula__body">x_new = xᵢ + λ · (x_nn − xᵢ),  0 ≤ λ ≤ 1</div><p class="formula__note">Synthetic point along the line to a minority-class neighbor.</p></article>
+    <article class="formula" style="grid-column:1 / -1;min-height:0;">
+      <div class="formula__meta">sklearn pattern</div>
+      <h3 class="formula__title">Leakage-safe <span class="hl">pipeline</span></h3>
+      <div class="formula__body">from sklearn.pipeline import Pipeline
+from sklearn.compose  import ColumnTransformer
+from sklearn.impute   import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.linear_model  import LogisticRegression
+
+pre = ColumnTransformer([
+    ("num", Pipeline([("imp", SimpleImputer(strategy="median")),
+                      ("sc",  StandardScaler())]), num_cols),
+    ("cat", Pipeline([("imp", SimpleImputer(strategy="most_frequent")),
+                      ("oh",  OneHotEncoder(handle_unknown="ignore"))]), cat_cols),
+])
+
+model = Pipeline([("pre", pre),
+                  ("clf", LogisticRegression(class_weight="balanced"))])
+
+model.fit(X_train, y_train)          # fits scalers, encoders, and model on TRAIN only
+model.predict(X_test)                # same transforms applied at inference</div>
+      <p class="formula__note">The whole pipeline fits on training data — no scaler or encoder ever sees the test set.</p>
+    </article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Preprocessing</span>
+    <span class="fnum">38</span>
+  </footer>
+</section>
+
+<!-- 4F · Cleaning Q I -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Cleaning</span><span>Interview questions</span></header>
+  <h1 class="page-title">Cleaning questions <span class="hl">— I</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">How do you decide whether to <em class="em">drop</em> or <em class="em">impute</em> missing values?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">Why can <em class="em">mean imputation</em> be problematic?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">When is <em class="em">median imputation</em> preferable to mean imputation?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">How would you identify <em class="em">duplicate records</em> when there is no unique ID?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">How do you distinguish a true <em class="em">outlier</em> from a <em class="em">data error</em>?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">When would you use <em class="em">IQR</em> vs <em class="em">z-score</em> for outlier detection?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">Why is <em class="em">data type validation</em> important?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">What are common techniques for <em class="em">cleaning categorical strings</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What is <em class="em">data leakage</em>? Give an example.</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">Why should preprocessing be <em class="em">fit on training data only</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Cleaning</span>
+    <span class="fnum">39</span>
+  </footer>
+</section>
+
+<!-- 4G · Preprocessing Q II -->
+<section class="page" data-section="s4">
+  <header class="page-head"><span class="pill">S4 · Preprocessing</span><span>Interview questions</span></header>
+  <h1 class="page-title">Preprocessing questions <span class="hl">— II</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">standardization</em> and <em class="em">min-max scaling</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">Which algorithms are especially sensitive to <em class="em">feature scale</em>?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">When would you use <em class="em">one-hot</em> vs <em class="em">ordinal</em> encoding?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">What is the risk of <em class="em">target encoding</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">How would you handle a feature with <em class="em">thousands of categories</em>?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What does a <em class="em">log transformation</em> do to a right-skewed feature?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">How would you handle a <em class="em">highly imbalanced target</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">What is the advantage of using a <em class="em">pipeline</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">Why can feature selection before cross-validation create <em class="em">leakage</em>?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">How would you ensure preprocessing is <em class="em">identical in training and production</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S4 · Preprocessing</span>
+    <span class="fnum">40</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     SECTION 5 · MACHINE LEARNING
+     ============================================================ -->
+<section class="page" data-section="s5" id="s5-cover">
+  <div class="section-divider">
+    <div class="eyebrow">Section 05</div>
+    <div class="kicker">Models + metrics + validation</div>
+    <h1>MACHINE LEARNING <span class="hl">FUNDAMENTALS</span></h1>
+    <p>The models, metrics, and validation ideas you should be able to explain before advanced ML.</p>
+  </div>
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Interview Prep</span>
+    <span class="fnum">41</span>
+  </footer>
+</section>
+
+<!-- 5A · ML foundations 1/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Foundations · 1 / 2</span></header>
+  <h1 class="page-title">ML topics — <span class="hl">foundations</span></h1>
+  <p class="page-lede">Focus on intuition, assumptions, and when each family is useful.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Supervised vs unsupervised</h3><p class="topic__desc">Labels vs no labels; regression, classification, clustering.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Train / val / test</h3><p class="topic__desc">Purpose of each split and why the test set stays untouched until final evaluation.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Bias vs variance</h3><p class="topic__desc">Underfitting vs overfitting; model flexibility and generalization.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Linear regression</h3><p class="topic__desc">Linear relationship, coefficients, assumptions, residuals.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Logistic regression</h3><p class="topic__desc">Probabilities for classification; log-odds and decision thresholds.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">K-nearest neighbors</h3><p class="topic__desc">Distance-based prediction; scaling, k choice, curse of dimensionality.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">42</span>
+  </footer>
+</section>
+
+<!-- 5B · ML foundations 2/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Foundations · 2 / 2</span></header>
+  <h1 class="page-title">ML topics — <span class="hl">foundations</span> continued</h1>
+  <p class="page-lede">Tree-based models still dominate tabular problems in real-world interviews.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Decision trees</h3><p class="topic__desc">Splits, impurity, depth, overfitting, interpretability.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Random forests</h3><p class="topic__desc">Bagging many trees, feature randomness, variance reduction.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Gradient boosting</h3><p class="topic__desc">Sequential weak learners correcting residual errors (XGBoost, LightGBM, CatBoost).</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Naive Bayes</h3><p class="topic__desc">Bayes-based classifier with conditional-independence assumption.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Support vector machines</h3><p class="topic__desc">Margins, kernels at a high level, scaling sensitivity.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">K-means clustering</h3><p class="topic__desc">Centroids, assignments, k choice, scaling, cluster shape assumptions.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">43</span>
+  </footer>
+</section>
+
+<!-- 5C · ML evaluation 1/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Evaluation · 1 / 2</span></header>
+  <h1 class="page-title">ML topics — <span class="hl">evaluation</span></h1>
+  <p class="page-lede">Model quality depends on choosing the right validation strategy and metric.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Regression metrics</h3><p class="topic__desc">MAE, MSE, RMSE, R²; sensitivity to large errors.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Confusion matrix</h3><p class="topic__desc">TP, TN, FP, FN as the basis for every classification metric.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Classification metrics</h3><p class="topic__desc">Accuracy, precision, recall, specificity, F1.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">ROC-AUC vs PR-AUC</h3><p class="topic__desc">Ranking quality; PR is often more informative for rare positives.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Threshold tuning</h3><p class="topic__desc">Probability threshold affects precision/recall and business costs.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Cross-validation</h3><p class="topic__desc">K-fold, stratified K-fold, TimeSeriesSplit; estimate generalization using repeated held-out folds.</p><div class="topic__bar"><span class="bar"><span style="width:100%"></span></span><span class="bar-val">100%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">44</span>
+  </footer>
+</section>
+
+<!-- 5D · ML evaluation 2/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Evaluation · 2 / 2</span></header>
+  <h1 class="page-title">ML topics — <span class="hl">evaluation</span> continued</h1>
+  <p class="page-lede">Regularization, tuning, importance, and repeatable results.</p>
+
+  <div class="grid">
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Regularization</h3><p class="topic__desc">L1 and L2 penalties; reduce overfitting, shrink coefficients.</p><div class="topic__bar"><span class="bar"><span style="width:95%"></span></span><span class="bar-val">95%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Hyperparameters</h3><p class="topic__desc">Parameters chosen before fitting; grid/random/Bayesian search.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Feature importance</h3><p class="topic__desc">Tree importance, coefficient interpretation, permutation importance.</p><div class="topic__bar"><span class="bar"><span style="width:85%"></span></span><span class="bar-val">85%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Reproducibility</h3><p class="topic__desc">Random seeds, pipelines, versioned data/code, consistent metrics.</p><div class="topic__bar"><span class="bar"><span style="width:90%"></span></span><span class="bar-val">90%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Calibration</h3><p class="topic__desc">Platt scaling / isotonic regression; when raw probabilities are miscalibrated.</p><div class="topic__bar"><span class="bar"><span style="width:75%"></span></span><span class="bar-val">75%</span></div></article>
+    <article class="topic"><div class="topic__meta">Interview priority</div><h3 class="topic__title">Learning curves</h3><p class="topic__desc">Score vs train size; a diagnostic for bias, variance, and data-need.</p><div class="topic__bar"><span class="bar"><span style="width:70%"></span></span><span class="bar-val">70%</span></div></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">45</span>
+  </footer>
+</section>
+
+<!-- 5E · Regression formulas 1/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Regression formulas · 1 / 2</span></header>
+  <h1 class="page-title">Regression <span class="hl">formulas.</span></h1>
+  <p class="page-lede">Know what each metric penalizes and what a "good" direction means.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Linear <span class="hl">regression</span></h3><div class="formula__body">ŷ = β₀ + Σ βⱼ · xⱼ</div><p class="formula__note">Each βⱼ is the expected change in ŷ per unit change in xⱼ, holding others fixed.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Residual</span></h3><div class="formula__body">eᵢ = yᵢ − ŷᵢ</div><p class="formula__note">Model error for one observation.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">MAE</span></h3><div class="formula__body">MAE = (1/n) Σ |yᵢ − ŷᵢ|</div><p class="formula__note">Robust relative to squared-error metrics.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">MSE</span></h3><div class="formula__body">MSE = (1/n) Σ (yᵢ − ŷᵢ)²</div><p class="formula__note">Penalizes large errors more heavily.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">46</span>
+  </footer>
+</section>
+
+<!-- 5F · Regression formulas 2/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Regression formulas · 2 / 2</span></header>
+  <h1 class="page-title">Regression <span class="hl">formulas.</span> continued</h1>
+  <p class="page-lede">RMSE, R², and the two shrinkage penalties.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">RMSE</span></h3><div class="formula__body">RMSE = √MSE</div><p class="formula__note">Same unit as the target.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">R²</span></h3><div class="formula__body">R² = 1 − SS_res / SS_tot</div><p class="formula__note">Fraction of variance explained vs a mean baseline. Can be negative when a model does worse than the mean.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">L1 <span class="hl">regularization</span></h3><div class="formula__body">Loss + λ · Σ |βⱼ|</div><p class="formula__note">Can drive some coefficients exactly to zero (feature selection).</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">L2 <span class="hl">regularization</span></h3><div class="formula__body">Loss + λ · Σ βⱼ²</div><p class="formula__note">Shrinks coefficients smoothly; rarely exactly zero.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">47</span>
+  </footer>
+</section>
+
+<!-- 5G · Classification formulas 1/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Classification formulas · 1 / 2</span></header>
+  <h1 class="page-title">Classification <span class="hl">formulas.</span></h1>
+  <p class="page-lede">Start from the confusion matrix; every metric is a different view of errors.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Sigmoid</span></h3><div class="formula__body">p = 1 / (1 + e^(−z))</div><p class="formula__note">Maps real-valued logit z to probability 0 – 1.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Logit</span> (log-odds)</h3><div class="formula__body">log(p / (1 − p)) = β₀ + Σ βⱼ · xⱼ</div><p class="formula__note">Linear relationship in log-odds for logistic regression.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Accuracy</span></h3><div class="formula__body">(TP + TN) / (TP + TN + FP + FN)</div><p class="formula__note">Can be misleading with class imbalance.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Precision</span></h3><div class="formula__body">TP / (TP + FP)</div><p class="formula__note">Of predicted positives, how many were correct?</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">48</span>
+  </footer>
+</section>
+
+<!-- 5H · Classification formulas 2/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Classification formulas · 2 / 2</span></header>
+  <h1 class="page-title">Classification <span class="hl">formulas.</span> continued</h1>
+  <p class="page-lede">Recall, specificity, F1, and calibrated log loss.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Recall / <span class="hl">sensitivity</span></h3><div class="formula__body">TP / (TP + FN)</div><p class="formula__note">Of actual positives, how many were found?</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Specificity</span></h3><div class="formula__body">TN / (TN + FP)</div><p class="formula__note">Of actual negatives, how many were correctly rejected?</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">F1</span> score</h3><div class="formula__body">F1 = 2 · (Precision · Recall) / (Precision + Recall)</div><p class="formula__note">Harmonic mean balances precision and recall.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Binary <span class="hl">log loss</span></h3><div class="formula__body">−(1/n) Σ [ y · log p + (1 − y) · log(1 − p) ]</div><p class="formula__note">Rewards calibrated confidence and heavily penalizes confident wrong predictions.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">49</span>
+  </footer>
+</section>
+
+<!-- 5I · Distance / trees / clustering 1/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Distance, trees &amp; clustering · 1 / 2</span></header>
+  <h1 class="page-title">Distance &amp; <span class="hl">impurity.</span></h1>
+  <p class="page-lede">How several common algorithms decide what is "close" or "pure".</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Euclidean <span class="hl">distance</span></h3><div class="formula__body">d(x, y) = √ Σ (xⱼ − yⱼ)²</div><p class="formula__note">Common KNN/K-means distance; scale matters.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Manhattan <span class="hl">distance</span></h3><div class="formula__body">d(x, y) = Σ |xⱼ − yⱼ|</div><p class="formula__note">Alternative distance less dominated by one large coordinate difference.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Gini <span class="hl">impurity</span></h3><div class="formula__body">Gini = 1 − Σ pₖ²</div><p class="formula__note">Zero for a pure node.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title"><span class="hl">Entropy</span></h3><div class="formula__body">H = − Σ pₖ · log₂ pₖ</div><p class="formula__note">Uncertainty/impurity measure used in tree splitting.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">50</span>
+  </footer>
+</section>
+
+<!-- 5J · Distance / trees / clustering 2/2 -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Distance, trees &amp; clustering · 2 / 2</span></header>
+  <h1 class="page-title">Splits, clusters &amp; <span class="hl">CV.</span></h1>
+  <p class="page-lede">Information gain, K-means objective, K-fold CV, and the SVM margin.</p>
+
+  <div class="fgrid">
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">Information <span class="hl">gain</span></h3><div class="formula__body">IG = H(parent) − weighted H(children)</div><p class="formula__note">Choose splits that reduce impurity.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">K-means <span class="hl">objective</span></h3><div class="formula__body">min Σᵢ ||xᵢ − μ_{cᵢ}||²</div><p class="formula__note">Minimize within-cluster squared distance to assigned centroid.</p></article>
+    <article class="formula"><div class="formula__meta">Formula</div><h3 class="formula__title">K-fold <span class="hl">CV score</span></h3><div class="formula__body">CV = (1/K) · Σ metric_k</div><p class="formula__note">Average held-out score across K folds.</p></article>
+    <article class="formula"><div class="formula__meta">Rule</div><h3 class="formula__title">SVM <span class="hl">margin</span></h3><div class="formula__body">larger margin  →  potentially better generalization</div><p class="formula__note">Core SVM concept; kernels allow nonlinear boundaries in transformed spaces.</p></article>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">51</span>
+  </footer>
+</section>
+
+<!-- 5K · Diagrams (bias-variance, confusion matrix, ROC) -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Diagrams · one look, one idea</span></header>
+  <h1 class="page-title">The three <span class="hl">must-draw</span> pictures.</h1>
+  <p class="page-lede">If you can sketch these on a whiteboard, you can talk about them.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;">
+    <figure class="diagram" style="margin:0;">
+      <h3>Confusion matrix</h3>
+      <table class="confusion">
+        <thead>
+          <tr><th></th><th>Pred +</th><th>Pred −</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Actual +</th><td><b>TP</b><small>hit</small></td><td><b>FN</b><small>missed</small></td></tr>
+          <tr><th>Actual −</th><td><b>FP</b><small>false alarm</small></td><td><b>TN</b><small>correct reject</small></td></tr>
+        </tbody>
+      </table>
+      <figcaption>Precision = TP / (TP+FP). Recall = TP / (TP+FN).</figcaption>
+    </figure>
+
+    <figure class="diagram" style="margin:0;">
+      <h3>Bias – variance</h3>
+      <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="130" fill="none"/>
+        <line x1="20" y1="110" x2="190" y2="110" stroke="rgba(240,244,255,.4)" stroke-width="0.8"/>
+        <line x1="20" y1="10"  x2="20"  y2="110" stroke="rgba(240,244,255,.4)" stroke-width="0.8"/>
+        <text x="105" y="126" fill="rgba(240,244,255,.65)" font-size="7" text-anchor="middle" font-family="Inter">model complexity →</text>
+        <text x="14" y="60" fill="rgba(240,244,255,.65)" font-size="7" text-anchor="end" font-family="Inter" transform="rotate(-90 14 60)">error</text>
+        <!-- bias (falls) -->
+        <path d="M25,25 Q80,80 185,100" fill="none" stroke="#F58BB6" stroke-width="1.5"/>
+        <!-- variance (rises) -->
+        <path d="M25,105 Q90,95 185,20" fill="none" stroke="#4CE0D6" stroke-width="1.5"/>
+        <!-- total (U) -->
+        <path d="M25,60 Q100,30 185,60" fill="none" stroke="#F5C453" stroke-width="1.8"/>
+        <circle cx="105" cy="35" r="2" fill="#F5C453"/>
+        <text x="112" y="34" fill="#F5C453" font-size="7" font-family="Inter">sweet spot</text>
+        <text x="185" y="105" fill="#F58BB6" font-size="7" font-family="Inter" text-anchor="end">bias²</text>
+        <text x="185" y="18"  fill="#4CE0D6" font-size="7" font-family="Inter" text-anchor="end">variance</text>
+        <text x="70" y="55" fill="#F5C453" font-size="7" font-family="Inter">total error</text>
+      </svg>
+      <figcaption>Underfit → high bias. Overfit → high variance. Optimum is a balance.</figcaption>
+    </figure>
+
+    <figure class="diagram" style="margin:0;grid-column:1 / -1;">
+      <h3>ROC vs Precision-Recall</h3>
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- ROC -->
+        <g transform="translate(10,5)">
+          <rect x="0" y="0" width="180" height="120" fill="none"/>
+          <line x1="15" y1="105" x2="170" y2="105" stroke="rgba(240,244,255,.4)"/>
+          <line x1="15" y1="10"  x2="15"  y2="105" stroke="rgba(240,244,255,.4)"/>
+          <line x1="15" y1="105" x2="170" y2="10"  stroke="rgba(240,244,255,.25)" stroke-dasharray="3 3"/>
+          <path d="M15,105 C40,40 90,25 170,15" fill="none" stroke="#4CE0D6" stroke-width="2"/>
+          <text x="90" y="120" fill="rgba(240,244,255,.65)" font-size="8" text-anchor="middle" font-family="Inter">FPR →</text>
+          <text x="8" y="55" fill="rgba(240,244,255,.65)" font-size="8" text-anchor="middle" font-family="Inter" transform="rotate(-90 8 55)">TPR</text>
+          <text x="90" y="8" fill="#4CE0D6" font-size="9" text-anchor="middle" font-family="Inter" font-weight="700">ROC</text>
+        </g>
+        <!-- PR -->
+        <g transform="translate(215,5)">
+          <rect x="0" y="0" width="180" height="120" fill="none"/>
+          <line x1="15" y1="105" x2="170" y2="105" stroke="rgba(240,244,255,.4)"/>
+          <line x1="15" y1="10"  x2="15"  y2="105" stroke="rgba(240,244,255,.4)"/>
+          <path d="M15,20 C50,25 100,40 170,95" fill="none" stroke="#F58BB6" stroke-width="2"/>
+          <line x1="15" y1="85" x2="170" y2="85" stroke="rgba(240,244,255,.25)" stroke-dasharray="3 3"/>
+          <text x="90" y="120" fill="rgba(240,244,255,.65)" font-size="8" text-anchor="middle" font-family="Inter">Recall →</text>
+          <text x="8" y="55" fill="rgba(240,244,255,.65)" font-size="8" text-anchor="middle" font-family="Inter" transform="rotate(-90 8 55)">Precision</text>
+          <text x="90" y="8" fill="#F58BB6" font-size="9" text-anchor="middle" font-family="Inter" font-weight="700">PR</text>
+          <text x="170" y="80" fill="rgba(240,244,255,.5)" font-size="6" text-anchor="end" font-family="Inter">base rate</text>
+        </g>
+      </svg>
+      <figcaption>Prefer PR when positives are rare — ROC can look flatteringly good on imbalanced data.</figcaption>
+    </figure>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">52</span>
+  </footer>
+</section>
+
+<!-- 5L · ML Q I -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Interview questions</span></header>
+  <h1 class="page-title">ML questions <span class="hl">— I</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">supervised</em> and <em class="em">unsupervised</em> learning?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">What is the purpose of <em class="em">train, validation, and test sets</em>?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Explain the <em class="em">bias – variance</em> trade-off.</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">How do you recognize <em class="em">overfitting</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">When is <em class="em">linear regression</em> a reasonable model?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">Why is <em class="em">logistic regression</em> called regression if it is used for classification?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">Why does <em class="em">KNN require feature scaling</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">How does a <em class="em">decision tree choose a split</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">Why can a single deep tree <em class="em">overfit</em>?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">How does a <em class="em">random forest</em> reduce variance?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">53</span>
+  </footer>
+</section>
+
+<!-- 5M · ML Q II -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Interview questions</span></header>
+  <h1 class="page-title">ML questions <span class="hl">— II</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">What is the difference between <em class="em">bagging</em> and <em class="em">boosting</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">How does <em class="em">gradient boosting</em> improve successive models?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">What assumptions does <em class="em">Naive Bayes</em> make?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">What is the intuition behind the <em class="em">SVM margin</em>?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">How does <em class="em">K-means</em> work step by step?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">How would you choose <em class="em">K</em> in K-means?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What is the difference between <em class="em">L1</em> and <em class="em">L2</em> regularization?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">What are <em class="em">parameters</em> vs <em class="em">hyperparameters</em>?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What is the purpose of <em class="em">cross-validation</em>?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">Why should hyperparameter tuning <em class="em">not use the final test set</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">54</span>
+  </footer>
+</section>
+
+<!-- 5N · ML Q III -->
+<section class="page" data-section="s5">
+  <header class="page-head"><span class="pill">S5 · ML</span><span>Interview questions</span></header>
+  <h1 class="page-title">ML questions <span class="hl">— III</span></h1>
+  <p class="page-lede">Answer these aloud without notes.</p>
+
+  <ol class="qlist">
+    <li class="q"><span class="q__num">01</span><span class="q__text">When would you prefer <em class="em">MAE</em> over <em class="em">RMSE</em>?</span></li>
+    <li class="q"><span class="q__num">02</span><span class="q__text">What does <em class="em">R²</em> measure, and can it be negative?</span></li>
+    <li class="q"><span class="q__num">03</span><span class="q__text">Why can <em class="em">accuracy</em> be misleading on imbalanced data?</span></li>
+    <li class="q"><span class="q__num">04</span><span class="q__text">When is <em class="em">precision</em> more important than recall?</span></li>
+    <li class="q"><span class="q__num">05</span><span class="q__text">When is <em class="em">recall</em> more important than precision?</span></li>
+    <li class="q"><span class="q__num">06</span><span class="q__text">What does the <em class="em">F1 score</em> balance?</span></li>
+    <li class="q"><span class="q__num">07</span><span class="q__text">What is the difference between <em class="em">ROC-AUC</em> and <em class="em">PR-AUC</em>?</span></li>
+    <li class="q"><span class="q__num">08</span><span class="q__text">How does changing the classification <em class="em">threshold</em> affect precision and recall?</span></li>
+    <li class="q"><span class="q__num">09</span><span class="q__text">What is <em class="em">data leakage</em> in a machine-learning pipeline?</span></li>
+    <li class="q"><span class="q__num">10</span><span class="q__text">How would you make a modeling workflow <em class="em">reproducible</em>?</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">S5 · ML</span>
+    <span class="fnum">55</span>
+  </footer>
+</section>
+
+<!-- ============================================================
+     FINAL REVIEW · RAPID FIRE · CAREER
+     ============================================================ -->
+<section class="page" data-section="s0" id="final-review">
+  <header class="page-head"><span class="pill">Final review</span><span>Checklist · 1 / 2</span></header>
+  <h1 class="page-title">Before the <span class="hl">interview.</span></h1>
+  <p class="page-lede">You are ready when you can explain each item below without reading a definition.</p>
+
+  <div class="check-grid">
+    <div class="check-card">
+      <h3>Statistics + Probability</h3>
+      <ul>
+        <li><span>Mean · median · variance · std · IQR</span></li>
+        <li><span>Correlation vs covariance</span></li>
+        <li><span>Conditional probability + Bayes</span></li>
+        <li><span>Common distributions (Binomial, Normal, Poisson)</span></li>
+        <li><span>CLT + standard error</span></li>
+        <li><span>Confidence intervals + p-values</span></li>
+        <li><span>Type I / II errors + power</span></li>
+      </ul>
+    </div>
+    <div class="check-card">
+      <h3>Python</h3>
+      <ul>
+        <li><span>Collections + mutability</span></li>
+        <li><span>Functions + scope</span></li>
+        <li><span>Comprehensions</span></li>
+        <li><span>Iterators / generators</span></li>
+        <li><span>Exceptions / context managers</span></li>
+        <li><span>OOP basics</span></li>
+        <li><span>Big-O of common operations</span></li>
+      </ul>
+    </div>
+    <div class="check-card">
+      <h3>SQL</h3>
+      <ul>
+        <li><span>WHERE / GROUP BY / HAVING</span></li>
+        <li><span>Joins + NULLs + anti-joins</span></li>
+        <li><span>CASE + conditional aggregation</span></li>
+        <li><span>CTEs / subqueries</span></li>
+        <li><span>Window functions (ROW_NUMBER, LAG, running SUM)</span></li>
+        <li><span>Top-N / running totals / duplicates</span></li>
+        <li><span>Indexes + ACID basics</span></li>
+      </ul>
+    </div>
+    <div class="check-card">
+      <h3>Cleaning + Preprocessing</h3>
+      <ul>
+        <li><span>Missing data + duplicates</span></li>
+        <li><span>Outliers</span></li>
+        <li><span>Scaling + encoding</span></li>
+        <li><span>Imbalance</span></li>
+        <li><span>Leakage</span></li>
+        <li><span>Pipelines</span></li>
+        <li><span>Train-only fit discipline</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Final review</span>
+    <span class="fnum">56</span>
+  </footer>
+</section>
+
+<!-- Final review 2 -->
+<section class="page" data-section="s0">
+  <header class="page-head"><span class="pill">Final review</span><span>Priority map</span></header>
+  <h1 class="page-title">Machine learning <span class="hl">priority.</span></h1>
+  <p class="page-lede">Master the 95 – 100 % topics first, then close the remaining gaps.</p>
+
+  <div style="display:flex;flex-direction:column;gap:4mm;margin-top:2mm;">
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Bias vs variance</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:100%"></span></span>
+      <span class="bar-val">100%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Linear + logistic regression</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:100%"></span></span>
+      <span class="bar-val">100%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Regression metrics (MAE / RMSE / R²)</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:100%"></span></span>
+      <span class="bar-val">100%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Classification metrics + confusion matrix</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:100%"></span></span>
+      <span class="bar-val">100%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Cross-validation</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:100%"></span></span>
+      <span class="bar-val">100%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Trees · random forest · boosting</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:95%"></span></span>
+      <span class="bar-val">95%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">L1 / L2 regularization</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:95%"></span></span>
+      <span class="bar-val">95%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">Thresholds + class imbalance</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:95%"></span></span>
+      <span class="bar-val">95%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">KNN</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:85%"></span></span>
+      <span class="bar-val">85%</span>
+    </div>
+    <div class="topic" style="min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:4mm;">
+      <span style="font-weight:600;font-size:11px;">K-means</span>
+      <span class="bar" style="max-width:60mm;"><span style="width:85%"></span></span>
+      <span class="bar-val">85%</span>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:6mm;">
+    <strong>Best test</strong>Explain the concept → state the formula/rule → give one use case → name one failure mode.
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Final review</span>
+    <span class="fnum">57</span>
+  </footer>
+</section>
+
+<!-- Rapid fire I (with answers) -->
+<section class="page" data-section="s0">
+  <header class="page-head"><span class="pill">Rapid fire</span><span>Self-test · 1 / 2</span></header>
+  <h1 class="page-title">Rapid-fire <span class="hl">self-test — I</span></h1>
+  <p class="page-lede">Aim for one clear answer in 20 – 40 seconds. Suggested one-liners on the right.</p>
+
+  <ol class="rapid">
+    <li>
+      <div class="q"><span class="q__num">01</span><span class="q__text">Mean vs median — which survives outliers better?</span></li>
+      <div class="a"><b>Median.</b> The mean is pulled by extreme values; the median depends only on order.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">02</span><span class="q__text">What changes in Bayes theorem after observing evidence?</span></li>
+      <div class="a">The <b>prior becomes the posterior</b>: P(A|B) = P(B|A)·P(A) / P(B).</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">03</span><span class="q__text">List vs tuple vs set vs dict — when do you choose each?</span></li>
+      <div class="a"><b>List</b> ordered + mutable; <b>tuple</b> ordered + immutable (safe keys, records); <b>set</b> unique membership; <b>dict</b> key → value lookup.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">04</span><span class="q__text">Why is set membership usually faster than list membership?</span></li>
+      <div class="a">Sets use a <b>hash table</b> — O(1) average lookup — while list membership is a linear scan (O(n)).</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">05</span><span class="q__text">WHERE vs HAVING?</span></li>
+      <div class="a"><b>WHERE</b> filters rows before aggregation; <b>HAVING</b> filters groups after aggregation.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">06</span><span class="q__text">ROW_NUMBER vs RANK vs DENSE_RANK?</span></li>
+      <div class="a">All rank rows in a partition. Ties: <b>ROW_NUMBER</b> unique, <b>RANK</b> gaps (1,2,2,4), <b>DENSE_RANK</b> no gaps (1,2,2,3).</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">07</span><span class="q__text">Why can a LEFT JOIN create duplicate-looking rows?</span></li>
+      <div class="a">When the right table has <b>multiple matches per key</b>, each left row is repeated once per match.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">08</span><span class="q__text">Why must scalers and imputers be fit on training data only?</span></li>
+      <div class="a">Fitting on test/val leaks <b>future information</b> into training, inflating scores.</div>
+    </li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Rapid fire</span>
+    <span class="fnum">58</span>
+  </footer>
+</section>
+
+<!-- Rapid fire II (with answers) -->
+<section class="page" data-section="s0">
+  <header class="page-head"><span class="pill">Rapid fire</span><span>Self-test · 2 / 2</span></header>
+  <h1 class="page-title">Rapid-fire <span class="hl">self-test — II</span></h1>
+  <p class="page-lede">Target: one clear answer per question in 20 – 40 seconds, with no unnecessary jargon.</p>
+
+  <ol class="rapid" start="9">
+    <li>
+      <div class="q"><span class="q__num">09</span><span class="q__text">Standardization vs min-max scaling?</span></li>
+      <div class="a"><b>Standardize</b> to μ=0, σ=1 (assumes roughly normal, no fixed range). <b>Min-max</b> to [0,1] (sensitive to outliers, keeps distribution shape).</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">10</span><span class="q__text">What is leakage?</span></li>
+      <div class="a">Any information from <b>outside the training slice</b> — future data, target-derived features, test-fit scalers — sneaking into training.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">11</span><span class="q__text">Bias vs variance?</span></li>
+      <div class="a"><b>Bias</b> = error from oversimplifying; <b>variance</b> = error from being too sensitive to training data.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">12</span><span class="q__text">MAE vs RMSE?</span></li>
+      <div class="a">Both measure error in target units. <b>RMSE</b> penalizes large errors more; <b>MAE</b> is more robust to outliers.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">13</span><span class="q__text">Precision vs recall?</span></li>
+      <div class="a"><b>Precision</b> = of predicted positives, how many are right. <b>Recall</b> = of actual positives, how many did we catch.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">14</span><span class="q__text">What does cross-validation estimate?</span></li>
+      <div class="a">The model's <b>generalization</b> performance on unseen data, more stably than a single held-out split.</div>
+    </li>
+    <li>
+      <div class="q"><span class="q__num">15</span><span class="q__text">L1 vs L2 regularization?</span></li>
+      <div class="a"><b>L1</b> (lasso) can zero coefficients — implicit feature selection. <b>L2</b> (ridge) shrinks coefficients smoothly.</div>
+    </li>
+  </ol>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Rapid fire</span>
+    <span class="fnum">59</span>
+  </footer>
+</section>
+
+<!-- Career outcomes -->
+<section class="page" data-section="s0">
+  <header class="page-head"><span class="pill">Career outcomes</span><span>What can you apply for?</span></header>
+  <h1 class="page-title">Jobs you can target <span class="hl">after this.</span></h1>
+  <p class="page-lede">Percentages show how closely each role matches the skills covered in this guide — a learning-fit indicator, not a job guarantee.</p>
+
+  <div class="career">
+    <div class="row">
+      <div class="role">Junior Data Analyst<small>Best starting match</small></div>
+      <div class="desc">Strong fit for SQL, Python basics, statistics, cleaning, preprocessing, and interview fundamentals. Add a BI tool + one dashboard project.</div>
+      <div class="pct">92%</div>
+      <span class="bar bar-inline"><span style="width:92%"></span></span>
+    </div>
+    <div class="row">
+      <div class="role">Data Analyst<small>Entry-level</small></div>
+      <div class="desc">Realistic once you can analyse a dataset end-to-end and explain findings clearly.</div>
+      <div class="pct">88%</div>
+      <span class="bar bar-inline"><span style="width:88%"></span></span>
+    </div>
+    <div class="row">
+      <div class="role">Analytics Associate<small>Business + data</small></div>
+      <div class="desc">Good match for reporting, SQL analysis, data quality checks, basic statistics, and stakeholder questions.</div>
+      <div class="pct">86%</div>
+      <span class="bar bar-inline"><span style="width:86%"></span></span>
+    </div>
+    <div class="row">
+      <div class="role">BI / Reporting Analyst<small>Add a BI tool</small></div>
+      <div class="desc">Your SQL and data-cleaning base transfers well; add Power BI or Tableau plus dashboard projects.</div>
+      <div class="pct">80%</div>
+      <span class="bar bar-inline"><span style="width:80%"></span></span>
+    </div>
+    <div class="row">
+      <div class="role">Data Science Intern<small>Project-ready path</small></div>
+      <div class="desc">A good next step if you add 2 – 3 portfolio projects showing EDA, preprocessing, modeling, and evaluation.</div>
+      <div class="pct">78%</div>
+      <span class="bar bar-inline"><span style="width:78%"></span></span>
+    </div>
+    <div class="row">
+      <div class="role">Junior Data Scientist<small>Needs deeper ML</small></div>
+      <div class="desc">Possible after strengthening feature engineering, model tuning, experimentation, deployment basics, and projects.</div>
+      <div class="pct">70%</div>
+      <span class="bar bar-inline"><span style="width:70%"></span></span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Next move</strong>Build one SQL analysis project, one dashboard project, and one end-to-end machine-learning project — then practise explaining each project in interview language.
+  </div>
+
+  <footer class="page-foot">
+    <span class="brand">@data.science.beginners</span>
+    <span class="fsect">Career</span>
+    <span class="fnum">60</span>
+  </footer>
+</section>
+
+<!-- Back cover -->
+<section class="page" data-section="s0">
+  <div class="cover">
+    <div class="cover__top">
+      <span>Data science · interview prep</span>
+      <span>Ebook 02</span>
+    </div>
+
+    <div style="margin-top:auto;">
+      <h1 class="cover__title">LEARN IT.<br/><span class="hl">EXPLAIN IT.</span></h1>
+      <p class="cover__sub">Interview preparation becomes easier when you stop collecting endless notes and focus on what you must be able to explain under pressure.</p>
+      <p class="cover__sub"><em>Use this guide as a revision checklist: topic → formula / rule → spoken answer.</em></p>
+    </div>
+
+    <div class="cover__foot">
+      <div>
+        <div style="color:var(--ink);font-weight:700;font-size:12px;letter-spacing:0.06em;">@data.science.beginners</div>
+        <div style="margin-top:2mm;">Ebook 02 · Revised</div>
+      </div>
+      <div class="r">
+        <div>Statistics · Python · SQL</div>
+        <div style="margin-top:2mm;">Cleaning · Machine Learning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
