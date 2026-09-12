@@ -6,9 +6,13 @@
   "scripts": {
     "start": "npx --yes serve .",
     "build:pdf": "node build/build-pdf.mjs",
+    "build:playbook-pdf": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome node build/build-playbook-pdf.mjs",
     "preview": "npx --yes serve ."
   },
   "author": "@data.science.beginners",
   "license": "UNLICENSED",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
 }

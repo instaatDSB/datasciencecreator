@@ -1,0 +1,479 @@
+/* ============================================================
+   THE AI CODING AGENT PLAYBOOK — brand overlay
+   Inherits tokens from ../../assets/css/main.css and print.css
+   ============================================================ */
+
+/* ---------- Playbook accent (its own hue) ---------- */
+:root {
+  --pb-accent-a: #4CE0D6;     /* teal */
+  --pb-accent-b: #7A5CFF;     /* violet */
+  --pb-accent-c: #F5C453;     /* amber for warnings */
+  --pb-accent-d: #6EE7A2;     /* green for key ideas */
+  --pb-accent-e: #F58BB6;     /* magenta for callouts */
+}
+
+/* Playbook uses the section-0 accent as its default */
+.page[data-section="pb"] { --accent: var(--pb-accent-a); }
+
+/* ============================================================
+   COVER
+   ============================================================ */
+.pb-cover {
+  height: 100%;
+  min-height: 210mm;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 14mm 12mm 12mm;
+  background:
+    radial-gradient(700px 480px at 78% 8%, rgba(76, 224, 214, 0.28), transparent 60%),
+    radial-gradient(900px 620px at -8% 100%, rgba(122, 92, 255, 0.30), transparent 60%),
+    linear-gradient(180deg, #0B1638 0%, #060B1C 100%);
+}
+.pb-cover__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.pb-cover__top .pill {
+  border-color: rgba(76, 224, 214, 0.4);
+  color: var(--pb-accent-a);
+}
+.pb-cover__mark {
+  align-self: center;
+  justify-self: start;
+  margin: 12mm 0 8mm;
+}
+.pb-cover__body { align-self: end; }
+.pb-cover__eyebrow {
+  color: var(--pb-accent-a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin: 0 0 6mm;
+}
+.pb-cover__title {
+  font-size: 38px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 6mm;
+  background: linear-gradient(120deg, #F0F4FF 0%, #4CE0D6 55%, #7A5CFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.pb-cover__sub {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.42;
+  max-width: 115mm;
+  margin: 0 0 8mm;
+}
+.pb-cover__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8mm;
+}
+.pb-cover__chips .chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 9px;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.pb-cover__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 10px;
+  color: var(--ink-mute);
+  letter-spacing: 0.14em;
+  padding-top: 6mm;
+  border-top: 1px solid var(--line);
+}
+.pb-cover__foot .publisher {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  font-size: 11px;
+}
+
+/* ============================================================
+   TABLE OF CONTENTS
+   ============================================================ */
+.pb-toc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm 8mm;
+  margin-top: 2mm;
+}
+.pb-toc__item {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: baseline;
+  gap: 6px;
+  padding-bottom: 3mm;
+  border-bottom: 1px dashed var(--line);
+  font-size: 10px;
+  color: var(--ink);
+}
+.pb-toc__item .num {
+  font-weight: 700;
+  color: var(--pb-accent-a);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  font-size: 9.5px;
+}
+.pb-toc__item .title { color: var(--ink); font-weight: 500; }
+.pb-toc__item .pg { color: var(--ink-mute); font-variant-numeric: tabular-nums; }
+.pb-toc__section {
+  grid-column: 1 / -1;
+  margin: 3mm 0 1mm;
+  font-size: 8.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--pb-accent-b);
+  font-weight: 700;
+}
+
+/* ============================================================
+   CHAPTER OPENERS
+   Each PAGE from the manuscript is a "chapter."
+   ============================================================ */
+.pb-chapter { }
+
+.pb-chapter__opener {
+  padding: 20mm 0 10mm;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8mm;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.pb-chapter__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--pb-accent-a);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 4mm;
+}
+.pb-chapter__eyebrow .num {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  background: linear-gradient(120deg, var(--pb-accent-a), var(--pb-accent-b));
+  color: #060B1C;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.10em;
+}
+.pb-chapter__title {
+  font-size: 26px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Chapter body typography */
+.pb-body {
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.pb-body p { margin: 0 0 3.4mm; }
+.pb-body p:last-child { margin-bottom: 0; }
+.pb-body strong { color: var(--ink); font-weight: 700; }
+.pb-body em { color: var(--ink-soft); font-style: italic; }
+.pb-body code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: rgba(20, 34, 78, 0.55);
+  border: 1px solid var(--line);
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: var(--code-ink);
+}
+.pb-body a { color: var(--pb-accent-a); text-decoration: none; }
+.pb-body h2, .pb-body h3 {
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 5mm 0 2mm;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.pb-body ul, .pb-body ol {
+  margin: 0 0 3.4mm;
+  padding-left: 6mm;
+}
+.pb-body li { margin-bottom: 1.4mm; }
+.pb-body li::marker { color: var(--pb-accent-a); }
+.pb-body hr {
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 6mm 0;
+}
+
+/* Tables (used on Page 5) */
+.pb-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  margin: 3mm 0 4mm;
+  background: rgba(10, 20, 55, 0.35);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pb-body thead th {
+  background: linear-gradient(120deg, rgba(76, 224, 214, 0.16), rgba(122, 92, 255, 0.16));
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 9pt;
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line-strong);
+  letter-spacing: 0.02em;
+}
+.pb-body tbody td {
+  padding: 6px 8px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+.pb-body tbody tr:first-child td { border-top: none; }
+.pb-body tbody td:first-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ============================================================
+   CALLOUTS
+   Blockquotes starting with **CALLOUT NAME** get typed styling.
+   ============================================================ */
+.pb-callout {
+  border-left: 3px solid var(--pb-accent-a);
+  background: linear-gradient(120deg, rgba(76, 224, 214, 0.08), rgba(122, 92, 255, 0.06));
+  border-radius: 4px 8px 8px 4px;
+  padding: 4mm 5mm 4mm 6mm;
+  margin: 4mm 0;
+  font-size: 10pt;
+  color: var(--ink);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pb-callout__label {
+  display: inline-block;
+  font-size: 8.5px;
+  letter-spacing: 0.24em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--pb-accent-a);
+  margin-bottom: 2mm;
+}
+.pb-callout p { margin: 0 0 2.5mm; }
+.pb-callout p:last-child { margin-bottom: 0; }
+.pb-callout ul, .pb-callout ol { margin-bottom: 0; }
+
+.pb-callout--key       { border-color: var(--pb-accent-d); background: linear-gradient(120deg, rgba(110, 231, 162, 0.10), rgba(76, 224, 214, 0.06)); }
+.pb-callout--key .pb-callout__label { color: var(--pb-accent-d); }
+
+.pb-callout--watch     { border-color: var(--pb-accent-c); background: linear-gradient(120deg, rgba(245, 196, 83, 0.10), rgba(245, 139, 182, 0.06)); }
+.pb-callout--watch .pb-callout__label { color: var(--pb-accent-c); }
+
+.pb-callout--try       { border-color: var(--pb-accent-b); background: linear-gradient(120deg, rgba(122, 92, 255, 0.10), rgba(76, 224, 214, 0.06)); }
+.pb-callout--try .pb-callout__label { color: var(--pb-accent-b); }
+
+.pb-callout--example   { border-color: var(--pb-accent-a); background: linear-gradient(120deg, rgba(76, 224, 214, 0.10), rgba(76, 224, 214, 0.04)); }
+.pb-callout--example .pb-callout__label { color: var(--pb-accent-a); }
+
+.pb-callout--remember  { border-color: var(--pb-accent-e); background: linear-gradient(120deg, rgba(245, 139, 182, 0.10), rgba(122, 92, 255, 0.06)); }
+.pb-callout--remember .pb-callout__label { color: var(--pb-accent-e); }
+
+.pb-callout--beginner  { border-color: #7DA7FF; background: linear-gradient(120deg, rgba(125, 167, 255, 0.10), rgba(76, 224, 214, 0.06)); }
+.pb-callout--beginner .pb-callout__label { color: #7DA7FF; }
+
+/* generic blockquote (no label) */
+.pb-body blockquote:not(.pb-callout) {
+  border-left: 3px solid var(--line-strong);
+  background: rgba(20, 34, 78, 0.30);
+  border-radius: 4px 8px 8px 4px;
+  padding: 3mm 5mm;
+  margin: 3mm 0;
+  color: var(--ink-soft);
+  font-style: italic;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pb-body blockquote:not(.pb-callout) p { margin: 0 0 2mm; }
+.pb-body blockquote:not(.pb-callout) p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   FRAMEWORK DIAGRAM (used on cover and reference card)
+   ============================================================ */
+.pb-framework {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3mm;
+  margin: 4mm 0;
+}
+.pb-framework__stage {
+  padding: 3mm 4mm;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(10, 20, 55, 0.55);
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 3mm;
+  align-items: baseline;
+}
+.pb-framework__stage .n {
+  font-weight: 800;
+  color: var(--pb-accent-a);
+  font-variant-numeric: tabular-nums;
+}
+.pb-framework__stage .name {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+}
+.pb-framework__stage .why {
+  grid-column: 2;
+  color: var(--ink-mute);
+  font-size: 9pt;
+  margin-top: 1mm;
+}
+
+/* ============================================================
+   GLOSSARY
+   ============================================================ */
+.pb-glossary {
+  columns: 2;
+  column-gap: 8mm;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.pb-glossary p { break-inside: avoid; page-break-inside: avoid; margin: 0 0 2.5mm; }
+.pb-glossary strong { color: var(--ink); font-weight: 700; }
+
+/* ============================================================
+   REFERENCE CARD
+   ============================================================ */
+.pb-ref { display: grid; gap: 5mm; }
+.pb-ref__block {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4mm 5mm;
+  background: rgba(10, 20, 55, 0.45);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pb-ref__block h3 {
+  margin: 0 0 3mm;
+  font-size: 10pt;
+  font-weight: 800;
+  color: var(--pb-accent-a);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.pb-ref__block p, .pb-ref__block ol, .pb-ref__block ul {
+  margin: 0 0 2mm;
+  font-size: 9.5pt;
+  color: var(--ink);
+}
+.pb-ref__block ol, .pb-ref__block ul { padding-left: 5mm; }
+.pb-ref__block li { margin-bottom: 1mm; color: var(--ink-soft); }
+
+/* ============================================================
+   FOOTER (page number + running head)
+   ============================================================ */
+.pb-foot {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  bottom: 6mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.pb-foot .r { color: var(--pb-accent-a); font-weight: 700; }
+
+/* ============================================================
+   CHAPTER DIVIDER PAGES (part openers)
+   ============================================================ */
+.pb-part {
+  height: 100%;
+  min-height: 210mm;
+  display: grid;
+  place-items: center;
+  padding: 12mm;
+  text-align: center;
+  background:
+    radial-gradient(600px 500px at 50% 40%, rgba(76, 224, 214, 0.16), transparent 60%),
+    linear-gradient(180deg, #0B1638 0%, #060B1C 100%);
+}
+.pb-part__eyebrow {
+  color: var(--pb-accent-a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 6mm;
+}
+.pb-part__title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin: 0 0 4mm;
+  color: var(--ink);
+  max-width: 110mm;
+  line-height: 1.1;
+}
+.pb-part__sub {
+  color: var(--ink-soft);
+  font-size: 11pt;
+  max-width: 110mm;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+@media print {
+  .pb-chapter__opener {
+    /* keep opener + first paragraph together where possible */
+    orphans: 3;
+    widows: 3;
+  }
+  .pb-callout, .pb-ref__block, .pb-framework__stage,
+  .pb-toc__item, .pb-body table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Each new chapter starts a fresh physical page */
+  .page.pb-chapter { page-break-before: always; break-before: page; }
+  .page.pb-cover, .page.pb-toc-page, .page.pb-part, .page.pb-glossary-page, .page.pb-ref-page {
+    page-break-before: always;
+    break-before: page;
+  }
+  .page:first-child { page-break-before: auto; break-before: auto; }
+}

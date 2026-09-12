@@ -1,0 +1,1239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The AI Coding Agent Playbook — @data.science.beginners · Ebook 01</title>
+<meta name="description" content="A beginner-friendly guide to working with AI coding agents — from your first instruction to a reliable development workflow." />
+<meta name="author" content="@data.science.beginners" />
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="../../assets/css/print.css" media="all" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="screen">
+<p class="screen-hint screen-only">Preview · Print (⌘/Ctrl-P) for a clean A5 PDF · or run <code>npm run build:playbook-pdf</code></p>
+
+
+<section class="page pb-cover" data-section="pb" id="cover">
+  <div class="pb-cover__top">
+    <span class="pill">Ebook · 01</span>
+    <span>@data.science.beginners</span>
+  </div>
+
+  <div class="pb-cover__mark" aria-hidden="true">
+    <svg viewBox="0 0 220 120" width="220" height="120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="pbgrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#4CE0D6"/>
+          <stop offset="1" stop-color="#7A5CFF"/>
+        </linearGradient>
+      </defs>
+      <!-- 8-stage ring dots -->
+      <g>
+        <circle cx="30"  cy="60" r="7" fill="url(#pbgrad)"/>
+        <circle cx="55"  cy="30" r="6" fill="url(#pbgrad)" opacity="0.9"/>
+        <circle cx="90"  cy="20" r="6" fill="url(#pbgrad)" opacity="0.85"/>
+        <circle cx="125" cy="30" r="6" fill="url(#pbgrad)" opacity="0.8"/>
+        <circle cx="150" cy="60" r="6" fill="url(#pbgrad)" opacity="0.75"/>
+        <circle cx="125" cy="90" r="6" fill="url(#pbgrad)" opacity="0.7"/>
+        <circle cx="90"  cy="100" r="6" fill="url(#pbgrad)" opacity="0.65"/>
+        <circle cx="55"  cy="90" r="6" fill="url(#pbgrad)" opacity="0.6"/>
+      </g>
+      <path d="M30 60 L55 30 L90 20 L125 30 L150 60 L125 90 L90 100 L55 90 Z"
+            stroke="#4CE0D6" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+      <!-- central icon -->
+      <g transform="translate(180,40)">
+        <rect x="0" y="0" width="24" height="30" rx="3"
+              fill="none" stroke="#F0F4FF" stroke-opacity="0.9" stroke-width="1.5"/>
+        <line x1="4" y1="8"  x2="14" y2="8"  stroke="#4CE0D6" stroke-width="1.5"/>
+        <line x1="4" y1="14" x2="20" y2="14" stroke="#F0F4FF" stroke-opacity="0.6" stroke-width="1.5"/>
+        <line x1="4" y1="20" x2="18" y2="20" stroke="#F0F4FF" stroke-opacity="0.6" stroke-width="1.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="pb-cover__body">
+    <p class="pb-cover__eyebrow">The playbook</p>
+    <h1 class="pb-cover__title">The AI Coding<br/>Agent Playbook.</h1>
+    <p class="pb-cover__sub">A beginner-friendly guide to working with AI coding agents — from your first instruction to a reliable development workflow.</p>
+    <div class="pb-cover__chips">
+      <span class="chip">Prompt ≠ workflow</span>
+      <span class="chip">Eight stages</span>
+      <span class="chip">One running example</span>
+      <span class="chip">Glossary + reference card</span>
+    </div>
+    <div class="pb-cover__foot">
+      <div>
+        <div class="publisher">@data.science.beginners</div>
+        <div style="margin-top:2mm;">Ebook 01 · First edition</div>
+      </div>
+      <div style="text-align:right;">
+        <div>32 pages · A5</div>
+        <div style="margin-top:2mm;">For students, career switchers, junior devs</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page pb-toc-page" data-section="pb" id="toc">
+  <header class="page-head"><span class="pill">Contents</span><span>@data.science.beginners</span></header>
+  <h1 class="page-title">Contents.</h1>
+  <p class="page-lede">Thirty-two short chapters, one running example, and a workflow you can start using on your next task.</p>
+  <div class="pb-toc">
+    <div class="pb-toc__section">The problem</div>
+    <div class="pb-toc__item"><span class="num">02</span><span class="title">WHY DOES AI STILL BREAK THINGS?</span><span class="pg">Ch. 1</span></div>
+    <div class="pb-toc__item"><span class="num">03</span><span class="title">WHY THIS BOOK EXISTS</span><span class="pg">Ch. 2</span></div>
+    <div class="pb-toc__section">Foundations</div>
+    <div class="pb-toc__item"><span class="num">04</span><span class="title">WHAT IS AN AI CODING AGENT?</span><span class="pg">Ch. 3</span></div>
+    <div class="pb-toc__item"><span class="num">05</span><span class="title">CHATBOT VS CODING AGENT</span><span class="pg">Ch. 4</span></div>
+    <div class="pb-toc__item"><span class="num">06</span><span class="title">THE BIG SHIFT</span><span class="pg">Ch. 5</span></div>
+    <div class="pb-toc__section">The framework</div>
+    <div class="pb-toc__item"><span class="num">07</span><span class="title">THE AI CODING AGENT WORKFLOW</span><span class="pg">Ch. 6</span></div>
+    <div class="pb-toc__section">Define</div>
+    <div class="pb-toc__item"><span class="num">08</span><span class="title">DEFINE THE JOB</span><span class="pg">Ch. 7</span></div>
+    <div class="pb-toc__item"><span class="num">09</span><span class="title">DEFINE WHAT &quot;DONE&quot; MEANS</span><span class="pg">Ch. 8</span></div>
+    <div class="pb-toc__item"><span class="num">10</span><span class="title">SCOPE AND CONSTRAINTS</span><span class="pg">Ch. 9</span></div>
+    <div class="pb-toc__section">Context</div>
+    <div class="pb-toc__item"><span class="num">11</span><span class="title">CONTEXT: AI NEEDS A MAP</span><span class="pg">Ch. 10</span></div>
+    <div class="pb-toc__item"><span class="num">12</span><span class="title">PROJECT MEMORY</span><span class="pg">Ch. 11</span></div>
+    <div class="pb-toc__item"><span class="num">13</span><span class="title">WHAT SHOULD YOU DOCUMENT?</span><span class="pg">Ch. 12</span></div>
+    <div class="pb-toc__section">Investigate</div>
+    <div class="pb-toc__item"><span class="num">14</span><span class="title">INVESTIGATE BEFORE EDITING</span><span class="pg">Ch. 13</span></div>
+    <div class="pb-toc__item"><span class="num">15</span><span class="title">FIND THE RIGHT PLACE</span><span class="pg">Ch. 14</span></div>
+    <div class="pb-toc__section">Execute</div>
+    <div class="pb-toc__item"><span class="num">16</span><span class="title">MAKE THE SMALLEST SAFE CHANGE</span><span class="pg">Ch. 15</span></div>
+    <div class="pb-toc__item"><span class="num">17</span><span class="title">EXECUTE IN SMALL STEPS</span><span class="pg">Ch. 16</span></div>
+    <div class="pb-toc__section">Boundaries</div>
+    <div class="pb-toc__item"><span class="num">18</span><span class="title">UNDERSTAND THE BLAST RADIUS</span><span class="pg">Ch. 17</span></div>
+    <div class="pb-toc__item"><span class="num">19</span><span class="title">SET EXPLICIT BOUNDARIES</span><span class="pg">Ch. 18</span></div>
+    <div class="pb-toc__section">Verify</div>
+    <div class="pb-toc__item"><span class="num">20</span><span class="title">CODE THAT LOOKS RIGHT CAN STILL BE WRONG</span><span class="pg">Ch. 19</span></div>
+    <div class="pb-toc__item"><span class="num">21</span><span class="title">THE FEEDBACK LOOP</span><span class="pg">Ch. 20</span></div>
+    <div class="pb-toc__item"><span class="num">22</span><span class="title">WAYS TO CHECK THE WORK</span><span class="pg">Ch. 21</span></div>
+    <div class="pb-toc__item"><span class="num">23</span><span class="title">TESTS AS THE REFEREE</span><span class="pg">Ch. 22</span></div>
+    <div class="pb-toc__section">Review</div>
+    <div class="pb-toc__item"><span class="num">24</span><span class="title">REVIEW THE DIFF</span><span class="pg">Ch. 23</span></div>
+    <div class="pb-toc__item"><span class="num">25</span><span class="title">THE HUMAN CHECKPOINT</span><span class="pg">Ch. 24</span></div>
+    <div class="pb-toc__section">Learn</div>
+    <div class="pb-toc__item"><span class="num">26</span><span class="title">TURN MISTAKES INTO RULES</span><span class="pg">Ch. 25</span></div>
+    <div class="pb-toc__item"><span class="num">27</span><span class="title">MAKE THE PROJECT BETTER AT WORKING WITH AI</span><span class="pg">Ch. 26</span></div>
+    <div class="pb-toc__section">The whole system</div>
+    <div class="pb-toc__item"><span class="num">28</span><span class="title">THE COMPLETE AI CODING AGENT OPERATING SYSTEM</span><span class="pg">Ch. 27</span></div>
+    <div class="pb-toc__item"><span class="num">29</span><span class="title">REAL-WORLD WALKTHROUGH</span><span class="pg">Ch. 28</span></div>
+    <div class="pb-toc__section">Practice</div>
+    <div class="pb-toc__item"><span class="num">30</span><span class="title">REUSABLE AI CODING TASK TEMPLATE</span><span class="pg">Ch. 29</span></div>
+    <div class="pb-toc__item"><span class="num">31</span><span class="title">THE TWO FINAL CHECKLISTS</span><span class="pg">Ch. 30</span></div>
+    <div class="pb-toc__section">Close</div>
+    <div class="pb-toc__item"><span class="num">32</span><span class="title">THE FINAL PRINCIPLE</span><span class="pg">Ch. 31</span></div>
+    <div class="pb-toc__section">Reference</div>
+    <div class="pb-toc__item"><span class="num">G</span><span class="title">Glossary</span><span class="pg">—</span></div>
+    <div class="pb-toc__item"><span class="num">R</span><span class="title">Final reference card</span><span class="pg">—</span></div>
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Contents</span></footer>
+</section>
+<section class="page pb-part" data-section="pb">
+  <div>
+    <p class="pb-part__eyebrow">Part one</p>
+    <h1 class="pb-part__title">The workflow.</h1>
+    <p class="pb-part__sub">The problem with prompts alone, the foundations of working with agents, and the eight-stage system this book teaches.</p>
+  </div>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-02">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">02</span> <span>The problem</span></div>
+    <h1 class="pb-chapter__title">WHY DOES AI STILL BREAK THINGS?</h1>
+  </header>
+  <div class="pb-body">
+    <p>Why can an AI coding agent write four hundred lines of code in ninety seconds — and still leave your project in worse shape than before you asked?</p>
+<p>If you have spent any time with a modern AI coding tool, you have felt this moment. You typed a short request. The agent worked confidently. Files appeared. Code scrolled past. Something got installed. A message told you the task was complete.</p>
+<p>Then you opened the app, and nothing worked.</p>
+<p>Or worse: something that used to work now doesn't, and you can't tell what changed.</p>
+<p>This is the strange paradox of the current moment. The tools are extraordinary. The results are unreliable. And most people quietly assume the problem is them — that they picked the wrong prompt, the wrong model, or the wrong tool.</p>
+<p>It usually isn't any of those things.</p>
+<p>The problem is almost never the prompt. The problem is almost always the environment the prompt was sent into: no clear task, no context, no boundaries, no way to verify the result, and no way to learn from what went wrong.</p>
+<p>This book is about fixing that environment. Not with tricks. With a workflow.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">The problem</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-03">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">03</span> <span>The problem</span></div>
+    <h1 class="pb-chapter__title">WHY THIS BOOK EXISTS</h1>
+  </header>
+  <div class="pb-body">
+    <p>There are already thousands of articles about "the perfect prompt." There are prompt libraries, cheat sheets, and viral threads promising ten commands that will change your life.</p>
+<p>They rarely change anything, because they treat the wrong layer of the problem.</p>
+<p><strong>AI coding agents are genuinely powerful.</strong> They can read a codebase, edit multiple files, run tests, install packages, follow instructions across several steps, and correct their own mistakes when guided well. Used carefully, a single person can now do work that used to require a small team.</p>
+<p><strong>And yet beginners still struggle.</strong> Not because the tools are bad, and not because beginners aren't smart. They struggle because nobody taught them the part that isn't the prompt.</p>
+<p>Consider a familiar scene. You are building your first small project — let's call it a Student Job Tracker, an app to save companies you're applying to, track interview stages, and remember which follow-up email you owe on Thursday. You ask an AI agent to "add a way to mark an application as rejected." Ten minutes later, the agent has touched six files, renamed a column in your data, added a new button that doesn't appear anywhere, and broken the page that used to list your applications.</p>
+<p>You did not write a bad prompt. You wrote a normal one. What was missing was everything around it: a clear definition of the task, the context the agent needed, the boundaries of what it should and shouldn't touch, and a way to check the result before it became a mess.</p>
+<p>That surrounding structure is a workflow. This book teaches you one.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>You don't get better results from AI coding agents by asking better questions. You get better results by giving the agent a better working environment.</p>
+</blockquote>
+<p>If that idea sounds obvious, good. Most true things do, in hindsight. The rest of this book is about what "a better working environment" actually looks like, one concrete habit at a time.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">The problem</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-04">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">04</span> <span>Foundations</span></div>
+    <h1 class="pb-chapter__title">WHAT IS AN AI CODING AGENT?</h1>
+  </header>
+  <div class="pb-body">
+    <p>Before going further, it helps to be precise about what an AI coding agent actually is — because the term gets used loosely, and the differences matter.</p>
+<p>Three things often get grouped together. They are not the same.</p>
+<p><strong>A chatbot</strong> answers questions. You type; it replies. It lives inside a conversation window. It cannot open your files, run anything on your computer, or check whether its answer was correct. If you ask it how to fix a bug, it will describe a fix. Applying that fix is entirely your job.</p>
+<p><em>Think of it as a knowledgeable friend on the phone. Helpful, but not in the room with you.</em></p>
+<p><strong>A coding assistant</strong> helps you write code while you write it. It suggests the next line, completes a function, or rewrites a small block you've highlighted. It sees the file you're in, and often a little more. You are still the driver — it is sitting in the passenger seat, pointing at the road.</p>
+<p><em>Think of it as an autocomplete that studied computer science.</em></p>
+<p><strong>A coding agent</strong> is a different kind of thing. It can read across a whole project, decide which files to open, edit several of them, run commands in a terminal, execute tests, read the results, notice a failure, and try again. You give it a goal; it takes actions to reach that goal. Between your instruction and the finished result, it may make dozens of small decisions on its own.</p>
+<p><em>Think of it as a junior developer you just hired, working on your machine, who has never met you or your project before, and who will do exactly what you tell them — including the things you didn't realize you were telling them.</em></p>
+<p>That last analogy is the one to hold on to. It explains almost every surprising thing an agent does.</p>
+<p>The specific tool you use — Claude Code, Codex, Cursor, GitHub Copilot's agent mode, Gemini CLI, or something newer by the time you read this — matters less than understanding which of these three you are actually working with in any given moment. The techniques in this book apply across all of them, because they are about you, not the tool.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Foundations</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-05">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">05</span> <span>Foundations</span></div>
+    <h1 class="pb-chapter__title">CHATBOT VS CODING AGENT</h1>
+  </header>
+  <div class="pb-body">
+    <p>The move from chatbot to agent is not a small upgrade. It is a change in kind. Comparing them side by side makes the shift, and its consequences, easy to see.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Chatbot</strong></th>
+<th><strong>Coding Assistant</strong></th>
+<th><strong>Coding Agent</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it produces</td>
+<td>Words</td>
+<td>Code suggestions inside a file</td>
+<td>Actual changes to your project</td>
+</tr>
+<tr>
+<td>What it can see</td>
+<td>Your message</td>
+<td>The current file, sometimes a few nearby</td>
+<td>As much of your codebase as you allow, and as its context window permits</td>
+</tr>
+<tr>
+<td>What it can do alone</td>
+<td>Nothing</td>
+<td>Insert or replace code you accept</td>
+<td>Read files, edit files, run commands, run tests, install packages, iterate</td>
+</tr>
+<tr>
+<td>Where the risk lives</td>
+<td>In whether you believe the answer</td>
+<td>In whether you accept the suggestion</td>
+<td>In everything it does between your instruction and "done"</td>
+</tr>
+<tr>
+<td>Your role</td>
+<td>Ask and evaluate</td>
+<td>Write with help</td>
+<td>Direct, constrain, and verify</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the last row changes. With a chatbot, your job is to think. With an assistant, your job is to write, with a smarter keyboard. With an agent, your job becomes something new: you are the person deciding what the agent should attempt, what it is allowed to touch, and whether the result is actually good.</p>
+<p>That role has a name in every other field that uses it. A director on a film set does not operate the camera. A head chef does not plate every dish. What they do is set the intent, provide the context, mark the boundaries, and check the work. When any of those four things is missing, the output suffers — no matter how talented the crew.</p>
+<p>Working with an AI coding agent is the same craft. And this is where the Student Job Tracker will keep returning throughout the book. Every technique — how to define a task, how to hand over context, how to keep the agent from wandering, how to verify what it built — will be shown against that one small, familiar project, so the ideas stay concrete instead of abstract.</p>
+<blockquote class="pb-callout pb-callout--remember"><span class="pb-callout__label">REMEMBER</span><p>The more an AI system can do on its own, the more your workflow matters. A chatbot forgives a vague question. An agent does not — it acts on it.</p>
+</blockquote>
+<p>That is why this book exists, and why the next pages start not with prompts, but with the first real habit of working with agents: learning to <em>define</em> the task before a single instruction is sent.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Foundations</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-06">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">06</span> <span>Foundations</span></div>
+    <h1 class="pb-chapter__title">THE BIG SHIFT</h1>
+  </header>
+  <div class="pb-body">
+    <p>Somewhere between your first week and your third with an AI coding agent, a quiet shift has to happen. Most people never make it, and that is the difference between the users who eventually ship real projects and the ones who quietly go back to copy-pasting snippets from a chatbot.</p>
+<p>The shift is this.</p>
+<p><strong>Old thinking:</strong> <em>Tell the AI what code to write.</em>
+<strong>New thinking:</strong> <em>Give the AI a well-defined job inside a controlled environment.</em></p>
+<p>The old thinking treats the agent like a very fast typist. You describe the code you want; it produces it. If the result is wrong, you assume you described it badly, so you describe it again — longer, with more adjectives, maybe with an example. This is the "better prompt" trap. It can improve a small answer from a chatbot. It cannot save you from an agent that has quietly rewritten three files you didn't want touched.</p>
+<p>The new thinking treats the agent like a capable stranger you just hired for the afternoon.</p>
+<p>Imagine you hire a contractor to fix a leaking pipe under your kitchen sink. You do not hand them a hammer and say, "improve the kitchen." You show them the sink. You point at the leak. You tell them not to touch the dishwasher. You mention that the cabinet door is loose so they don't force it. You agree on what "done" looks like: no water on the floor, hot and cold both work, everything closes properly. Then you let them work.</p>
+<p>The contractor is skilled. But the reason the job goes well is not their skill — it is the <em>frame</em> you built around the job before they picked up a wrench.</p>
+<p>An AI coding agent needs the same frame. A defined job. A visible workspace. Known boundaries. A clear picture of success. Without these, even a highly capable agent will do highly capable damage, quickly, and with confidence.</p>
+<p>This is the shift the rest of the book is built on. Everything from here forward is about how to build that frame, one piece at a time.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Foundations</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-07">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">07</span> <span>The framework</span></div>
+    <h1 class="pb-chapter__title">THE AI CODING AGENT WORKFLOW</h1>
+  </header>
+  <div class="pb-body">
+    <p>There are eight stages in a healthy workflow with an AI coding agent. You will not always do all of them in a strict order. But once you can name them, you can notice which one is missing when something goes wrong — and something going wrong is almost always a stage you skipped.</p>
+<p>Here is the whole map, on one page. Each stage gets its own chapter later.</p>
+<p><strong>1. DEFINE.</strong> Turn a wish into a job. State the objective, the scope, and what "done" actually means, before the agent writes a single line.</p>
+<p><strong>2. CONTEXT.</strong> Give the agent the information a new teammate would need on day one: how the project is organized, what conventions it follows, and what it must not break.</p>
+<p><strong>3. INVESTIGATE.</strong> Before changing anything, have the agent (and yourself) understand the code that already exists. Most bad edits come from acting before looking.</p>
+<p><strong>4. SET BOUNDARIES.</strong> Say, in the instruction itself, which files and features the agent may touch — and which it may not. Explicit walls prevent quiet damage.</p>
+<p><strong>5. EXECUTE.</strong> Let the agent do the work — in controlled steps, not one giant leap. Small changes are easier to steer, easier to reverse, and easier to trust.</p>
+<p><strong>6. VERIFY.</strong> Prove that the change actually works. Open the app. Run the tests. Check the thing you asked for, and check the things you didn't ask about, because those are what quietly broke.</p>
+<p><strong>7. REVIEW.</strong> Read what the agent produced as if a coworker wrote it. Understand each change well enough to explain it. If you can't explain it, you don't yet own it.</p>
+<p><strong>8. LEARN.</strong> Notice the patterns. What tripped the agent up? What context was missing? Feed the answer back into your notes, your project documentation, and your next task — so the same mistake doesn't happen twice.</p>
+<blockquote class="pb-callout pb-callout--beginner"><span class="pb-callout__label">BEGINNER NOTE</span><p>Read the map once, then let it fade. You are not expected to memorize it. The point of naming the stages is so that later, when a task quietly falls apart, you can look at the wreckage and say, <em>"Ah — I skipped Investigate."</em> That is the entire skill.</p>
+</blockquote>
+<p>The rest of Part One walks through the first three stages: <strong>Define, Context, and Investigate.</strong> These are the stages beginners skip most often, and the ones that pay back the most when done well. Part Two covers boundaries, execution, and verification. Part Three closes the loop: review and learning.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">The framework</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-08">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">08</span> <span>Define</span></div>
+    <h1 class="pb-chapter__title">DEFINE THE JOB</h1>
+  </header>
+  <div class="pb-body">
+    <p>Almost every disappointing session with an AI coding agent starts the same way: the instruction was vague, so the agent filled in the blanks. It had no choice. Ambiguity does not stop an agent — it just gives it room to invent.</p>
+<p>Look at this one, which sounds fine until you read it twice:</p>
+<blockquote>
+<p>"Improve the dashboard."</p>
+</blockquote>
+<p>Improve how? For whom? Which dashboard, if there is more than one? Faster, prettier, easier to read, more mobile-friendly, more accurate? Improve using what — a new library, a redesign, a rewrite? And what happens to everything that is already working on that page?</p>
+<p>The agent doesn't know. So it decides. And whatever it decides is unlikely to match what was in your head.</p>
+<p>A well-defined task answers four questions before any code is written.</p>
+<p><strong>1. Objective — what are you actually trying to achieve?</strong>
+Not the code. The outcome. <em>"So the student can tell at a glance which applications are still active."</em></p>
+<p><strong>2. Scope — what is inside the job, and what is outside?</strong>
+Which pages, which features, which files. Especially: what should <em>not</em> change.</p>
+<p><strong>3. Expected result — what will the reader (and you) see when it works?</strong>
+A new button, a new column, a filter, a redirect — describe the visible outcome, not the implementation.</p>
+<p><strong>4. Constraints — what must stay true?</strong>
+Existing behavior that must not break. Styles that must be respected. Data that must not be lost. Libraries you don't want added.</p>
+<p>Put those four together and the earlier instruction becomes something an agent can actually work with. Using the Student Job Tracker:</p>
+<blockquote class="pb-callout pb-callout--example"><span class="pb-callout__label">REAL-WORLD EXAMPLE</span><p><strong>Objective:</strong> Help the student quickly see which of their job applications are still active versus closed.
+<strong>Scope:</strong> The Applications list page only. Do not touch the Companies page or the Interview Stages view.
+<strong>Expected result:</strong> Each application in the list shows a small colored status label (Active, Rejected, Offer, Withdrawn). At the top of the list, a filter lets the student show only Active applications.
+<strong>Constraints:</strong> Do not change the underlying data model. Do not add new dependencies. The existing "Add Application" button must still work exactly as before.</p>
+</blockquote>
+<p>Notice what happened. The task got longer — and infinitely clearer. There is now almost no room for the agent to invent. There is also almost no room for <em>you</em> to be surprised, which is the real point. A defined task is not paperwork. It is a promise you make to your future self about what you actually asked for.</p>
+<blockquote class="pb-callout pb-callout--try"><span class="pb-callout__label">TRY THIS</span><p>Before sending an instruction, read it back and ask: <em>"If I gave this to a stranger and they took it literally, would I be happy with any answer that fit?"</em> If the answer is no, you have not defined the job yet.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Define</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-09">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">09</span> <span>Define</span></div>
+    <h1 class="pb-chapter__title">DEFINE WHAT &quot;DONE&quot; MEANS</h1>
+  </header>
+  <div class="pb-body">
+    <p>Defining the job tells the agent what to do. Defining "done" tells the agent — and yourself — when to stop.</p>
+<p>This sounds like the same thing. It isn't.</p>
+<p>An agent will happily tell you a task is complete the moment it finishes typing. That is not the same as the task actually being complete. "Complete" means the change works, the surrounding features still work, and the result matches what you asked for on a real screen, with real data, in the browser or app where the user will see it.</p>
+<p>Without a written definition of done, every task drifts into a soft, agreeable ending. The agent says "Done!" You nod. You move on. Two hours later something is broken and neither of you can remember what changed.</p>
+<p>A good definition of done is boring, specific, and checkable. You should be able to run through it like a short checklist and tick each line honestly.</p>
+<p>For the Applications-status task from the previous page, "done" might look like this:</p>
+<blockquote class="pb-callout pb-callout--example"><span class="pb-callout__label">REAL-WORLD EXAMPLE</span><p><strong>Done means:</strong>
+- The Applications list page loads without errors.
+- Every application row shows a colored status label.
+- Clicking the status filter narrows the list correctly, including "show all."
+- The existing "Add Application" button still opens the form and saves a new entry.
+- Nothing on the Companies page or Interview Stages page has changed.
+- The layout still looks correct on a phone-sized screen.
+- The project's existing tests still pass.</p>
+</blockquote>
+<p>Notice what this list quietly does. It protects the parts of the app you didn't ask the agent to touch. Those are the parts most likely to break — not the feature under the spotlight, but the neighbors of that feature. A definition of done makes the neighbors visible.</p>
+<p>Some of these checks you will do by hand (opening the page, clicking the button). Some the agent can do for you (running the tests). Later chapters will go deeper on both. For now, the habit is the point.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>A task without a definition of done is an unfinished conversation. It ends whenever someone gets tired, not when the work is actually complete. Writing "done means…" in three or four lines, before the agent starts, is one of the highest-leverage habits in this entire book.</p>
+</blockquote>
+<p>If you do only two things differently after reading this chapter — define the job, and define what "done" means — you will already be working with agents more skillfully than most people ever will.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Define</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-10">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">10</span> <span>Define</span></div>
+    <h1 class="pb-chapter__title">SCOPE AND CONSTRAINTS</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is a phrase professional engineers use when they talk about risky changes: <strong>blast radius.</strong> It means, if this change goes wrong, how much of the surrounding world gets damaged?</p>
+<p>A typo in a comment: blast radius of nothing.
+Renaming a column in your database: blast radius of everything that ever read that column.</p>
+<p>You do not need to become an engineer to use this idea. You just need to notice, before every task, how big the potential damage is — and then deliberately make it smaller. (We will return to blast radius on its own chapter later, once we have the vocabulary to talk about it in more depth.)</p>
+<p><strong>Scope is how you shrink the blast radius on purpose.</strong></p>
+<p>Think of your project as a house. Right now, you want to fix a squeaky door in the guest bedroom. You do not need — and do not want — the contractor rewiring the kitchen while they're at it, even if the kitchen wiring is a little old. A bigger job is not a better job. It is a job with more ways to fail, more things to test, and more surface area for surprises.</p>
+<p>When you write a task for an AI agent, you are effectively defining the room they are allowed to work in. Be specific about three things:</p>
+<p><strong>What the agent should change.</strong>
+Name the files, folders, pages, or features. <em>"Only the Applications list component and its associated styles."</em></p>
+<p><strong>What the agent should not change.</strong>
+Name the things that are near the work but off-limits. <em>"Do not modify the data model. Do not touch the Companies page. Do not add new libraries."</em></p>
+<p><strong>Which parts of the system are sensitive.</strong>
+Some areas of a project are load-bearing — authentication, payments, saved user data, anything to do with logins, keys, or configuration. Even if the current task is nowhere near them, it is worth naming them as untouchable. <em>"Do not modify anything under <code>/auth</code> or <code>/config</code>, even to improve it."</em></p>
+<p>For the Student Job Tracker, a scoped instruction might end with a line as simple as:</p>
+<blockquote>
+<p>Work only inside the Applications list feature. Do not modify the sign-in flow, the database schema, or any file outside the <code>applications/</code> folder.</p>
+</blockquote>
+<p>That single sentence prevents an entire category of disaster. It costs you ten seconds to write. It can save you an evening of trying to figure out why you can no longer log in.</p>
+<blockquote class="pb-callout pb-callout--remember"><span class="pb-callout__label">REMEMBER</span><p>If the blast radius of a task is bigger than you can comfortably review in one sitting, the task is too big. Split it. Ship the small version. Come back for the rest.</p>
+</blockquote>
+<p>Small scopes are not timid. They are what allow you to move quickly <em>without</em> moving recklessly. The agent stays inside a room; you stay in control of the house.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Define</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-11">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">11</span> <span>Context</span></div>
+    <h1 class="pb-chapter__title">CONTEXT: AI NEEDS A MAP</h1>
+  </header>
+  <div class="pb-body">
+    <p>Even the most carefully defined task will fall apart if the agent has no idea what kind of project it just walked into.</p>
+<p>Imagine hiring that same contractor from the earlier analogy — clear job, clear scope, clear definition of done — and then dropping them in front of a house they have never seen, with no floor plan, no idea where the water shutoff is, no notes about which walls are load-bearing, and no clue that the electrical panel is behind the laundry room door. They are still skilled. They are also, now, guessing.</p>
+<p>That is what happens to an AI coding agent when you give it a good instruction inside a project it doesn't understand. It will still act confidently. It will just be guessing.</p>
+<p><strong>Context is the floor plan.</strong> It is everything the agent needs to know to make good decisions inside your specific project, as opposed to some average project it has seen versions of during training.</p>
+<p>Useful context for a project like the Student Job Tracker includes things like:</p>
+<ul>
+<li><strong>Project structure</strong> — where the pages live, where shared components live, where the data layer sits. (<em>"Pages are in <code>src/pages/</code>. Reusable components in <code>src/components/</code>. Data access in <code>src/lib/db.ts</code>."</em>)</li>
+<li><strong>Architecture</strong> — the shape of the thing. (<em>"This is a small web app with a single database. There is no separate backend service."</em>)</li>
+<li><strong>Coding conventions</strong> — the local dialect. (<em>"We use functional components. We prefer named exports. Styles live next to the component in a <code>.module.css</code> file."</em>)</li>
+<li><strong>Commands</strong> — how to actually run and test the project. (<em>"<code>npm run dev</code> starts the app. <code>npm test</code> runs the tests. <code>npm run build</code> must succeed before anything ships."</em>)</li>
+<li><strong>Testing instructions</strong> — how you know something works. (<em>"Manual check: open <code>/applications</code>, add a fake application, refresh the page, confirm it persists."</em>)</li>
+<li><strong>Important constraints</strong> — the load-bearing walls. (<em>"Never modify <code>src/auth/</code>. Never change the database schema without an accompanying migration file."</em>)</li>
+<li><strong>Existing patterns</strong> — the way things are done here. (<em>"New pages should copy the pattern in <code>applications/list.tsx</code>. Do not introduce a new state management library — we use React's built-in hooks."</em>)</li>
+</ul>
+<p>Written down once, this becomes the project's memory — a document the agent can read at the start of a task, so it does not have to guess who you are or how you like to work. Most modern AI coding tools have a conventional place for this: a file at the root of your project (often called something like <code>AGENTS.md</code>, <code>CLAUDE.md</code>, <code>.cursorrules</code>, or similar), which the tool reads before starting work. The exact filename matters less than the habit.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>Most of what feels like "the AI got it wrong" is actually "the AI never had the information to get it right." Writing down your project's context is not busywork. It is the single most reusable piece of prompt engineering you will ever do — because you write it once, and every future task benefits.</p>
+</blockquote>
+<p>In the next chapter, we will turn from <em>giving</em> context to <em>gathering</em> it — the Investigate stage, where the agent (and you) look before you leap.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Context</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-12">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">12</span> <span>Context</span></div>
+    <h1 class="pb-chapter__title">PROJECT MEMORY</h1>
+  </header>
+  <div class="pb-body">
+    <p>Every time you open a new conversation with an AI coding agent, it starts from zero. It does not remember yesterday. It does not remember the last task. It does not remember the promise it made to never touch your authentication folder. Unless something reminds it, all of that context has to be reintroduced by you, by hand, every single time.</p>
+<p>That is exhausting. It is also the reason many people quietly give up on agents after a few weeks. They mistake "I have to explain my project again" for "this tool doesn't work."</p>
+<p>The fix is a very old idea in a new context: <strong>write it down once, in a place the agent will always read.</strong></p>
+<p>Most modern AI coding tools look for a specific file at the top of your project when a session starts. The exact name varies by tool, and the conventions will keep shifting. Common examples at the time of writing include:</p>
+<ul>
+<li><strong><code>AGENTS.md</code></strong> — a growing shared convention across several agent tools.</li>
+<li><strong><code>CLAUDE.md</code></strong> — used by Claude Code and some other Anthropic-facing tools.</li>
+<li><strong><code>.cursorrules</code></strong> or <strong><code>.cursor/rules/</code></strong> — used by Cursor.</li>
+<li><strong><code>README.md</code></strong> — the general-purpose project introduction that most tools (and every human) will read.</li>
+<li><strong><code>docs/</code></strong> — a folder for longer explanations, architecture notes, and reference material.</li>
+</ul>
+<p>Do not get attached to any one filename. They will change. The idea underneath will not. All of these files serve the same purpose:</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>A place where you store the instructions and knowledge you would otherwise have to repeat in every conversation.</p>
+</blockquote>
+<p>Think of it as the project's memory. When a new agent session begins, that file is typically the first thing it reads — the equivalent of handing a new hire the onboarding document before their first meeting instead of explaining the company from scratch every morning.</p>
+<p>For the Student Job Tracker, a short <code>AGENTS.md</code> might tell any agent, on any day:</p>
+<ul>
+<li>What the project is (<em>"a small web app for tracking student job applications"</em>).</li>
+<li>Where the important code lives (<em>"pages in <code>src/pages/</code>, shared components in <code>src/components/</code>, data in <code>src/lib/db.ts</code>"</em>).</li>
+<li>Which commands run and test the project.</li>
+<li>Which folders must not be modified without explicit permission.</li>
+<li>The one or two conventions the project cares about most.</li>
+</ul>
+<p>That single file will save you hundreds of retyped sentences over the life of the project. More importantly, it will save you from the errors that happen when you <em>forget</em> to retype one of them.</p>
+<blockquote class="pb-callout pb-callout--remember"><span class="pb-callout__label">REMEMBER</span><p>If you have explained the same thing to an agent twice, write it into project memory. If you have explained it three times, you should feel embarrassed that it isn't there already.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Context</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-13">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">13</span> <span>Context</span></div>
+    <h1 class="pb-chapter__title">WHAT SHOULD YOU DOCUMENT?</h1>
+  </header>
+  <div class="pb-body">
+    <p>Project memory is only useful if it contains the right things. A bloated, contradictory, out-of-date file is worse than no file at all, because the agent will still read it and quietly follow instructions you no longer mean.</p>
+<p>Aim for a short, honest document that answers the questions a competent new teammate would ask on their first day.</p>
+<p><strong>Include:</strong></p>
+<ul>
+<li><strong>Architecture in one paragraph.</strong> What is this project, in plain words? <em>"A single-page web app with a small local database. No separate backend. Deployed as static files."</em></li>
+<li><strong>Important directories.</strong> Where does each kind of thing live? Three or four lines is usually enough.</li>
+<li><strong>How to run and test it.</strong> The actual commands. <code>npm run dev</code>, <code>npm test</code>, <code>npm run build</code>. If a command has a common gotcha (<em>"run <code>npm install</code> first if <code>node_modules/</code> is missing"</em>), name it.</li>
+<li><strong>Coding conventions that matter.</strong> Not every stylistic preference — the ones that would produce visibly wrong-looking code if ignored. <em>"Use functional components. Named exports. Styles live in <code>.module.css</code> files beside the component."</em></li>
+<li><strong>Testing expectations.</strong> What counts as "tested" here? Automatic tests? A manual click-through? Both? Say so.</li>
+<li><strong>Deployment expectations.</strong> Does anything happen automatically when code is pushed? Is there a staging environment? Anything the agent should never do on its own (like publishing a new version)?</li>
+<li><strong>Security-sensitive areas.</strong> Authentication code, anything that touches user data, anything with API keys or environment variables. Name these folders explicitly and mark them off-limits without human approval.</li>
+<li><strong>Files or systems that require caution.</strong> Database migrations, configuration files, anything a beginner would not think to be careful about. If there's a landmine, draw a circle around it.</li>
+</ul>
+<p><strong>Leave out:</strong></p>
+<ul>
+<li><strong>Walls of generic advice</strong> (<em>"write clean code," "use best practices"</em>). The agent already knows these phrases and cannot act on them.</li>
+<li><strong>Contradictory rules.</strong> If two lines disagree, the agent will pick one — and it will not always be the one you meant.</li>
+<li><strong>Outdated instructions.</strong> A rule about a folder that no longer exists is a trap for future agents. Delete it the moment it stops being true.</li>
+<li><strong>Long explanations of <em>why</em> the code exists.</strong> Save those for a design document. Project memory is for <em>how to work here now.</em></li>
+</ul>
+<p>A useful test: read your own document out loud in under two minutes. If you can't, it is too long. If you can, and someone unfamiliar with the project could act on it, it is doing its job.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>Useful documentation reduces uncertainty. Everything else is decoration. Every line that doesn't answer a question the agent will actually face is a line that dilutes the ones that do.</p>
+</blockquote>
+<p>For the Student Job Tracker, the entire project memory might be less than a page. That is fine. Short and true beats long and aspirational, every time.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Context</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-14">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">14</span> <span>Investigate</span></div>
+    <h1 class="pb-chapter__title">INVESTIGATE BEFORE EDITING</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is a temptation, when working with an AI coding agent, to skip straight to the edit. You have a task. The agent is fast. Why wait?</p>
+<p>Because the fastest way to break a project is to change code you do not yet understand — and that is true whether the person changing it is you, a junior developer, or an agent working at a hundred lines per minute.</p>
+<p>Before any change, healthy work moves through five steps:</p>
+<p><strong>READ → TRACE → UNDERSTAND → PLAN → EDIT</strong></p>
+<ul>
+<li><strong>Read</strong> the files that seem most related to the task. Not skim — read.</li>
+<li><strong>Trace</strong> how those files connect. Where does the data come from? Where does it go? Who calls this function? What page uses this component?</li>
+<li><strong>Understand</strong> what the current behavior actually is. Not what you <em>think</em> it is. What the code, right now, does.</li>
+<li><strong>Plan</strong> the change in words before touching any code. Which files will change, in what order, and why.</li>
+<li><strong>Edit</strong> — and only now — with the plan in hand.</li>
+</ul>
+<p>Agents can and should do most of this for you. Modern coding agents are generally good at reading code, tracing references, and summarizing what a piece of the project actually does. Ask for that summary <em>before</em> you ask for a change:</p>
+<blockquote>
+<p><em>"Before you modify anything, read the Applications list page and the file that saves application data. Summarize how a new application currently gets from the form to the database. Then propose a plan for adding a status field. Do not edit any files yet."</em></p>
+</blockquote>
+<p>Here is what happens when this step is skipped.</p>
+<p>Back in the Student Job Tracker: you ask the agent to "add a Rejected status to applications." Without investigating, the agent invents a reasonable-sounding solution. It adds a new <code>status</code> field on the application form. It writes a new function to save it. It updates the list page to show it.</p>
+<p>Then you try to add a rejected application, and the app crashes.</p>
+<p>Why? Because the project already had a status system — a small one, half-built, in a file the agent never opened. The database column was already there under a different name. The list page was already reading from it. The agent didn't know, because it never looked. It built a second, parallel system on top of the first, and the two collided the moment you used them.</p>
+<p>None of this would have happened if the first instruction had been: <em>before changing anything, look at how status is currently handled in this project and report back.</em> The agent would have found the existing pieces in seconds, and the task would have shrunk from "build a status system" to "finish the one that's already here."</p>
+<blockquote class="pb-callout pb-callout--watch"><span class="pb-callout__label">WATCH OUT</span><p>Treat "look first" as the first stage of every task, not an optional detour. An agent that has read the code before editing it is a different, and much safer, agent than one that starts typing immediately.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Investigate</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-15">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">15</span> <span>Investigate</span></div>
+    <h1 class="pb-chapter__title">FIND THE RIGHT PLACE</h1>
+  </header>
+  <div class="pb-body">
+    <p>Every change you make lives somewhere. Part of working well with an agent is helping it — and yourself — figure out <em>where</em> before figuring out <em>what.</em></p>
+<p>First, a plain-English definition. A <strong>codebase</strong> is simply the collection of all the files that make up your project: the code, the styles, the configuration, the small helper files that glue everything together. When people say "search the codebase," they mean "look across all those files at once, not just the one you happen to have open."</p>
+<p>Real projects are almost never a single file. Even a small app like the Student Job Tracker might have dozens: a page for the list of applications, a page for a single application, a form for adding one, a shared component for the status label, a file for talking to the database, a stylesheet, a configuration file, a test or two. A change to "how status works" could plausibly live in any of them. Often it lives in several.</p>
+<p>Good agents, given a task, will do something like this before editing:</p>
+<ul>
+<li><strong>Search the codebase for related words.</strong> <em>"Where does the word <code>status</code> already appear? Where is <code>application</code> defined? Where is the list of applications rendered?"</em> A search across all files finds the touchpoints in seconds.</li>
+<li><strong>Trace a feature end to end.</strong> Start at the visible thing (a button, a page, a column on screen), then follow it backward through the code: what happens when the user clicks it? What function runs? What file does that function live in? What does it call next? Keep going until you reach the data.</li>
+<li><strong>Find related components.</strong> Many features are made of small parts that talk to each other — a form, a list, a shared label. Changing one without noticing the others is how "small" changes become large surprises.</li>
+<li><strong>Understand dependencies between files.</strong> Which files import from which? If you change the shape of the data in one place, who else was relying on the old shape? These are the invisible strings between files, and they are where accidental damage travels.</li>
+</ul>
+<p>You do not need to run these searches yourself. You need to <em>ask</em> for them. A useful pre-edit instruction to an agent sounds like:</p>
+<blockquote>
+<p><em>"Before proposing changes, find every file that references the Applications list or the status of an application. List them. For each, describe in one sentence what it does. Then tell me where you think the change should live and why."</em></p>
+</blockquote>
+<p>The answer to that one instruction is often the entire difference between a clean change and a messy one. You learn where the work belongs. The agent proves it understood the project. And you both discover the surprises — the second copy of the status logic, the shared label used in three places, the old test that will need updating — <em>before</em> any code moves.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>The first question of any task is not <em>"what should the code look like?"</em> It is <em>"where does this change belong, and what else touches it?"</em> Answer that first, and the code almost writes itself. Skip it, and no amount of typing will save you.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Investigate</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-16">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">16</span> <span>Execute</span></div>
+    <h1 class="pb-chapter__title">MAKE THE SMALLEST SAFE CHANGE</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is a strong temptation, especially with an agent that can do so much so quickly, to hand over big tasks. <em>"Redesign the whole dashboard." "Refactor the data layer." "Rebuild the job tracker to look more like LinkedIn."</em></p>
+<p>Resist it. Not because agents can't attempt work at that size — they can — but because <em>you</em> can't safely review work at that size, and unreviewed work is not really finished work.</p>
+<p>A small change is easier to:</p>
+<ul>
+<li><strong>Understand.</strong> You can hold the whole thing in your head at once.</li>
+<li><strong>Test.</strong> There are fewer things to click, fewer things that could have broken.</li>
+<li><strong>Review.</strong> You can read the entire diff and know what it says.</li>
+<li><strong>Undo.</strong> If something goes wrong, you throw away twenty minutes of work, not two days.</li>
+<li><strong>Debug.</strong> When a bug appears, the list of suspects is short.</li>
+</ul>
+<p>Every one of those advantages compounds. Large changes are not just a little riskier than small ones — they are catastrophically riskier, because the failure modes multiply with the surface area.</p>
+<p>The professional habit here is called <strong>incremental development.</strong> It is the discipline of turning any big goal into a sequence of small, working, verifiable steps, and shipping each one before starting the next.</p>
+<p>Compare these two versions of the same ambition.</p>
+<p><strong>The tempting version:</strong></p>
+<blockquote>
+<p><em>"Redesign the entire Student Job Tracker to feel more modern."</em></p>
+</blockquote>
+<p>That is one enormous, undefined task. If the agent's first attempt is 80% right, you now have to figure out which 20% is wrong across an entire redesigned app. Good luck.</p>
+<p><strong>The disciplined version:</strong></p>
+<ol>
+<li>Add a <code>status</code> field to applications, in the data layer only. Verify with a test.</li>
+<li>Show the status as plain text on the list page. Verify by opening the page.</li>
+<li>Replace the plain text with a colored label component. Verify visually.</li>
+<li>Add a status filter to the top of the list. Verify by filtering.</li>
+<li>Update the "Add Application" form so status can be set on creation. Verify by adding one.</li>
+<li>Only now, revisit the visual design of the list as a whole.</li>
+</ol>
+<p>Every step is small. Every step ends with a working app. If step 3 breaks something, you know exactly where to look, because steps 1 and 2 were fine ten minutes ago.</p>
+<p>You have not moved more slowly. You have moved more <em>honestly.</em> And in practice, honest work is faster, because you never spend an afternoon trying to untangle a change you no longer understand.</p>
+<blockquote class="pb-callout pb-callout--remember"><span class="pb-callout__label">REMEMBER</span><p>The size of a task is not measured by how ambitious it sounds. It is measured by how much can quietly break inside it. Aim for changes small enough that "quietly break" has almost nowhere to hide.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Execute</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-17">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">17</span> <span>Execute</span></div>
+    <h1 class="pb-chapter__title">EXECUTE IN SMALL STEPS</h1>
+  </header>
+  <div class="pb-body">
+    <p>Once a task is defined, scoped, and understood, execution begins. This is the stage where most beginners hand the wheel entirely to the agent and hope. Don't. Execution is where your role shifts from planner to pilot — still not typing every line, but staying in the loop, one step at a time.</p>
+<p>A healthy execution loop looks like this:</p>
+<ul>
+<li><strong>One logical change at a time.</strong> Ask the agent to make a single, self-contained edit — not five. <em>"Add the <code>status</code> field to the data layer. Do not touch the UI yet. Stop when you're done."</em> A tight instruction produces a tight change, which produces a tight review.</li>
+<li><strong>Inspect the results before continuing.</strong> Look at what changed. Open the app. Click the thing. Read the diff. If step one is wrong, do not build step two on top of it — you are now building on sand.</li>
+<li><strong>Avoid unnecessary refactoring.</strong> Agents often tidy. They will rename variables, move helpers, and "improve" code that had nothing to do with your task. This is a hidden cost: a five-line change becomes a fifty-line change, half of which you didn't ask for and now have to review. Explicitly say: <em>"Change only what is needed for this task. Do not refactor unrelated code."</em></li>
+<li><strong>Preserve working functionality.</strong> The features that already work are worth more than the feature you are adding. State this out loud. <em>"The existing Add Application flow must continue to work exactly as it does today. If your change would alter its behavior, stop and tell me instead."</em></li>
+<li><strong>Use existing project patterns.</strong> If the project already has a way of doing things — how components are structured, how data is fetched, how styles are written — the new code should look like the old code. Consistency is not aesthetics; it is what makes a codebase understandable at a glance, months later, when you have forgotten everything about it.</li>
+</ul>
+<p>Behind all of these is a single idea: <strong>the agent's autonomy should be controlled, not unlimited.</strong></p>
+<p>An agent left completely free will do a lot. Much of it will look impressive. Some of it will quietly damage your project in ways you cannot see until much later. An agent kept on a short leash — one step, inspect, next step, inspect — moves slightly slower per instruction and often dramatically faster overall, because nothing has to be untangled after the fact.</p>
+<p>In the Student Job Tracker, the difference shows up like this. Left free: <em>"Add application status."</em> Fifteen minutes later, the schema has changed, the form has been redesigned, two new components exist, an unused old file has been deleted, and something in the sign-in flow is subtly different. Kept on a leash: the same feature, delivered in six small, reviewable pushes, each of which left the app working.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>The agent proposes. You approve. Every meaningful change should pass through your attention at least once before it becomes permanent. The moment that stops being true, you have lost the plot — no matter how good the last few outputs looked.</p>
+</blockquote>
+<p>Which raises the next question, and the subject of the next chapter: how do you actually <em>set</em> those boundaries — not just in your head, but in a way the agent will respect?</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Execute</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-18">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">18</span> <span>Boundaries</span></div>
+    <h1 class="pb-chapter__title">UNDERSTAND THE BLAST RADIUS</h1>
+  </header>
+  <div class="pb-body">
+    <p>We introduced the phrase "blast radius" briefly on Page 10, when we first talked about scope. Now it deserves a page of its own, because it is the single most useful lens you can bring to any change an agent proposes.</p>
+<p>Blast radius is not about fear. It is about noticing, before you push a button, <em>how far a mistake could travel</em> if this change turns out to be wrong.</p>
+<p>Some changes have almost no blast radius. Fixing a typo on a help page can only ever damage that help page. If it goes wrong, one line of text looks funny for ten minutes.</p>
+<p>Other changes have a very large blast radius, even though they look small on the screen. Consider these examples, all of which have caught out beginners working with agents.</p>
+<ul>
+<li><strong>A change to one page quietly affects another.</strong> In the Student Job Tracker, the "status label" component is used both on the Applications list and on the individual Application detail page. Redesigning it for the list page silently redesigns it on the detail page too — often not in the way you wanted.</li>
+<li><strong>A change to the database changes what every part of the app can see.</strong> Rename a column and every page that read the old name goes blank. Rename it in the code and forget the database, and every save fails.</li>
+<li><strong>A change near authentication changes who can log in.</strong> Even a small edit inside a login file — reordering two lines, "improving" a check — can lock existing users out of their account.</li>
+<li><strong>A change to a payment path can move real money.</strong> Not relevant to a school project. Extremely relevant the day you get your first paying customer.</li>
+<li><strong>A change to how the app talks to an outside service (an API) can break the app for everyone at once,</strong> the moment that service returns something slightly unexpected.</li>
+<li><strong>A change to existing user data is often permanent.</strong> Deleting a column, transforming values in place, "cleaning up" old records — these actions can lose information that no backup will fully restore.</li>
+</ul>
+<p>The point of this list is not to make you nervous. It is to teach you to <em>ask</em> one question before every task:</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>Before every change: <em>if this goes wrong, how much can it break, and how hard is it to undo?</em></p>
+</blockquote>
+<p>If the answer is "one page, and I can undo it in a click" — proceed cheerfully.
+If the answer is "the whole app, and rolling back means restoring a backup I don't have" — stop, shrink the scope, and take a smaller step.</p>
+<p>Measure the blast radius before the change, not after it. An agent will not do this for you. It is your job as the person in the room.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Boundaries</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-19">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">19</span> <span>Boundaries</span></div>
+    <h1 class="pb-chapter__title">SET EXPLICIT BOUNDARIES</h1>
+  </header>
+  <div class="pb-body">
+    <p>Once you can see the blast radius, the next move is to make the boundaries of a task explicit — in writing, in the instruction itself. Not in your head. Not "the agent should know." In the actual sentences you send.</p>
+<p>A good task instruction has two halves. The first says what the agent should do. The second says what the agent must not do. The second half is the one beginners almost always forget, and it is usually the more important of the two.</p>
+<p>For the Student Job Tracker, adding a "status" field might look like this:</p>
+<blockquote class="pb-callout pb-callout--example"><span class="pb-callout__label">REAL-WORLD EXAMPLE</span><p><strong>Change:</strong>
+- The Applications list component (<code>src/pages/applications/list.tsx</code>) and its styles.
+- The data function that reads applications from the database.</p>
+<p><strong>Do not change:</strong>
+- Authentication or anything under <code>src/auth/</code>.
+- The database schema (no new columns, no renamed columns).
+- Any file inside <code>src/payments/</code> or <code>src/config/</code>.
+- Unrelated components, even to "clean them up."
+- The production configuration file.</p>
+</blockquote>
+<p>Reading that, the agent has almost no room to wander. It knows the rectangle it is allowed to work inside, and it knows the walls it must not lean against.</p>
+<p>Why does this improve reliability so much? Because agents, like human developers, tend to expand to fill the space they are given. Without stated boundaries, an agent working on the Applications list may notice the sign-in page nearby, decide the styles are inconsistent, and "improve" them. It may spot a slightly awkward function in a neighboring file and refactor it. It may observe that a config value looks outdated and update it. Each of these moves might be individually defensible. Together, they are how a small, safe task becomes a large, risky one.</p>
+<p>Explicit boundaries also make review possible. When you know exactly which files should have changed, opening the diff becomes a quick check: did the agent touch anything outside the rectangle? If yes, that alone is a reason to reject the change, no matter how good the code looks.</p>
+<blockquote class="pb-callout pb-callout--try"><span class="pb-callout__label">TRY THIS</span><p>Add this sentence to almost every task: <em>"Do not modify anything outside the files listed above. If you believe another file needs to change to complete this task, stop and tell me — do not change it yourself."</em> That single sentence will prevent more damage than any prompt trick you will ever learn.</p>
+</blockquote>
+<p>Boundaries are not distrust. They are the working conditions that let both you and the agent do good work at speed.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Boundaries</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-20">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">20</span> <span>Verify</span></div>
+    <h1 class="pb-chapter__title">CODE THAT LOOKS RIGHT CAN STILL BE WRONG</h1>
+  </header>
+  <div class="pb-body">
+    <p>Here is a hard truth about working with AI coding agents, and one that takes most people a few painful sessions to fully absorb:</p>
+<p><strong>Code that looks correct is not the same as code that works.</strong></p>
+<p>An agent can produce a change that compiles cleanly, uses good names, follows the project's conventions, and reads like something a thoughtful senior engineer would write — and still be quietly, completely wrong. This is not a failure of the agent. It is a property of code in general. Software has always been able to look right and behave wrong. Agents just produce more of it, faster, which means the gap between "looks right" and "is right" now matters more than ever.</p>
+<p>The gap has a few common shapes. It helps to be able to name them.</p>
+<p><strong>Bugs.</strong> The most familiar kind. The code does something, just not what you wanted. A filter that filters the wrong list. A save function that saves an empty record. A total that adds a number twice.</p>
+<p><strong>Edge cases.</strong> The code works for the normal path and fails for the unusual one. In the Student Job Tracker: adding an application with an empty company name crashes the list. Or a status filter works for four of the five status values and silently hides one.</p>
+<p><strong>Integration problems.</strong> Each piece works in isolation, but two pieces together do not. The new status label component looks fine on its own; dropped into the list page, it breaks the row layout on narrow screens. Or a new database function works when called directly, but the page that uses it never receives the result because the code that connects them was never updated.</p>
+<p><strong>Side effects.</strong> The change succeeds at what you asked for and accidentally changes something else. The new status filter works, and — because the agent quietly changed the sort order while it was in there — the list now shows the oldest applications first instead of the newest, and nobody noticed.</p>
+<p>None of these failures show up when you skim the code. Some of them do not show up when you run the code, either. They show up the first time a real person uses the app in a way you didn't think to try.</p>
+<p>The response to this is not to trust less. It is to <em>verify more</em>, in ways that are proportionate to the blast radius of the change. Every serious change should end not with "the agent said it was done" but with a visible answer to the question: <strong>how do I actually know this works?</strong></p>
+<p>That question is what the rest of this section is about.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Verify</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-21">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">21</span> <span>Verify</span></div>
+    <h1 class="pb-chapter__title">THE FEEDBACK LOOP</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is a workflow shape that separates people who ship reliable software from people who ship confusing software. It looks like this:</p>
+<p><strong>IMPLEMENT → TEST → FIX → TEST AGAIN → VALIDATE</strong></p>
+<p>And there is another shape, the one beginners tend to use by default:</p>
+<p><strong>IMPLEMENT → ASSUME IT WORKS</strong></p>
+<p>The first shape is a loop. The second is a leap. Everything good about working with an AI coding agent depends on choosing the loop.</p>
+<p>The loop is not complicated. It is only this: after every meaningful change, you (or the agent, under your direction) actually check that the change did what you meant it to. If it didn't, you fix it. Then you check again. When the checks pass — and only when they pass — you call it done.</p>
+<p>For someone new to programming, the word "test" can sound formal, like something that requires special training. It doesn't. A test is anything that asks the software a question and gets back an honest answer. That question can be asked in different ways.</p>
+<ul>
+<li><strong>By a human.</strong> You open the app, click the new button, and see whether the right thing happens. This is called <em>manual testing.</em> It is the oldest and most underrated form of verification.</li>
+<li><strong>By the computer, on your behalf.</strong> You (or the agent) write a small piece of code whose only job is to check another piece of code. When you run it, it either says "passed" or "failed." This is called an <em>automated test.</em> It is not magic. It is a script that answers a specific question every time you run it.</li>
+</ul>
+<p>Both count. Both are valid. What matters is that <em>some</em> honest check happens between "the agent finished typing" and "the task is done."</p>
+<p>The loop earns its keep the moment something fails. Say you added the status filter to the Applications list, ran a manual check, and noticed that clicking "Rejected" also hides some applications that are clearly still active. Without the loop, you might not notice until a week later, by which point three more changes sit on top of the broken one and untangling them is a full afternoon. With the loop, you catch it now, describe the failure to the agent (<em>"clicking Rejected also hides applications where status is Offer"</em>), and fix it while everything is still fresh.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>Treat "does it work?" as part of the task, not an afterthought. The task is not "add the filter." The task is "add the filter <em>and demonstrate that it works.</em>" Ending the loop early is not saving time. It is deferring the cost, usually with interest.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Verify</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-22">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">22</span> <span>Verify</span></div>
+    <h1 class="pb-chapter__title">WAYS TO CHECK THE WORK</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is no single way to verify that a change is correct. Serious projects use several, layered on top of each other, so that different kinds of mistakes are caught by different kinds of checks. You do not need to master all of them at once. You do need to know what each one is, and roughly what it protects against.</p>
+<p>Here they are, in plain English.</p>
+<p><strong>Automated tests.</strong> Small pieces of code that check other pieces of code. You (or the agent) write them once; then they run in seconds, every time, forever. A good test for the Job Tracker might be: <em>"when I save an application with status Active and then read it back, its status is still Active."</em> If someone later breaks the save function, that test fails immediately.</p>
+<p><strong>Linting.</strong> A tool that reads your code and complains about small stylistic or structural problems — unused variables, inconsistent formatting, obvious mistakes like using a variable before defining it. Think of it as a spell-checker for code. It catches nothing about whether the software <em>does the right thing</em>, but it catches a lot of noise that would otherwise slow down review.</p>
+<p><strong>Type checking.</strong> In many modern projects, every piece of data has a declared shape — an application has an <code>id</code> (a number), a <code>company</code> (a string), a <code>status</code> (one of a fixed list of values). A type checker reads the whole project and complains if any piece of code tries to use data in a shape it isn't. If the agent adds a new status value and forgets to update the list of allowed statuses somewhere else, the type checker will catch many of these mismatches before you ever run the app.</p>
+<p><strong>Build checks.</strong> Before your app is deployed, it usually has to be <em>built</em> — packaged into the form that actually runs for users (a compact bundle of files that a web server or app store can hand out). A build check is simply: does that packaging succeed? A project that compiles fine while you are developing can still fail to build for release. Running the build after a change catches this.</p>
+<p><strong>Manual testing.</strong> You, using the app the way a real user would. Open the page. Click the button. Add an application. Filter by status. Refresh. Log out and back in. This is the check that most often catches the bugs no other tool will — the ones that live in the gap between "the code runs" and "the experience works."</p>
+<p><strong>Checking expected behavior.</strong> After a change, deliberately confirm that the specific thing you asked for actually happens. If the task was "show a colored status label on each row," open the list and look for colored labels on each row. It sounds trivial. It is skipped constantly.</p>
+<p><strong>Checking edge cases.</strong> After the normal path works, try the unusual ones. What happens with zero applications? A hundred? An application with a very long company name? An application with no status set? A user who is logged out? Edge cases are where the interesting failures live.</p>
+<p>You will not run every check for every change. A one-line copy edit does not need a full test suite; a change to how applications are saved probably does. Match the depth of your verification to the blast radius of the change. Small changes, small checks. Large changes, layered checks.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Verify</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-23">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">23</span> <span>Verify</span></div>
+    <h1 class="pb-chapter__title">TESTS AS THE REFEREE</h1>
+  </header>
+  <div class="pb-body">
+    <p>Of all the ways to check the work, automated tests deserve a page of their own — because they play a specific role that nothing else can play.</p>
+<p>Tests are a <strong>referee.</strong> They are the piece of your project that gives an objective, repeatable answer to the question "does this still work?" — untouched by anyone's opinion or memory or hope.</p>
+<p>That role matters more with AI coding agents than it ever did with humans alone, for a simple reason. Agents move fast and sound confident. When an agent tells you a change is complete, you have three options: trust the claim, spend time reviewing every line, or run a test that answers the question directly. Only the third scales.</p>
+<p>Tests reduce guesswork. Without them, "does the save function still work?" is answered by <em>trying to remember</em> whether the last change might have affected it. With them, it is answered by running one command and reading one word: passed, or failed.</p>
+<p>Tests increase confidence when they pass. If every test in the Job Tracker passes after the agent's change, you know — not hope — that all the behaviors those tests describe still work. You can move on to the next task with less anxiety, and less anxiety is not a soft benefit; it is what allows you to keep momentum without cutting corners.</p>
+<p>But — and this is the part that is easy to miss — <strong>passing tests are not proof of perfection.</strong> They are only proof that the specific behaviors your tests describe still work. Anything your tests do not describe is still unknown territory. If you never wrote a test for what happens with an empty company name, a green test suite tells you nothing about that case. The referee only calls fouls on plays it can see.</p>
+<p>This is why good tests are worth thinking about, not just producing. A useful test reflects a behavior you actually care about — something a real user would notice if it broke. <em>"Saving an application persists its status." "Filtering by Rejected shows only rejected applications." "The Add button opens the form."</em> A less useful test reflects incidental details of the code that could reasonably change tomorrow without anyone caring.</p>
+<p>Ask the agent to write tests alongside changes, not as an afterthought. Ask for tests that describe <em>behavior</em> the user would notice, not internal wiring nobody outside the project cares about. And when a test fails, resist the temptation to "fix" it by making the test less strict. A failing test is the referee doing its job; silencing the referee is not the same as winning the game.</p>
+<blockquote class="pb-callout pb-callout--watch"><span class="pb-callout__label">WATCH OUT</span><p>Tests are the most honest teammate on your project. They do not care how confident the agent sounded or how tired you are at 11 p.m. They only care whether the behavior they describe still holds. Treat them accordingly.</p>
+</blockquote>
+<p>Even with strong tests, one form of verification remains irreplaceable: a human being reading the change, understanding it, and taking responsibility for it. That is the subject of the next chapter.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Verify</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-24">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">24</span> <span>Review</span></div>
+    <h1 class="pb-chapter__title">REVIEW THE DIFF</h1>
+  </header>
+  <div class="pb-body">
+    <p>Before we can talk about reviewing a change, one piece of vocabulary is worth naming clearly: the <strong>diff</strong>.</p>
+<p>A diff is simply a side-by-side view of what a change actually did. Not what the agent said it did. Not what you asked for. What the files, right now, look like compared to what they looked like a few minutes ago. Removed lines are shown in one color (usually red), added lines in another (usually green). Every serious code editor and every AI coding tool can show you one.</p>
+<p>If tests are the referee, the diff is the game tape. It is where you find out what really happened.</p>
+<p>Reading a diff is a skill you build slowly, and you do not need to understand every character of code to do it well. You only need to bring six questions with you.</p>
+<ul>
+<li><strong>What changed?</strong> Which files were touched, and roughly what did each change do? If you cannot summarize this in one or two sentences, you have not yet read the diff carefully enough.</li>
+<li><strong>Why did it change?</strong> For each meaningful edit, can you connect it back to the task you defined? If a change exists that you cannot explain in terms of the original task, that is a flag, not a feature.</li>
+<li><strong>Did the agent modify anything unrelated?</strong> Look for edits outside the scope you set. A stray edit in a file you never mentioned is one of the most common sources of quiet damage.</li>
+<li><strong>Is the implementation simpler or more complicated than it needed to be?</strong> Agents often solve small problems with impressively general solutions. A five-line change that does the job is almost always better than a fifty-line "framework" that does the same job plus four things you didn't ask for.</li>
+<li><strong>Are there unexpected files?</strong> New files, deleted files, renamed files. Each one deserves a moment. Did you expect this file to exist? Do you understand what it is for?</li>
+<li><strong>Does the change actually solve the original problem?</strong> Come back to the task definition and the definition of done. Do the words in the diff, read charitably, match the promise you made to yourself before starting?</li>
+</ul>
+<p>None of these questions require you to be a strong programmer. They require you to be a careful reader who is willing to be honestly puzzled when something doesn't make sense — and to <em>ask</em>, out loud, until it does. <em>"Why did you add this new file?" "Why did you change the sort order here?"</em> A good agent will answer these questions clearly. A confused agent's answers will themselves be confused, which is useful information.</p>
+<p>One warning worth stating plainly: <strong>passing tests do not remove the need to read the diff.</strong> Tests confirm that the behaviors you thought to test still work. The diff shows you everything else — the things you didn't test, the things you didn't ask for, the things that will surprise you a week from now. A green test suite plus an unread diff is one of the most dangerous combinations in AI-assisted development. It feels like safety. It isn't.</p>
+<blockquote class="pb-callout pb-callout--remember"><span class="pb-callout__label">REMEMBER</span><p>Never merge, ship, or move on from a change you have not read. If the diff is too large to read in one sitting, that is the diff telling you the change was too large in the first place. Split it and try again.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Review</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-25">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">25</span> <span>Review</span></div>
+    <h1 class="pb-chapter__title">THE HUMAN CHECKPOINT</h1>
+  </header>
+  <div class="pb-body">
+    <p>A useful way to think about your role, once you have built a real workflow around an agent, is this: <strong>the agent is allowed to be fast; you are required to be accountable.</strong></p>
+<p>Speed and accountability are different jobs. Modern agents can absorb the speed job entirely. Nothing and nobody can absorb the accountability job for you. It is worth being specific about what that means in practice — what actually stays on your side of the line, no matter how capable the tools become.</p>
+<p><strong>Product decisions.</strong> What should this software do? Who is it for? Which features matter now, which can wait, and which are quietly bad ideas dressed up as reasonable requests? An agent can propose. It cannot decide, because deciding requires knowing what you and your users actually want, and the agent does not.</p>
+<p><strong>Architecture decisions.</strong> How the pieces of the project fit together. Whether this feature belongs in a new file or an existing one. Whether a small bit of duplication now is preferable to a premature abstraction. These decisions echo for months. They should be made by someone who will still be here in three months.</p>
+<p><strong>Security.</strong> Anything that touches authentication, user data, secrets, API keys, permissions, or the boundary between your project and the outside world. An agent following its default instincts will happily reduce friction in ways that also reduce safety. Every security-relevant change deserves a human looking at it slowly.</p>
+<p><strong>Correctness.</strong> In the end, someone has to be responsible for the claim "this works." Not "the agent said it works." Not "the tests passed." Someone has to have looked at the change, understood it, checked it, and stood behind it. That someone is you.</p>
+<p><strong>Trade-offs.</strong> Almost every real decision has costs on both sides — speed against clarity, flexibility against simplicity, features now against maintenance later. Agents are poor judges of trade-offs because they do not carry the consequences. You do.</p>
+<p><strong>Final approval.</strong> The moment where a change stops being a proposal and becomes part of the project. This should always be a human moment. Not an automatic one. Not a "sure, ship it" reflex. A pause, however short, in which you say, <em>"yes — I approve this, and I understand it."</em></p>
+<p>None of this means treating the agent as a suspect. It means treating yourself as the pilot. The agent can fly most of the plane most of the time. There is still a person in the seat, watching the instruments, making the calls at the moments that matter.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>An AI coding agent can accelerate implementation. It should not silently own the decision-making. Anything that would embarrass a serious engineer to delegate to a junior on day one is not a good candidate for silent delegation to an agent either.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Review</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-26">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">26</span> <span>Learn</span></div>
+    <h1 class="pb-chapter__title">TURN MISTAKES INTO RULES</h1>
+  </header>
+  <div class="pb-body">
+    <p>Every time you work with an AI coding agent, something small goes wrong. The agent modifies a file it should not have. It invents a function name that doesn't exist. It picks a library you don't use. It "cleans up" code you liked the way it was. It over-refactors. It renames things without being asked.</p>
+<p>Beginners react to each of these moments in isolation. They fix it, they sigh, they move on, and next week the same thing happens again. That is the trap.</p>
+<p>Serious users of AI coding agents do something different, and it is the habit that eventually separates people who ship reliable software from people who chase the same bugs forever. They turn each recurring mistake into a <strong>rule</strong>, and they write the rule into a place the agent will read every time.</p>
+<p>The loop is simple:</p>
+<p><strong>MISTAKE → RULE → BETTER FUTURE BEHAVIOR</strong></p>
+<p>You notice the mistake. You write a sentence that would have prevented it. You add that sentence to your project's memory — the <code>AGENTS.md</code>, <code>CLAUDE.md</code>, or equivalent file we talked about earlier. From that point on, every new session starts with that lesson already in place.</p>
+<p>A few concrete examples, all drawn from the kinds of things beginners actually run into with a project like the Student Job Tracker.</p>
+<blockquote class="pb-callout pb-callout--example"><span class="pb-callout__label">REAL-WORLD EXAMPLE</span>
+<p><strong>Problem:</strong> The agent repeatedly modifies files outside the feature you asked about.
+<strong>New rule:</strong> <em>"Do not modify files outside the feature under discussion unless explicitly required. If you believe an outside file must change, stop and ask."</em></p>
+<p><strong>Problem:</strong> The agent keeps adding new libraries (external packages of pre-written code you install into a project) to solve small problems.
+<strong>New rule:</strong> <em>"Do not add new dependencies without explicit approval. Prefer solutions using the libraries already in <code>package.json</code>."</em></p>
+<p><strong>Problem:</strong> The agent quietly changes the database schema — the shape of the database, meaning which fields exist and what type each one is — when adding features.
+<strong>New rule:</strong> <em>"Never change the database schema in the same task as a UI change. Schema changes require their own task and their own review."</em></p>
+<p><strong>Problem:</strong> The agent writes tests only for the happy path.
+<strong>New rule:</strong> <em>"When adding a new feature, include at least one test for an edge case — empty input, missing field, or unexpected value."</em></p>
+<p><strong>Problem:</strong> The agent invents function names or files that don't exist.
+<strong>New rule:</strong> <em>"Before referring to a function or file, confirm it exists by searching the codebase. Do not assume."</em></p>
+</blockquote>
+<p>Each rule is short, specific, and written in the imperative. Each one closes a door that has been quietly slammed on you at least once. Together, over weeks and months, they turn your project memory from a generic onboarding document into something much more valuable: a record of the specific, hard-earned lessons this project has taught you.</p>
+<blockquote class="pb-callout pb-callout--try"><span class="pb-callout__label">TRY THIS</span><p>At the end of any session that produced a surprise, ask: <em>"What sentence, added to project memory, would have prevented this?"</em> Then add the sentence. That single question, asked honestly and often, is the difference between an agent that gets worse to work with over time and one that gets better.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Learn</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-27">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">27</span> <span>Learn</span></div>
+    <h1 class="pb-chapter__title">MAKE THE PROJECT BETTER AT WORKING WITH AI</h1>
+  </header>
+  <div class="pb-body">
+    <p>There is a quiet, cumulative property to a well-run project that uses AI coding agents, and it is one of the most important ideas in this book. Stated plainly:</p>
+<p><strong>A project should get easier to work with over time, not harder.</strong></p>
+<p>Most codebases go the other direction. They start clean and small. Features pile on. Conventions drift. Documentation goes out of date. Nobody remembers why a particular file exists. Every new change costs more than the last, and every new person — human or agent — takes longer to become useful. This is entropy, and it happens by default.</p>
+<p>Working carefully with an AI coding agent gives you an unusual opportunity to fight that entropy on purpose. Every session becomes a small chance to leave the project slightly better organized, slightly better explained, and slightly easier for the next task. Over months, the compound effect is dramatic.</p>
+<p>Concretely, a well-tended project accumulates:</p>
+<ul>
+<li><strong>Clearer documentation.</strong> Not more of it — clearer. The project memory sharpens with every rule you learn, every convention you decide is real, every landmine you draw a circle around.</li>
+<li><strong>Better tests.</strong> Each new feature ships with tests for the behaviors that matter. Each bug you find becomes a test that will catch it if it ever returns. The referee gets stronger.</li>
+<li><strong>Stronger conventions.</strong> <em>"This is how we do things here"</em> becomes an actual, written thing, not a vague feeling. Components look consistent. Files sit where you'd expect. New code fits into the shape of the old.</li>
+<li><strong>Better instructions.</strong> Your task-writing improves. The kinds of tasks you send to the agent get sharper, more scoped, more defined. Fewer misfires. Fewer surprises.</li>
+<li><strong>Reusable workflows.</strong> You start to recognize task shapes. <em>"Adding a new field to an existing entity"</em> becomes a familiar pattern, with a familiar checklist. So does <em>"adding a new page"</em> and <em>"changing an existing form."</em> The tenth time you do one of these is much cheaper than the first.</li>
+<li><strong>Fewer repeated mistakes.</strong> The rules you wrote yesterday quietly prevent today's version of yesterday's problem. You stop stepping on the same rakes.</li>
+</ul>
+<p>The paradox is that this makes the <em>agent</em> look better too — even though the agent hasn't changed. The same model, working inside a project with strong documentation, sharp conventions, and a well-tuned rules file, tends to produce dramatically better work than it does in a blank, chaotic one. What changed was not the intelligence in the machine. What changed was the environment you built around it.</p>
+<p>That environment is portable in a deeper sense as well. Better documentation is better for the next human who joins the project. Better tests protect against every future change, human or otherwise. Better conventions make everything faster to read. In building a project that is friendly to AI agents, you have — almost as a side effect — built a project that is friendly to people.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">KEY IDEA</span><p>Every task is two deliverables. One is the change itself. The other is a slightly better project to make the next change in. Beginners deliver only the first. Serious builders deliver both.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Learn</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-28">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">28</span> <span>The whole system</span></div>
+    <h1 class="pb-chapter__title">THE COMPLETE AI CODING AGENT OPERATING SYSTEM</h1>
+  </header>
+  <div class="pb-body">
+    <p>We started this book with a promise: that the difference between frustrating AI-assisted work and reliable AI-assisted work is not the prompt, but the workflow. It is now time to lay the full workflow out on one page, as an operating system rather than a list of tips.</p>
+<p>Each stage exists to prevent a specific failure. Read the whole thing once. Come back to it whenever a task falls apart, and diagnose which stage you skipped.</p>
+<p><strong>1. DEFINE.</strong>
+Turn a wish into a job. State the objective, the scope, the expected result, and what "done" means — in writing, before any code is written.
+<em>Prevents: vague tasks that end whenever the agent gets tired.</em></p>
+<p><strong>2. CONTEXT.</strong>
+Give the agent the map it needs to work inside this specific project — structure, conventions, commands, and the parts of the system that require caution. Written once, in project memory, so it doesn't have to be retyped every session.
+<em>Prevents: an agent guessing about your project instead of understanding it.</em></p>
+<p><strong>3. INVESTIGATE.</strong>
+Before changing anything, look. Have the agent read the relevant files, trace how the feature currently works, and report back. Only then propose the change.
+<em>Prevents: building a second, parallel version of a system that already exists.</em></p>
+<p><strong>4. BOUNDARIES.</strong>
+Say, out loud, what the agent may and may not touch. Name the files that are inside the rectangle and the ones that are off-limits. Include the sentence <em>"If you believe another file must change, stop and ask."</em>
+<em>Prevents: small tasks that quietly become large ones.</em></p>
+<p><strong>5. EXECUTE.</strong>
+Work in small, controlled steps. One logical change at a time. No unrequested refactoring. Reuse the project's existing patterns. Inspect the result before moving on.
+<em>Prevents: unreviewable piles of "improvements" that all have to be untangled at once.</em></p>
+<p><strong>6. VERIFY.</strong>
+Prove the change works. Run the tests. Open the app. Check the specific thing you asked for. Check the neighboring features that were most likely to break. Try one or two edge cases.
+<em>Prevents: shipping code that looks right and behaves wrong.</em></p>
+<p><strong>7. REVIEW.</strong>
+Read the diff. Understand every change. Confirm nothing outside the scope was touched. Take responsibility for the change as if you had written it yourself, because — as far as the project is concerned — you did.
+<em>Prevents: silent damage hidden behind a green test suite.</em></p>
+<p><strong>8. LEARN.</strong>
+When something goes wrong, ask what rule, added to project memory, would have prevented it. Add the rule. Leave the project a little better organized than you found it.
+<em>Prevents: making the same mistake a second time, and a third, and a fourth.</em></p>
+<p>That is the whole system. Eight stages, each defensible, each doing a specific job that no other stage can do. None of them are exotic. All of them are skippable, which is exactly why most beginners skip them.</p>
+<blockquote class="pb-callout pb-callout--key"><span class="pb-callout__label">THE INTELLECTUAL PAYOFF, IN ONE LINE</span><p>A prompt is one instruction. A workflow is the system that surrounds it. Good results come from good systems, not clever sentences.</p>
+</blockquote>
+<p>If you finish this book remembering only that, and if you build even a rough version of this system into how you work, you will already be more effective with AI coding agents than most people who use them.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">The whole system</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-29">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">29</span> <span>Walkthrough</span></div>
+    <h1 class="pb-chapter__title">REAL-WORLD WALKTHROUGH</h1>
+  </header>
+  <div class="pb-body">
+    <p>To make the operating system concrete, here is one realistic task in the Student Job Tracker, worked all the way through. The task is small, deliberately. A small task, done well, teaches the workflow more clearly than a large task done impressively.</p>
+<p><strong>The task, as it might first appear in your head:</strong>
+<em>"Add a filter to the dashboard so I can see only the applications with a given status."</em></p>
+<p>Watch how that sentence becomes real work through the eight stages.</p>
+<p><strong>1. DEFINE</strong>
+You write, before doing anything else:</p>
+<blockquote>
+<p><em>Objective:</em> Let the student narrow the Applications list to a single status at a time.
+<em>Scope:</em> The Applications list page only.
+<em>Expected result:</em> A row of buttons above the list — All, Active, Rejected, Offer, Withdrawn. Clicking one shows only applications matching that status. "All" restores the full list.
+<em>Constraints:</em> No new libraries. No changes to the database. No changes to the Add Application form.
+<em>Done means:</em> Each button filters correctly, "All" returns everything, existing add/edit flows still work, the list still looks correct on a phone-sized screen, existing tests still pass.</p>
+</blockquote>
+<p><strong>2. CONTEXT</strong>
+You confirm that project memory (<code>AGENTS.md</code>) already covers the project structure, commands, and off-limits folders. You do not repeat this in the task; the agent will read it.</p>
+<p><strong>3. INVESTIGATE</strong>
+Your first instruction to the agent is not "add the filter." It is:</p>
+<blockquote>
+<p><em>"Before proposing any changes, read the Applications list page and any component or function that already touches application status. Summarize how status is stored and displayed today, and where you think the filter should live. Do not edit any files yet."</em></p>
+</blockquote>
+<p>The agent reports back that status is already stored on each application, already displayed as a colored label, and that the list page fetches all applications at once and renders them in a simple component. It proposes putting the filter buttons above the list and filtering in memory. You agree.</p>
+<p><strong>4. BOUNDARIES</strong>
+Your next instruction:</p>
+<blockquote>
+<p><em>"Change only the Applications list page and its stylesheet. Do not modify the data layer, the Add Application form, or any file outside <code>src/pages/applications/</code>. If you believe another file must change, stop and tell me."</em></p>
+</blockquote>
+<p><strong>5. EXECUTE</strong>
+You ask for the change in two small steps rather than one:</p>
+<blockquote>
+<p><em>"Step 1: Add the filter buttons above the list. Have 'All' be selected by default. Do not wire them up to any filtering logic yet. Stop when done."</em></p>
+</blockquote>
+<p>You look at the result. The buttons are there. Nothing else moved.</p>
+<blockquote>
+<p><em>"Step 2: Wire the buttons so clicking one filters the visible list to that status. Keep the current filter selection in the page's local state. Do not persist it."</em></p>
+</blockquote>
+<p>You look again. The filter works.</p>
+<p><strong>6. VERIFY</strong>
+You run the project's tests: green. You open the app manually. You click each status button in turn — the list narrows correctly. You click "All" — everything comes back. You add a new application with status "Rejected" using the existing form (which you did not want to change) — it saves, and the "Rejected" filter now includes it. You resize the browser to a phone width — the buttons wrap cleanly, the list still reads well.</p>
+<p>You also try an edge case: a status with zero applications. The list shows an empty state cleanly rather than crashing.</p>
+<p><strong>7. REVIEW</strong>
+You open the diff. Two files changed: the list page and its stylesheet, exactly as scoped. No new dependencies. No stray edits. The new code follows the same component pattern as the rest of the page. You can explain, in one sentence per hunk, why every change is there. You approve it.</p>
+<p><strong>8. LEARN</strong>
+Reflecting on the session, one small thing surprised you: the agent's first proposal had used a slightly different naming style for the filter buttons than the rest of the project's components. You caught it in review and asked for a rename. That is a rule worth capturing. You add one line to <code>AGENTS.md</code>:</p>
+<blockquote>
+<p><em>"Interactive elements (buttons, filters, toggles) should follow the naming pattern used in <code>src/components/</code>. Match existing conventions rather than inventing new ones."</em></p>
+</blockquote>
+<p>The next time you or anyone else adds a similar element, that lesson is already learned.</p>
+<p>That is one small feature, shipped in an afternoon, without drama. Nothing about it required advanced engineering skill. It required a defined task, a little context, a look before a leap, explicit boundaries, small steps, honest verification, careful review, and one sentence of learning captured for next time.</p>
+<p>Do this ten times, and you will not just have ten features. You will have a project — and a way of working — that gets easier every week instead of harder.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Walkthrough</span></footer>
+</section>
+
+<section class="page pb-part" data-section="pb">
+  <div>
+    <p class="pb-part__eyebrow">Part two</p>
+    <h1 class="pb-part__title">Practice &amp; reference.</h1>
+    <p class="pb-part__sub">A reusable task template, the two working checklists, and a closing chapter on the only skill in this field that will still be worth having in ten years.</p>
+  </div>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-30">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">30</span> <span>Practice</span></div>
+    <h1 class="pb-chapter__title">REUSABLE AI CODING TASK TEMPLATE</h1>
+  </header>
+  <div class="pb-body">
+    <p>The single most useful thing you can copy out of this book is a template. Not a prompt template — a <em>task</em> template. Something you fill in before every meaningful change, until doing so becomes automatic and you no longer need the form.</p>
+<p>Keep this template somewhere you can reach in ten seconds. Paste it into a note. Print it out. Whatever works.</p>
+<hr />
+<p><strong>TASK TEMPLATE — AI CODING AGENT</strong></p>
+<p><strong>TASK.</strong>
+<em>A one-line name for the change. Something you could tell a friend in an elevator.</em>
+Example: <em>"Add a status filter to the Applications list."</em></p>
+<p><strong>GOAL.</strong>
+<em>The outcome, not the code. Why does this matter?</em>
+Example: <em>"So the student can quickly see only the applications that are still active, without scrolling past rejected ones."</em></p>
+<p><strong>CONTEXT.</strong>
+<em>Which part of the project this touches. Point to the relevant folders, files, or existing patterns.</em>
+Example: <em>"The Applications list page (<code>src/pages/applications/list.tsx</code>) and the shared status label component in <code>src/components/</code>."</em></p>
+<p><strong>INSPECT FIRST.</strong>
+<em>Ask the agent to look before it leaps.</em>
+Example: <em>"Before proposing any changes, read the Applications list page and any file that touches application status. Summarize how status is stored and displayed today. Do not edit yet."</em></p>
+<p><strong>SCOPE.</strong>
+<em>What files or areas the agent may change.</em>
+Example: <em>"The Applications list page and its stylesheet. Nothing else."</em></p>
+<p><strong>BOUNDARIES.</strong>
+<em>What must not change, and the standing safety rule.</em>
+Example:</p>
+<blockquote>
+<p><em>"Do not modify the database, the Add Application form, or any file outside <code>src/pages/applications/</code>. Do not add new libraries. If you believe another file must change, stop and tell me — do not change it yourself."</em></p>
+</blockquote>
+<p><strong>SUCCESS CRITERIA.</strong>
+<em>A short checkable list. What "done" looks like when a real person uses it.</em>
+Example:
+- <em>Filter buttons appear above the list.</em>
+- <em>Clicking each filter shows only applications matching that status.</em>
+- <em>"All" restores the full list.</em>
+- <em>The Add Application flow still works exactly as before.</em>
+- <em>The list still looks correct on a phone-sized screen.</em></p>
+<p><strong>VALIDATION.</strong>
+<em>How you (or the agent) will prove it works.</em>
+Example:
+- <em>Run the existing test suite. It must stay green.</em>
+- <em>Manually filter by each status. Add one new application via the form and confirm it appears in the correct filter.</em>
+- <em>Try one edge case: a status with zero applications. Confirm the list shows an empty state, not an error.</em></p>
+<p><strong>REVIEW.</strong>
+<em>What you will check before accepting the change.</em>
+Example:
+- <em>Only the scoped files were modified.</em>
+- <em>No new dependencies were added.</em>
+- <em>I can explain each hunk of the diff in one sentence.</em>
+- <em>The change matches the success criteria above.</em></p>
+<hr />
+<p>Two things about this template.</p>
+<p>First, filling it in should feel slow the first ten times and quick after that. If it feels slow forever, the task is probably ambiguous — which is exactly the moment when writing it down helps most.</p>
+<p>Second, the template will change as your project changes. Add fields for the constraints that repeatedly bite you. Delete fields that never earn their keep. What you are really building, one task at a time, is a personal operating manual for how you work with agents. This template is only the starting shape.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Practice</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-31">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">31</span> <span>Practice</span></div>
+    <h1 class="pb-chapter__title">THE TWO FINAL CHECKLISTS</h1>
+  </header>
+  <div class="pb-body">
+    <p>You have the operating system. You have the template. This page collects the two shortest possible checklists — one for before you ask the agent to work, one for before you accept its work.</p>
+<p>Use them the way a pilot uses a pre-flight checklist. Not because the pilot has forgotten how to fly, but because forgetting one small thing at speed is how accidents happen.</p>
+<hr />
+<h3>Checklist 1 — BEFORE ASKING THE AGENT TO WORK</h3>
+<ul>
+<li>[ ] I can state the <strong>objective</strong> of this task in one sentence.</li>
+<li>[ ] I have written <strong>scope</strong>: which files, pages, or features may change.</li>
+<li>[ ] I have written <strong>boundaries</strong>: what must not change, including any sensitive areas nearby.</li>
+<li>[ ] I have described the <strong>expected result</strong> in terms a user would recognize.</li>
+<li>[ ] I have named the <strong>constraints</strong> that must stay true (no new libraries, no schema changes, etc.).</li>
+<li>[ ] I have written a short, checkable <strong>definition of done</strong>.</li>
+<li>[ ] I have asked the agent to <strong>investigate first</strong> — read the relevant code and summarize it before editing.</li>
+<li>[ ] The instruction includes the standing rule: <em>"If you believe a file outside scope must change, stop and tell me."</em></li>
+<li>[ ] The task is <strong>small enough</strong> that I can review the whole diff in one sitting. If not, I have split it.</li>
+</ul>
+<hr />
+<h3>Checklist 2 — BEFORE ACCEPTING THE AGENT'S WORK</h3>
+<ul>
+<li>[ ] I have <strong>read the diff</strong>, not skimmed it.</li>
+<li>[ ] Every changed file is either <strong>expected</strong> or has an <strong>explanation I accept</strong>.</li>
+<li>[ ] <strong>No new dependencies</strong> appeared that I did not approve.</li>
+<li>[ ] <strong>Nothing outside the declared scope</strong> was modified.</li>
+<li>[ ] The <strong>tests still pass</strong>, and any new behavior has at least one test covering it.</li>
+<li>[ ] I have <strong>manually checked</strong> the specific thing I asked for, on a real screen with real data.</li>
+<li>[ ] I have <strong>spot-checked the neighbors</strong> — the features most likely to break, even if I did not touch them.</li>
+<li>[ ] I have tried at least <strong>one edge case</strong> (empty, very large, missing, unexpected value).</li>
+<li>[ ] I can <strong>explain each meaningful change</strong> in one sentence, out loud.</li>
+<li>[ ] If anything surprised me, I have captured it as a <strong>new rule</strong> in project memory.</li>
+</ul>
+<hr />
+<blockquote class="pb-callout pb-callout--watch"><span class="pb-callout__label">WATCH OUT</span><p>- The agent has touched files you did not name and cannot explain why.
+- The diff is too large to read in one sitting.
+- Tests were changed to "make them pass" instead of code being fixed.
+- A new library or dependency was added that you did not approve.
+- The database schema changed as a side effect of a UI task.
+- You are about to ship a change you do not understand because it's late and the tests are green.</p>
+<p>None of these are the end of the world. All of them are the moment where a small pause saves a large mess.</p>
+</blockquote>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Practice</span></footer>
+</section>
+
+<section class="page pb-chapter" data-section="pb" id="ch-32">
+  <header class="pb-chapter__opener">
+    <div class="pb-chapter__eyebrow"><span class="num">32</span> <span>Close</span></div>
+    <h1 class="pb-chapter__title">THE FINAL PRINCIPLE</h1>
+  </header>
+  <div class="pb-body">
+    <p>Tools change. Models change. The interface you use today will look old within a year, and the interface you use next year will look old the year after that. Whatever specific product name is on the tab in your browser right now — Claude Code, Cursor, Copilot, Codex, Gemini, something newer — will be joined, replaced, or subsumed by another.</p>
+<p>Almost nothing in this book depended on which one you use.</p>
+<p>What this book asked you to build is portable, because it lives in <em>you</em>, and in the small habits you leave behind in your projects. A short project-memory file. A task template you actually fill in. A definition of done that is checkable. A boundary line that says <em>stop and ask</em>. A diff you read before moving on. A rule captured after every surprise.</p>
+<p>These are humble artifacts. None of them will trend on social media. Together, they are the difference between someone who is technically using AI and someone who is actually shipping.</p>
+<p>Notice that none of them are prompts. The reason is now, hopefully, obvious.</p>
+<p><strong>A prompt is a single instruction inside a single conversation.</strong> Its lifespan is minutes. Its blast radius, at best, is one task.</p>
+<p><strong>A workflow is a system that lives across every conversation you will ever have.</strong> Its lifespan is the life of the project. Its blast radius, in the good sense, is every change you ever make.</p>
+<p>If you get the workflow right, most bad prompts still produce acceptable results, because the environment around the prompt catches the mistakes. If you get the workflow wrong, no prompt is clever enough to save you, because the environment will keep producing the same class of failure no matter what you type.</p>
+<p>The eight stages, one last time:</p>
+<p><strong>DEFINE → CONTEXT → INVESTIGATE → BOUNDARIES → EXECUTE → VERIFY → REVIEW → LEARN</strong></p>
+<p>And the single principle those eight stages exist to serve:</p>
+<blockquote>
+<p><strong>Don't aim for maximum AI autonomy. Aim for controlled autonomy.</strong></p>
+</blockquote>
+<p>There is one more thing worth saying, at the end.</p>
+<p>The reason to work this way is not just to write better code. It is to become the kind of person other people trust with real work. Not because you type faster than they do. Because when you say a change is done, it is actually done. Because when something breaks, you can explain why. Because you leave every project you touch a little easier for the next person to work in. That is a professional habit, not a technical one — and it will still be recognizable, decades from now, no matter what the tools look like then.</p>
+<p>The playbook ends here. The practice starts on your next task.</p>
+<p>Open the template. Define the job. Give the context. Investigate before editing. Set the boundaries. Execute in small steps. Verify honestly. Read the diff. Capture the lesson.</p>
+<p>Then do it again.</p>
+<p>That is how you become someone who works with AI coding agents well. And it is the only skill in this whole field that will still be worth having in ten years.</p>
+<hr />
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Close</span></footer>
+</section>
+
+<section class="page pb-glossary-page" data-section="pb" id="glossary">
+  <header class="page-head"><span class="pill">Reference</span><span>@data.science.beginners</span></header>
+  <h1 class="page-title">Glossary.</h1>
+  <p class="page-lede">Plain-English definitions of every technical term used in this book.</p>
+  <div class="pb-body pb-glossary">
+    <markdown.core.Markdown object at 0x7f12c0c1d410>
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Glossary</span></footer>
+</section>
+
+<section class="page pb-ref-page" data-section="pb" id="reference-card">
+  <header class="page-head"><span class="pill">Take-away</span><span>@data.science.beginners</span></header>
+  <h1 class="page-title">Reference card.</h1>
+  <p class="page-lede">Tear this out. Keep it next to your keyboard. Or just remember it.</p>
+  <div class="pb-body pb-ref">
+    <div class="pb-ref__block"><p><em>Tear this out. Keep it next to your keyboard. Or just remember it.</em></p></div>
+<div class="pb-ref__block"><p><strong>THE ONE-LINE THESIS</strong></p>
+<p><em>A prompt is one instruction. A workflow is the system around it. Good results come from good systems, not clever sentences.</em></p></div>
+<div class="pb-ref__block"><p><strong>THE EIGHT-STAGE OPERATING SYSTEM</strong></p>
+<pre><code>DEFINE
+  ↓
+CONTEXT
+  ↓
+INVESTIGATE
+  ↓
+BOUNDARIES
+  ↓
+EXECUTE
+  ↓
+VERIFY
+  ↓
+REVIEW
+  ↓
+LEARN
+</code></pre>
+<ol>
+<li><strong>DEFINE</strong> — objective, scope, expected result, constraints, done.</li>
+<li><strong>CONTEXT</strong> — project memory: what this project is and how it works.</li>
+<li><strong>INVESTIGATE</strong> — read the code before changing it.</li>
+<li><strong>BOUNDARIES</strong> — what may change; what must not; <em>"stop and ask."</em></li>
+<li><strong>EXECUTE</strong> — small steps; no unrequested refactoring; existing patterns.</li>
+<li><strong>VERIFY</strong> — the thing you asked for, the neighbors, tests, an edge case.</li>
+<li><strong>REVIEW</strong> — read the diff; explain every change; own it.</li>
+<li><strong>LEARN</strong> — turn each surprise into a rule; add it to project memory.</li>
+</ol></div>
+<div class="pb-ref__block"><p><strong>THE FOUR QUESTIONS OF DEFINITION</strong></p>
+<ol>
+<li>Objective — what outcome?</li>
+<li>Scope — what's in, what's out?</li>
+<li>Expected result — what will the user see?</li>
+<li>Constraints — what must stay true?</li>
+</ol></div>
+<div class="pb-ref__block"><p><strong>THE FIVE STEPS OF INVESTIGATION</strong></p>
+<p>READ → TRACE → UNDERSTAND → PLAN → EDIT.</p></div>
+<div class="pb-ref__block"><p><strong>THE STANDING RULE FOR EVERY TASK</strong></p>
+<blockquote>
+<p><em>"Do not modify anything outside the files listed above. If you believe another file must change, stop and tell me — do not change it yourself."</em></p>
+</blockquote></div>
+<div class="pb-ref__block"><p><strong>THE FEEDBACK LOOP</strong></p>
+<p>IMPLEMENT → TEST → FIX → TEST AGAIN → VALIDATE.</p></div>
+<div class="pb-ref__block"><p><strong>THE SIX DIFF-REVIEW QUESTIONS</strong></p>
+<ol>
+<li>What changed?</li>
+<li>Why did it change?</li>
+<li>Was anything unrelated modified?</li>
+<li>Is it simpler than it needed to be?</li>
+<li>Are there unexpected files?</li>
+<li>Does it actually solve the original problem?</li>
+</ol></div>
+<div class="pb-ref__block"><p><strong>RED FLAGS — STOP</strong></p>
+<ul>
+<li>Files outside scope were changed.</li>
+<li>The diff is too large to read in one sitting.</li>
+<li>Tests were softened instead of code being fixed.</li>
+<li>New dependencies appeared uninvited.</li>
+<li>The schema changed as a side effect.</li>
+<li>You cannot explain the change.</li>
+<li>You are about to ship late-at-night because "the tests passed."</li>
+</ul></div>
+<div class="pb-ref__block"><p><strong>THE LEARNING LOOP</strong></p>
+<p>MISTAKE → RULE → BETTER FUTURE BEHAVIOR.</p>
+<p><em>What one sentence, added to project memory, would have prevented this?</em></p></div>
+<div class="pb-ref__block"><p><strong>THE ATTITUDE</strong></p>
+<p>The agent is allowed to be fast. <strong>You are required to be accountable.</strong></p></div>
+<div class="pb-ref__block"><p><strong>THE FINAL PRINCIPLE</strong></p>
+<p><em>Don't aim for maximum AI autonomy. Aim for controlled autonomy.</em></p></div>
+<div class="pb-ref__block"><p><em>End of THE AI CODING AGENT PLAYBOOK.</em></p></div>
+  </div>
+  <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Reference</span></footer>
+</section>
+
+
+</body>
+</html>
