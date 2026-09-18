@@ -143,6 +143,20 @@
     <div class="pb-chapter__eyebrow"><span class="num">02</span> <span>The problem</span></div>
     <h1 class="pb-chapter__title">WHY DOES AI STILL BREAK THINGS?</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>AI writes code fast, but often breaks things.</li>
+      <li>It&#x27;s usually not your prompt that&#x27;s wrong.</li>
+      <li>It&#x27;s everything MISSING around the prompt.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Why can an AI coding agent write four hundred lines of code in ninety seconds — and still leave your project in worse shape than before you asked?</p>
 <p>If you have spent any time with a modern AI coding tool, you have felt this moment. You typed a short request. The agent worked confidently. Files appeared. Code scrolled past. Something got installed. A message told you the task was complete.</p>
@@ -162,6 +176,82 @@
     <div class="pb-chapter__eyebrow"><span class="num">03</span> <span>The problem</span></div>
     <h1 class="pb-chapter__title">WHY THIS BOOK EXISTS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Better prompts don&#x27;t fix bad results.</li>
+      <li>A better SYSTEM around the prompt does.</li>
+      <li>This book teaches that system, step by step.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vague prompt vs a working project">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <!-- prompt -->
+    <g transform="translate(20,30)">
+      <rect width="150" height="60" rx="8" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="12" y="22" font-size="9" fill="rgba(240,244,255,0.55)" letter-spacing="2">YOU TYPE</text>
+      <text x="12" y="42" font-size="10" fill="#F0F4FF">"Add rejected status"</text>
+    </g>
+    <!-- arrow -->
+    <path d="M175 60 L215 60" stroke="#4CE0D6" stroke-width="2"/>
+    <polygon points="215,60 210,56 210,64" fill="#4CE0D6"/>
+    <!-- ai -->
+    <g transform="translate(215,20)">
+      <rect width="80" height="80" rx="10" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="40" y="30" text-anchor="middle" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="2">AGENT</text>
+      <text x="40" y="52" text-anchor="middle" font-size="18">⚙</text>
+      <text x="40" y="70" text-anchor="middle" font-size="8" fill="rgba(240,244,255,0.72)">400 lines</text>
+    </g>
+    <!-- arrow -->
+    <path d="M300 60 L340 60" stroke="#F58BB6" stroke-width="2"/>
+    <polygon points="340,60 335,56 335,64" fill="#F58BB6"/>
+    <!-- broken -->
+    <g transform="translate(340,20)">
+      <rect width="110" height="80" rx="10" fill="rgba(20,34,78,0.55)" stroke="#F58BB6"/>
+      <text x="55" y="28" text-anchor="middle" font-size="9" fill="#F58BB6" font-weight="800" letter-spacing="2">BROKEN</text>
+      <text x="15" y="46" font-size="8.5" fill="rgba(240,244,255,0.72)">✗ New page blank</text>
+      <text x="15" y="60" font-size="8.5" fill="rgba(240,244,255,0.72)">✗ List broke</text>
+      <text x="15" y="74" font-size="8.5" fill="rgba(240,244,255,0.72)">✗ Can't undo</text>
+    </g>
+
+    <!-- the missing layer -->
+    <g transform="translate(20,130)">
+      <rect width="430" height="52" rx="8" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="215" y="22" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6" letter-spacing="3">WHAT WAS MISSING</text>
+      <text x="215" y="40" text-anchor="middle" font-size="9.5" fill="#F0F4FF">Task · Scope · Boundaries · Definition of done · Verification · Review</text>
+    </g>
+  </g>
+</svg>
+<figcaption>The prompt wasn't wrong. Everything around the prompt was missing.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There are already thousands of articles about "the perfect prompt." There are prompt libraries, cheat sheets, and viral threads promising ten commands that will change your life.</p>
 <p>They rarely change anything, because they treat the wrong layer of the problem.</p>
@@ -183,6 +273,111 @@
     <div class="pb-chapter__eyebrow"><span class="num">04</span> <span>Foundations</span></div>
     <h1 class="pb-chapter__title">WHAT IS AN AI CODING AGENT?</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Chatbot = just talks.</li>
+      <li>Assistant = suggests as you type.</li>
+      <li>Agent = actually edits your project. Big difference.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three types of AI: chatbot, assistant, agent">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- three columns -->
+  <g font-family="Inter, sans-serif" fill="#F0F4FF">
+    <!-- chatbot -->
+    <g transform="translate(10,10)">
+      <rect width="150" height="240" rx="10" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#7DA7FF" letter-spacing="2">CHATBOT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Answers questions</text>
+      <g transform="translate(60,72)" fill="none" stroke="#7DA7FF" stroke-width="1.5">
+        <rect x="0" y="0" width="30" height="22" rx="4"/>
+        <path d="M15 22 L18 30 L22 22"/>
+        <circle cx="9" cy="11" r="1.5" fill="#7DA7FF" stroke="none"/>
+        <circle cx="21" cy="11" r="1.5" fill="#7DA7FF" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="130">✓ Text in, text out</text>
+        <text x="14" y="146">✗ No file access</text>
+        <text x="14" y="162">✗ No commands</text>
+        <text x="14" y="178">✗ No testing</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like a friend</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">on the phone."</text>
+    </g>
+    <!-- assistant -->
+    <g transform="translate(175,10)">
+      <rect width="150" height="240" rx="10" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#F5C453" letter-spacing="2">ASSISTANT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Suggests as you type</text>
+      <g transform="translate(52,68)" fill="none" stroke="#F5C453" stroke-width="1.5">
+        <rect x="0" y="0" width="46" height="32" rx="3"/>
+        <line x1="4" y1="8" x2="30" y2="8"/>
+        <line x1="4" y1="15" x2="42" y2="15"/>
+        <line x1="4" y1="22" x2="26" y2="22"/>
+        <rect x="4" y="26" width="24" height="3" fill="#F5C453" fill-opacity="0.35" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="130">✓ Sees your file</text>
+        <text x="14" y="146">✓ Autocompletes code</text>
+        <text x="14" y="162">✗ Doesn't run code</text>
+        <text x="14" y="178">✗ Doesn't edit files</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like autocomplete</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">with a brain."</text>
+    </g>
+    <!-- agent -->
+    <g transform="translate(340,10)">
+      <rect width="150" height="240" rx="10" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#4CE0D6" letter-spacing="2">AGENT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Takes actions</text>
+      <g transform="translate(50,66)" fill="none" stroke="#4CE0D6" stroke-width="1.5">
+        <circle cx="25" cy="18" r="14"/>
+        <path d="M25 4 L25 32 M11 18 L39 18 M15 8 L35 28 M35 8 L15 28" stroke-opacity="0.5"/>
+        <circle cx="25" cy="18" r="4" fill="#4CE0D6" fill-opacity="0.4" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="118">✓ Reads whole project</text>
+        <text x="14" y="132">✓ Edits many files</text>
+        <text x="14" y="146">✓ Runs commands</text>
+        <text x="14" y="160">✓ Runs tests</text>
+        <text x="14" y="174">✓ Fixes its own errors</text>
+        <text x="14" y="188">⚠ Needs your rules</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like a junior dev</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">at your desk."</text>
+    </g>
+  </g>
+</svg>
+<figcaption>The three kinds of AI helpers you can talk to. The right-most one is the topic of this book.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>Before going further, it helps to be precise about what an AI coding agent actually is — because the term gets used loosely, and the differences matter.</p>
 <p>Three things often get grouped together. They are not the same.</p>
@@ -204,6 +399,111 @@
     <div class="pb-chapter__eyebrow"><span class="num">05</span> <span>Foundations</span></div>
     <h1 class="pb-chapter__title">CHATBOT VS CODING AGENT</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Agents can do a LOT more than chatbots.</li>
+      <li>That&#x27;s why they cause bigger surprises.</li>
+      <li>The more powerful the tool, the more your rules matter.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three types of AI: chatbot, assistant, agent">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- three columns -->
+  <g font-family="Inter, sans-serif" fill="#F0F4FF">
+    <!-- chatbot -->
+    <g transform="translate(10,10)">
+      <rect width="150" height="240" rx="10" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#7DA7FF" letter-spacing="2">CHATBOT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Answers questions</text>
+      <g transform="translate(60,72)" fill="none" stroke="#7DA7FF" stroke-width="1.5">
+        <rect x="0" y="0" width="30" height="22" rx="4"/>
+        <path d="M15 22 L18 30 L22 22"/>
+        <circle cx="9" cy="11" r="1.5" fill="#7DA7FF" stroke="none"/>
+        <circle cx="21" cy="11" r="1.5" fill="#7DA7FF" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="130">✓ Text in, text out</text>
+        <text x="14" y="146">✗ No file access</text>
+        <text x="14" y="162">✗ No commands</text>
+        <text x="14" y="178">✗ No testing</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like a friend</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">on the phone."</text>
+    </g>
+    <!-- assistant -->
+    <g transform="translate(175,10)">
+      <rect width="150" height="240" rx="10" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#F5C453" letter-spacing="2">ASSISTANT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Suggests as you type</text>
+      <g transform="translate(52,68)" fill="none" stroke="#F5C453" stroke-width="1.5">
+        <rect x="0" y="0" width="46" height="32" rx="3"/>
+        <line x1="4" y1="8" x2="30" y2="8"/>
+        <line x1="4" y1="15" x2="42" y2="15"/>
+        <line x1="4" y1="22" x2="26" y2="22"/>
+        <rect x="4" y="26" width="24" height="3" fill="#F5C453" fill-opacity="0.35" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="130">✓ Sees your file</text>
+        <text x="14" y="146">✓ Autocompletes code</text>
+        <text x="14" y="162">✗ Doesn't run code</text>
+        <text x="14" y="178">✗ Doesn't edit files</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like autocomplete</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">with a brain."</text>
+    </g>
+    <!-- agent -->
+    <g transform="translate(340,10)">
+      <rect width="150" height="240" rx="10" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#4CE0D6" letter-spacing="2">AGENT</text>
+      <text x="75" y="50" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)">Takes actions</text>
+      <g transform="translate(50,66)" fill="none" stroke="#4CE0D6" stroke-width="1.5">
+        <circle cx="25" cy="18" r="14"/>
+        <path d="M25 4 L25 32 M11 18 L39 18 M15 8 L35 28 M35 8 L15 28" stroke-opacity="0.5"/>
+        <circle cx="25" cy="18" r="4" fill="#4CE0D6" fill-opacity="0.4" stroke="none"/>
+      </g>
+      <g font-size="8.5" fill="rgba(240,244,255,0.72)">
+        <text x="14" y="118">✓ Reads whole project</text>
+        <text x="14" y="132">✓ Edits many files</text>
+        <text x="14" y="146">✓ Runs commands</text>
+        <text x="14" y="160">✓ Runs tests</text>
+        <text x="14" y="174">✓ Fixes its own errors</text>
+        <text x="14" y="188">⚠ Needs your rules</text>
+      </g>
+      <text x="75" y="215" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">"Like a junior dev</text>
+      <text x="75" y="228" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-style="italic">at your desk."</text>
+    </g>
+  </g>
+</svg>
+<figcaption>The three kinds of AI helpers you can talk to. The right-most one is the topic of this book.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>The move from chatbot to agent is not a small upgrade. It is a change in kind. Comparing them side by side makes the shift, and its consequences, easy to see.</p>
 <table>
@@ -264,6 +564,81 @@
     <div class="pb-chapter__eyebrow"><span class="num">06</span> <span>Foundations</span></div>
     <h1 class="pb-chapter__title">THE BIG SHIFT</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Stop thinking: &#x27;tell AI what code to write.&#x27;</li>
+      <li>Start thinking: &#x27;give AI a clear job with clear limits.&#x27;</li>
+      <li>Same as hiring a plumber — you point at the leak.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 460 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A prompt is one instruction; a workflow is a system">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <!-- left: prompt -->
+    <g transform="translate(20,20)">
+      <rect width="180" height="170" rx="10" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="90" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="rgba(240,244,255,0.55)" letter-spacing="3">A PROMPT</text>
+      <text x="90" y="42" text-anchor="middle" font-size="8" fill="rgba(240,244,255,0.55)">one instruction</text>
+      <g transform="translate(50,66)">
+        <rect width="80" height="26" rx="4" fill="#7DA7FF" fill-opacity="0.16" stroke="#7DA7FF" stroke-opacity="0.4"/>
+        <text x="40" y="17" text-anchor="middle" font-size="9" fill="#F0F4FF">"Fix the bug"</text>
+      </g>
+      <g transform="translate(20,110)" fill="rgba(240,244,255,0.72)" font-size="8.5">
+        <text x="0" y="0">Life-span: minutes</text>
+        <text x="0" y="14">Blast radius: one reply</text>
+        <text x="0" y="28">Repeatable: no</text>
+        <text x="0" y="42">Compounds: no</text>
+      </g>
+    </g>
+    <!-- right: workflow -->
+    <g transform="translate(230,20)">
+      <rect width="210" height="170" rx="10" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="105" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6" letter-spacing="3">A WORKFLOW</text>
+      <text x="105" y="42" text-anchor="middle" font-size="8" fill="rgba(240,244,255,0.55)">a system around the instruction</text>
+      <g transform="translate(16,60)" font-size="8" fill="#F0F4FF">
+        <text x="0" y="0">Define · Context · Investigate</text>
+        <text x="0" y="12">Boundaries · Execute · Verify</text>
+        <text x="0" y="24">Review · Learn</text>
+      </g>
+      <g transform="translate(16,110)" fill="rgba(240,244,255,0.72)" font-size="8.5">
+        <text x="0" y="0">Life-span: the whole project</text>
+        <text x="0" y="14">Blast radius: every change (in a good way)</text>
+        <text x="0" y="28">Repeatable: yes</text>
+        <text x="0" y="42">Compounds: yes</text>
+      </g>
+    </g>
+  </g>
+</svg>
+<figcaption>Prompt is a sentence. Workflow is the working environment around that sentence.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>Somewhere between your first week and your third with an AI coding agent, a quiet shift has to happen. Most people never make it, and that is the difference between the users who eventually ship real projects and the ones who quietly go back to copy-pasting snippets from a chatbot.</p>
 <p>The shift is this.</p>
@@ -285,6 +660,142 @@
     <div class="pb-chapter__eyebrow"><span class="num">07</span> <span>The framework</span></div>
     <h1 class="pb-chapter__title">THE AI CODING AGENT WORKFLOW</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>There are 8 steps to a healthy AI task.</li>
+      <li>This page shows all of them at once.</li>
+      <li>Each one gets its own chapter next.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure pb-figure--full">
+<svg viewBox="0 0 360 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eight-stage workflow">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    
+    <g transform="translate(0,20)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">01</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">DEFINE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What is the job?</text>
+    </g>
+
+    <line x1="42" y1="60" x2="42" y2="80" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,82 38,76 46,76" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,62)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">02</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">CONTEXT</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What is this project?</text>
+    </g>
+
+    <line x1="42" y1="102" x2="42" y2="122" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,124 38,118 46,118" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,104)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">03</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">INVESTIGATE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What's already there?</text>
+    </g>
+
+    <line x1="42" y1="144" x2="42" y2="164" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,166 38,160 46,160" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,146)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#F5C453" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#F5C453" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#F5C453">04</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">BOUNDARIES</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What must not change?</text>
+    </g>
+
+    <line x1="42" y1="186" x2="42" y2="206" stroke="#F5C453" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,208 38,202 46,202" fill="#F5C453" opacity="0.9"/>
+
+    <g transform="translate(0,188)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#7A5CFF" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#7A5CFF" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#7A5CFF">05</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">EXECUTE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Small step. Look. Repeat.</text>
+    </g>
+
+    <line x1="42" y1="228" x2="42" y2="248" stroke="#7A5CFF" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,250 38,244 46,244" fill="#7A5CFF" opacity="0.9"/>
+
+    <g transform="translate(0,230)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#7A5CFF" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#7A5CFF" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#7A5CFF">06</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">VERIFY</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Prove it works.</text>
+    </g>
+
+    <line x1="42" y1="270" x2="42" y2="290" stroke="#7A5CFF" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,292 38,286 46,286" fill="#7A5CFF" opacity="0.9"/>
+
+    <g transform="translate(0,272)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#F58BB6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#F58BB6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#F58BB6">07</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">REVIEW</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Read every change.</text>
+    </g>
+
+    <line x1="42" y1="312" x2="42" y2="332" stroke="#F58BB6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,334 38,328 46,328" fill="#F58BB6" opacity="0.9"/>
+
+    <g transform="translate(0,314)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#6EE7A2" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#6EE7A2" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#6EE7A2">08</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">LEARN</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Turn surprise into rule.</text>
+    </g>
+
+  </g>
+</svg>
+<figcaption>The eight stages. Skipping one is almost always why a task falls apart.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There are eight stages in a healthy workflow with an AI coding agent. You will not always do all of them in a strict order. But once you can name them, you can notice which one is missing when something goes wrong — and something going wrong is almost always a stage you skipped.</p>
 <p>Here is the whole map, on one page. Each stage gets its own chapter later.</p>
@@ -309,6 +820,20 @@
     <div class="pb-chapter__eyebrow"><span class="num">08</span> <span>Define</span></div>
     <h1 class="pb-chapter__title">DEFINE THE JOB</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>&#x27;Improve the dashboard&#x27; is a bad instruction.</li>
+      <li>Answer 4 questions first: what, where, result, rules.</li>
+      <li>Then the agent has almost no room to guess wrong.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Almost every disappointing session with an AI coding agent starts the same way: the instruction was vague, so the agent filled in the blanks. It had no choice. Ambiguity does not stop an agent — it just gives it room to invent.</p>
 <p>Look at this one, which sounds fine until you read it twice:</p>
@@ -345,6 +870,20 @@ Existing behavior that must not break. Styles that must be respected. Data that 
     <div class="pb-chapter__eyebrow"><span class="num">09</span> <span>Define</span></div>
     <h1 class="pb-chapter__title">DEFINE WHAT &quot;DONE&quot; MEANS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>&#x27;Done&#x27; isn&#x27;t when the agent stops typing.</li>
+      <li>It&#x27;s when a real person could use it.</li>
+      <li>Write a short checkable list — before you start.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Defining the job tells the agent what to do. Defining "done" tells the agent — and yourself — when to stop.</p>
 <p>This sounds like the same thing. It isn't.</p>
@@ -376,6 +915,67 @@ Existing behavior that must not break. Styles that must be respected. Data that 
     <div class="pb-chapter__eyebrow"><span class="num">10</span> <span>Define</span></div>
     <h1 class="pb-chapter__title">SCOPE AND CONSTRAINTS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>&#x27;Blast radius&#x27; = how much can break if this goes wrong.</li>
+      <li>Small scope = small blast radius.</li>
+      <li>Name what to touch. Name what to leave alone.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blast radius: how far a change can reach">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- concentric rings -->
+  <g transform="translate(140,120)">
+    <circle r="105" fill="none" stroke="#F58BB6" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="80"  fill="none" stroke="#F5C453" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="55"  fill="none" stroke="#4CE0D6" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="30"  fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+    <text y="4" text-anchor="middle" font-size="10" font-weight="700" fill="#F0F4FF" font-family="Inter, sans-serif">the change</text>
+  </g>
+  <!-- labels -->
+  <g font-family="Inter, sans-serif" font-size="9.5">
+    <text x="260" y="60" fill="#F58BB6" font-weight="700">Payments</text>
+    <text x="260" y="74" fill="rgba(240,244,255,0.72)">Real money moves.</text>
+    <text x="260" y="98" fill="#F58BB6" font-weight="700">Authentication</text>
+    <text x="260" y="112" fill="rgba(240,244,255,0.72)">Users get locked out.</text>
+    <text x="260" y="136" fill="#F5C453" font-weight="700">Database schema</text>
+    <text x="260" y="150" fill="rgba(240,244,255,0.72)">Every page that read it breaks.</text>
+    <text x="260" y="174" fill="#4CE0D6" font-weight="700">Shared component</text>
+    <text x="260" y="188" fill="rgba(240,244,255,0.72)">Other pages using it also change.</text>
+    <text x="260" y="212" fill="#F0F4FF" font-weight="700">This one file</text>
+    <text x="260" y="226" fill="rgba(240,244,255,0.72)">Only the thing you meant.</text>
+  </g>
+</svg>
+<figcaption>Before you push the button, ask: how far can this reach if it goes wrong?</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There is a phrase professional engineers use when they talk about risky changes: <strong>blast radius.</strong> It means, if this change goes wrong, how much of the surrounding world gets damaged?</p>
 <p>A typo in a comment: blast radius of nothing.
@@ -408,6 +1008,20 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">11</span> <span>Context</span></div>
     <h1 class="pb-chapter__title">CONTEXT: AI NEEDS A MAP</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>The agent has never seen your project.</li>
+      <li>Give it a map: folders, rules, commands.</li>
+      <li>Save the map to a file. It reads it every time.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Even the most carefully defined task will fall apart if the agent has no idea what kind of project it just walked into.</p>
 <p>Imagine hiring that same contractor from the earlier analogy — clear job, clear scope, clear definition of done — and then dropping them in front of a house they have never seen, with no floor plan, no idea where the water shutoff is, no notes about which walls are load-bearing, and no clue that the electrical panel is behind the laundry room door. They are still skilled. They are also, now, guessing.</p>
@@ -437,6 +1051,20 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">12</span> <span>Context</span></div>
     <h1 class="pb-chapter__title">PROJECT MEMORY</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>&#x27;Project memory&#x27; is a file the agent reads first.</li>
+      <li>Common names: AGENTS.md, CLAUDE.md.</li>
+      <li>Write it once. Save yourself a hundred re-explanations.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Every time you open a new conversation with an AI coding agent, it starts from zero. It does not remember yesterday. It does not remember the last task. It does not remember the promise it made to never touch your authentication folder. Unless something reminds it, all of that context has to be reintroduced by you, by hand, every single time.</p>
 <p>That is exhausting. It is also the reason many people quietly give up on agents after a few weeks. They mistake "I have to explain my project again" for "this tool doesn't work."</p>
@@ -474,6 +1102,20 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">13</span> <span>Context</span></div>
     <h1 class="pb-chapter__title">WHAT SHOULD YOU DOCUMENT?</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>In project memory: architecture, folders, commands, rules.</li>
+      <li>NOT: generic advice, contradictions, outdated lines.</li>
+      <li>Keep it under two minutes to read.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Project memory is only useful if it contains the right things. A bloated, contradictory, out-of-date file is worse than no file at all, because the agent will still read it and quietly follow instructions you no longer mean.</p>
 <p>Aim for a short, honest document that answers the questions a competent new teammate would ask on their first day.</p>
@@ -509,6 +1151,102 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">14</span> <span>Investigate</span></div>
     <h1 class="pb-chapter__title">INVESTIGATE BEFORE EDITING</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Bad idea: edit first, understand later.</li>
+      <li>Good order: READ, TRACE, UNDERSTAND, PLAN, EDIT.</li>
+      <li>Ask the agent to LOOK first. Every time.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 460 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Investigate pipeline: read, trace, understand, plan, edit">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <text x="10" y="30" font-size="11" fill="rgba(240,244,255,0.55)" letter-spacing="3">LOOK BEFORE YOU LEAP</text>
+    
+    <g transform="translate(10,60)">
+      <rect width="78" height="70" rx="8" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="39" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">READ</text>
+      <foreignObject x="4" y="34" width="70" height="34">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font: 8.5px Inter; color: rgba(240,244,255,0.72); text-align:center; line-height:1.3;">Open the right files.</div>
+      </foreignObject>
+    </g>
+
+    <path d="M88 95 L98 95" stroke="#4CE0D6" stroke-width="1.5"/>
+    <polygon points="98,95 94,92 94,98" fill="#4CE0D6"/>
+
+    <g transform="translate(98,60)">
+      <rect width="78" height="70" rx="8" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="39" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">TRACE</text>
+      <foreignObject x="4" y="34" width="70" height="34">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font: 8.5px Inter; color: rgba(240,244,255,0.72); text-align:center; line-height:1.3;">Follow how they connect.</div>
+      </foreignObject>
+    </g>
+
+    <path d="M176 95 L186 95" stroke="#4CE0D6" stroke-width="1.5"/>
+    <polygon points="186,95 182,92 182,98" fill="#4CE0D6"/>
+
+    <g transform="translate(186,60)">
+      <rect width="78" height="70" rx="8" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="39" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">UNDERSTAND</text>
+      <foreignObject x="4" y="34" width="70" height="34">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font: 8.5px Inter; color: rgba(240,244,255,0.72); text-align:center; line-height:1.3;">See what the code does now.</div>
+      </foreignObject>
+    </g>
+
+    <path d="M264 95 L274 95" stroke="#4CE0D6" stroke-width="1.5"/>
+    <polygon points="274,95 270,92 270,98" fill="#4CE0D6"/>
+
+    <g transform="translate(274,60)">
+      <rect width="78" height="70" rx="8" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="39" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">PLAN</text>
+      <foreignObject x="4" y="34" width="70" height="34">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font: 8.5px Inter; color: rgba(240,244,255,0.72); text-align:center; line-height:1.3;">Write the change in words.</div>
+      </foreignObject>
+    </g>
+
+    <path d="M352 95 L362 95" stroke="#4CE0D6" stroke-width="1.5"/>
+    <polygon points="362,95 358,92 358,98" fill="#4CE0D6"/>
+
+    <g transform="translate(362,60)">
+      <rect width="78" height="70" rx="8" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="39" y="26" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">EDIT</text>
+      <foreignObject x="4" y="34" width="70" height="34">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font: 8.5px Inter; color: rgba(240,244,255,0.72); text-align:center; line-height:1.3;">Now — and only now — change code.</div>
+      </foreignObject>
+    </g>
+
+  </g>
+</svg>
+<figcaption>The five-step order every safe change follows. Edit is last.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There is a temptation, when working with an AI coding agent, to skip straight to the edit. You have a task. The agent is fast. Why wait?</p>
 <p>Because the fastest way to break a project is to change code you do not yet understand — and that is true whether the person changing it is you, a junior developer, or an agent working at a hundred lines per minute.</p>
@@ -542,6 +1280,20 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">15</span> <span>Investigate</span></div>
     <h1 class="pb-chapter__title">FIND THE RIGHT PLACE</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Before writing code, find where it belongs.</li>
+      <li>Ask the agent to search the whole project.</li>
+      <li>This one habit prevents most &#x27;oops&#x27; moments.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Every change you make lives somewhere. Part of working well with an agent is helping it — and yourself — figure out <em>where</em> before figuring out <em>what.</em></p>
 <p>First, a plain-English definition. A <strong>codebase</strong> is simply the collection of all the files that make up your project: the code, the styles, the configuration, the small helper files that glue everything together. When people say "search the codebase," they mean "look across all those files at once, not just the one you happen to have open."</p>
@@ -570,6 +1322,93 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">16</span> <span>Execute</span></div>
     <h1 class="pb-chapter__title">MAKE THE SMALLEST SAFE CHANGE</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Big tasks fail in big ways.</li>
+      <li>Small tasks are easy to test, review, and undo.</li>
+      <li>Break every big goal into tiny working steps.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Small change vs big change">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <!-- big change (bad) -->
+    <g transform="translate(10,10)">
+      <rect width="230" height="200" rx="10" fill="rgba(20,34,78,0.55)" stroke="#F58BB6" stroke-opacity="0.5"/>
+      <text x="115" y="26" text-anchor="middle" font-size="10" fill="#F58BB6" font-weight="800" letter-spacing="2">ONE BIG CHANGE</text>
+      <g transform="translate(20,44)">
+        <rect width="190" height="26" rx="4" fill="#F58BB6" fill-opacity="0.15" stroke="#F58BB6" stroke-opacity="0.4"/>
+        <text x="10" y="17" font-size="9" fill="#F0F4FF">"Redesign the whole app"</text>
+      </g>
+      <g fill="rgba(240,244,255,0.72)" font-size="9">
+        <text x="20" y="96">✗ Hard to read the diff</text>
+        <text x="20" y="112">✗ Hard to test</text>
+        <text x="20" y="128">✗ Hard to undo</text>
+        <text x="20" y="144">✗ When it breaks — where?</text>
+        <text x="20" y="160">✗ Never fully finished</text>
+      </g>
+      <text x="115" y="185" text-anchor="middle" font-size="9" fill="#F58BB6" font-weight="700">1 giant leap</text>
+    </g>
+    <!-- small changes (good) -->
+    <g transform="translate(260,10)">
+      <rect width="230" height="200" rx="10" fill="url(#gradSoft)" stroke="#6EE7A2" stroke-width="1.5"/>
+      <text x="115" y="26" text-anchor="middle" font-size="10" fill="#6EE7A2" font-weight="800" letter-spacing="2">SMALL STEPS</text>
+      <g transform="translate(20,44)" font-size="8.5" fill="#F0F4FF">
+        <g>
+          <rect width="190" height="22" rx="3" fill="#6EE7A2" fill-opacity="0.08" stroke="#6EE7A2" stroke-opacity="0.3"/>
+          <text x="8" y="15">1. Add status field to data</text>
+          <text x="180" y="15" text-anchor="end" fill="#6EE7A2">✓</text>
+        </g>
+        <g transform="translate(0,26)">
+          <rect width="190" height="22" rx="3" fill="#6EE7A2" fill-opacity="0.08" stroke="#6EE7A2" stroke-opacity="0.3"/>
+          <text x="8" y="15">2. Show as plain text</text>
+          <text x="180" y="15" text-anchor="end" fill="#6EE7A2">✓</text>
+        </g>
+        <g transform="translate(0,52)">
+          <rect width="190" height="22" rx="3" fill="#6EE7A2" fill-opacity="0.08" stroke="#6EE7A2" stroke-opacity="0.3"/>
+          <text x="8" y="15">3. Make it a colored label</text>
+          <text x="180" y="15" text-anchor="end" fill="#6EE7A2">✓</text>
+        </g>
+        <g transform="translate(0,78)">
+          <rect width="190" height="22" rx="3" fill="#6EE7A2" fill-opacity="0.08" stroke="#6EE7A2" stroke-opacity="0.3"/>
+          <text x="8" y="15">4. Add filter buttons</text>
+          <text x="180" y="15" text-anchor="end" fill="#6EE7A2">✓</text>
+        </g>
+      </g>
+      <text x="115" y="185" text-anchor="middle" font-size="9" fill="#6EE7A2" font-weight="700">4 tiny wins</text>
+    </g>
+  </g>
+</svg>
+<figcaption>Same feature. On the left: a nightmare. On the right: normal work.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There is a strong temptation, especially with an agent that can do so much so quickly, to hand over big tasks. <em>"Redesign the whole dashboard." "Refactor the data layer." "Rebuild the job tracker to look more like LinkedIn."</em></p>
 <p>Resist it. Not because agents can't attempt work at that size — they can — but because <em>you</em> can't safely review work at that size, and unreviewed work is not really finished work.</p>
@@ -612,6 +1451,20 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">17</span> <span>Execute</span></div>
     <h1 class="pb-chapter__title">EXECUTE IN SMALL STEPS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>One step. Look. Next step. Look.</li>
+      <li>Say: &#x27;don&#x27;t refactor anything I didn&#x27;t ask for.&#x27;</li>
+      <li>You&#x27;re the pilot. The agent flies while you watch.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Once a task is defined, scoped, and understood, execution begins. This is the stage where most beginners hand the wheel entirely to the agent and hope. Don't. Execution is where your role shifts from planner to pilot — still not typing every line, but staying in the loop, one step at a time.</p>
 <p>A healthy execution loop looks like this:</p>
@@ -638,6 +1491,67 @@ Some areas of a project are load-bearing — authentication, payments, saved use
     <div class="pb-chapter__eyebrow"><span class="num">18</span> <span>Boundaries</span></div>
     <h1 class="pb-chapter__title">UNDERSTAND THE BLAST RADIUS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Some tiny changes reach into big places.</li>
+      <li>Auth, database, payments = high blast radius.</li>
+      <li>Before every task: &#x27;if this goes wrong, how bad?&#x27;</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blast radius: how far a change can reach">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- concentric rings -->
+  <g transform="translate(140,120)">
+    <circle r="105" fill="none" stroke="#F58BB6" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="80"  fill="none" stroke="#F5C453" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="55"  fill="none" stroke="#4CE0D6" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle r="30"  fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+    <text y="4" text-anchor="middle" font-size="10" font-weight="700" fill="#F0F4FF" font-family="Inter, sans-serif">the change</text>
+  </g>
+  <!-- labels -->
+  <g font-family="Inter, sans-serif" font-size="9.5">
+    <text x="260" y="60" fill="#F58BB6" font-weight="700">Payments</text>
+    <text x="260" y="74" fill="rgba(240,244,255,0.72)">Real money moves.</text>
+    <text x="260" y="98" fill="#F58BB6" font-weight="700">Authentication</text>
+    <text x="260" y="112" fill="rgba(240,244,255,0.72)">Users get locked out.</text>
+    <text x="260" y="136" fill="#F5C453" font-weight="700">Database schema</text>
+    <text x="260" y="150" fill="rgba(240,244,255,0.72)">Every page that read it breaks.</text>
+    <text x="260" y="174" fill="#4CE0D6" font-weight="700">Shared component</text>
+    <text x="260" y="188" fill="rgba(240,244,255,0.72)">Other pages using it also change.</text>
+    <text x="260" y="212" fill="#F0F4FF" font-weight="700">This one file</text>
+    <text x="260" y="226" fill="rgba(240,244,255,0.72)">Only the thing you meant.</text>
+  </g>
+</svg>
+<figcaption>Before you push the button, ask: how far can this reach if it goes wrong?</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>We introduced the phrase "blast radius" briefly on Page 10, when we first talked about scope. Now it deserves a page of its own, because it is the single most useful lens you can bring to any change an agent proposes.</p>
 <p>Blast radius is not about fear. It is about noticing, before you push a button, <em>how far a mistake could travel</em> if this change turns out to be wrong.</p>
@@ -667,6 +1581,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">19</span> <span>Boundaries</span></div>
     <h1 class="pb-chapter__title">SET EXPLICIT BOUNDARIES</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Every task has TWO halves: do this, do NOT do this.</li>
+      <li>Most people skip the second half. That&#x27;s the problem.</li>
+      <li>One magic sentence: &#x27;if you need to touch X, stop and ask.&#x27;</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Once you can see the blast radius, the next move is to make the boundaries of a task explicit — in writing, in the instruction itself. Not in your head. Not "the agent should know." In the actual sentences you send.</p>
 <p>A good task instruction has two halves. The first says what the agent should do. The second says what the agent must not do. The second half is the one beginners almost always forget, and it is usually the more important of the two.</p>
@@ -697,6 +1625,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">20</span> <span>Verify</span></div>
     <h1 class="pb-chapter__title">CODE THAT LOOKS RIGHT CAN STILL BE WRONG</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Code that looks perfect can still be broken.</li>
+      <li>Bugs, edge cases, side effects — none show at a glance.</li>
+      <li>Never trust &#x27;it looks right.&#x27; Actually test it.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Here is a hard truth about working with AI coding agents, and one that takes most people a few painful sessions to fully absorb:</p>
 <p><strong>Code that looks correct is not the same as code that works.</strong></p>
@@ -719,6 +1661,88 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">21</span> <span>Verify</span></div>
     <h1 class="pb-chapter__title">THE FEEDBACK LOOP</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>The loop: implement → test → fix → test → validate.</li>
+      <li>A test is just asking the software &#x27;does this work?&#x27;</li>
+      <li>You can ask by hand or with code. Both count.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feedback loop: implement, test, fix, test again, validate">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif" font-size="9.5" fill="#F0F4FF">
+    <!-- center circle -->
+    <circle cx="210" cy="110" r="46" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+    <text x="210" y="106" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6" letter-spacing="1">FEEDBACK</text>
+    <text x="210" y="122" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6" letter-spacing="1">LOOP</text>
+
+    <!-- five stations around a ring -->
+    <g>
+      <circle cx="210" cy="30" r="24" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6"/>
+      <text x="210" y="34" text-anchor="middle" font-weight="700">IMPLEMENT</text>
+    </g>
+    <g>
+      <circle cx="360" cy="80" r="24" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6"/>
+      <text x="360" y="84" text-anchor="middle" font-weight="700">TEST</text>
+    </g>
+    <g>
+      <circle cx="325" cy="180" r="24" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6"/>
+      <text x="325" y="184" text-anchor="middle" font-weight="700">FIX</text>
+    </g>
+    <g>
+      <circle cx="95" cy="180" r="24" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6"/>
+      <text x="95" y="184" text-anchor="middle" font-weight="700">TEST AGAIN</text>
+    </g>
+    <g>
+      <circle cx="60" cy="80" r="24" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6"/>
+      <text x="60" y="84" text-anchor="middle" font-weight="700">VALIDATE</text>
+    </g>
+
+    <!-- arrows -->
+    <g fill="none" stroke="#4CE0D6" stroke-width="1.5" stroke-opacity="0.75">
+      <path d="M234 34 A100 100 0 0 1 338 78" marker-end="url(#arr)"/>
+      <path d="M354 106 A100 100 0 0 1 336 156" marker-end="url(#arr)"/>
+      <path d="M301 184 L119 184" marker-end="url(#arr)"/>
+      <path d="M83 158 A100 100 0 0 1 66 106" marker-end="url(#arr)"/>
+      <path d="M82 78  A100 100 0 0 1 186 34" marker-end="url(#arr)"/>
+    </g>
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+        <polygon points="0,0 6,3 0,6" fill="#4CE0D6"/>
+      </marker>
+    </defs>
+  </g>
+</svg>
+<figcaption>After every change: check. Then check the check. Until it really works.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>There is a workflow shape that separates people who ship reliable software from people who ship confusing software. It looks like this:</p>
 <p><strong>IMPLEMENT → TEST → FIX → TEST AGAIN → VALIDATE</strong></p>
@@ -745,6 +1769,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">22</span> <span>Verify</span></div>
     <h1 class="pb-chapter__title">WAYS TO CHECK THE WORK</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Six ways to check the work — layer them.</li>
+      <li>Manual clicks, tests, linting, types, builds, edge cases.</li>
+      <li>Bigger change = more layers. Small change = fewer.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>There is no single way to verify that a change is correct. Serious projects use several, layered on top of each other, so that different kinds of mistakes are caught by different kinds of checks. You do not need to master all of them at once. You do need to know what each one is, and roughly what it protects against.</p>
 <p>Here they are, in plain English.</p>
@@ -766,6 +1804,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">23</span> <span>Verify</span></div>
     <h1 class="pb-chapter__title">TESTS AS THE REFEREE</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Tests are the referee. They don&#x27;t lie.</li>
+      <li>Passing tests ≠ perfect. Only what YOU tested passes.</li>
+      <li>Never soften a test to make it pass. Fix the code.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Of all the ways to check the work, automated tests deserve a page of their own — because they play a specific role that nothing else can play.</p>
 <p>Tests are a <strong>referee.</strong> They are the piece of your project that gives an objective, repeatable answer to the question "does this still work?" — untouched by anyone's opinion or memory or hope.</p>
@@ -788,6 +1840,88 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">24</span> <span>Review</span></div>
     <h1 class="pb-chapter__title">REVIEW THE DIFF</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>A &#x27;diff&#x27; shows exactly what changed. Red out, green in.</li>
+      <li>Bring 6 questions when you read one.</li>
+      <li>Never ship a change you didn&#x27;t read.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What a diff looks like">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5">
+    <!-- window chrome -->
+    <rect x="10" y="10" width="440" height="200" rx="8" fill="#060C22" stroke="rgba(140,170,255,0.28)"/>
+    <rect x="10" y="10" width="440" height="24" rx="8" fill="rgba(20,34,78,0.55)"/>
+    <g transform="translate(20,18)">
+      <circle r="4" cx="4" cy="8" fill="#F58BB6"/>
+      <circle r="4" cx="18" cy="8" fill="#F5C453"/>
+      <circle r="4" cx="32" cy="8" fill="#6EE7A2"/>
+    </g>
+    <text x="230" y="26" text-anchor="middle" fill="rgba(240,244,255,0.55)" font-family="Inter" font-size="9" letter-spacing="2">applications/list.tsx</text>
+
+    <!-- diff lines -->
+    <g transform="translate(24,50)" fill="#F0F4FF">
+      <text y="0" fill="rgba(240,244,255,0.55)">  10  function ApplicationList() {</text>
+      <g>
+        <rect x="-4" y="6" width="420" height="14" fill="#F58BB6" fill-opacity="0.14"/>
+        <text y="16" fill="#F58BB6">-  11    return &lt;ul&gt;{apps.map(...)}&lt;/ul&gt;</text>
+      </g>
+      <g>
+        <rect x="-4" y="22" width="420" height="14" fill="#6EE7A2" fill-opacity="0.14"/>
+        <text y="32" fill="#6EE7A2">+  11    const [f, setF] = useState('all')</text>
+      </g>
+      <g>
+        <rect x="-4" y="38" width="420" height="14" fill="#6EE7A2" fill-opacity="0.14"/>
+        <text y="48" fill="#6EE7A2">+  12    const visible = apps.filter(byF(f))</text>
+      </g>
+      <g>
+        <rect x="-4" y="54" width="420" height="14" fill="#6EE7A2" fill-opacity="0.14"/>
+        <text y="64" fill="#6EE7A2">+  13    return &lt;&gt;&lt;Filter on={f}/&gt;&lt;List rows={visible}/&gt;&lt;/&gt;</text>
+      </g>
+      <text y="80" fill="rgba(240,244,255,0.55)">  14  }</text>
+    </g>
+
+    <!-- callouts -->
+    <g font-family="Inter, sans-serif" font-size="8">
+      <text x="24" y="180" fill="#F58BB6" font-weight="700">RED</text>
+      <text x="52" y="180" fill="rgba(240,244,255,0.72)">= removed</text>
+      <text x="140" y="180" fill="#6EE7A2" font-weight="700">GREEN</text>
+      <text x="178" y="180" fill="rgba(240,244,255,0.72)">= added</text>
+      <text x="260" y="180" fill="rgba(240,244,255,0.55)">Read each line before you approve.</text>
+    </g>
+  </g>
+</svg>
+<figcaption>A diff shows what actually changed — red went out, green came in.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>Before we can talk about reviewing a change, one piece of vocabulary is worth naming clearly: the <strong>diff</strong>.</p>
 <p>A diff is simply a side-by-side view of what a change actually did. Not what the agent said it did. Not what you asked for. What the files, right now, look like compared to what they looked like a few minutes ago. Removed lines are shown in one color (usually red), added lines in another (usually green). Every serious code editor and every AI coding tool can show you one.</p>
@@ -815,6 +1949,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">25</span> <span>Review</span></div>
     <h1 class="pb-chapter__title">THE HUMAN CHECKPOINT</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>AI is fast. YOU are accountable.</li>
+      <li>Product choices, security, final approval = yours.</li>
+      <li>You are the pilot. Not the passenger.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>A useful way to think about your role, once you have built a real workflow around an agent, is this: <strong>the agent is allowed to be fast; you are required to be accountable.</strong></p>
 <p>Speed and accountability are different jobs. Modern agents can absorb the speed job entirely. Nothing and nobody can absorb the accountability job for you. It is worth being specific about what that means in practice — what actually stays on your side of the line, no matter how capable the tools become.</p>
@@ -837,6 +1985,80 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">26</span> <span>Learn</span></div>
     <h1 class="pb-chapter__title">TURN MISTAKES INTO RULES</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Every surprise = a new rule.</li>
+      <li>Write the rule in project memory.</li>
+      <li>Same mistake won&#x27;t happen twice.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 460 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mistake becomes rule becomes better behavior">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <!-- box 1 mistake -->
+    <g transform="translate(10,30)">
+      <rect width="130" height="80" rx="10" fill="rgba(20,34,78,0.55)" stroke="#F58BB6" stroke-opacity="0.6"/>
+      <text x="65" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#F58BB6" letter-spacing="2">MISTAKE</text>
+      <foreignObject x="10" y="30" width="110" height="44">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:9px Inter; color:rgba(240,244,255,0.75); text-align:center; line-height:1.35;">Agent changed a file outside the feature.</div>
+      </foreignObject>
+    </g>
+    <!-- arrow -->
+    <path d="M140 70 L170 70" stroke="#4CE0D6" stroke-width="2"/>
+    <polygon points="170,70 165,66 165,74" fill="#4CE0D6"/>
+    <!-- box 2 rule -->
+    <g transform="translate(170,30)">
+      <rect width="130" height="80" rx="10" fill="url(#gradSoft)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="65" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6" letter-spacing="2">NEW RULE</text>
+      <foreignObject x="8" y="30" width="114" height="44">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:8.5px Inter; color:#F0F4FF; text-align:center; line-height:1.3;">"Don't touch files outside the feature. Ask if unsure."</div>
+      </foreignObject>
+    </g>
+    <!-- arrow -->
+    <path d="M300 70 L330 70" stroke="#6EE7A2" stroke-width="2"/>
+    <polygon points="330,70 325,66 325,74" fill="#6EE7A2"/>
+    <!-- box 3 better -->
+    <g transform="translate(330,30)">
+      <rect width="120" height="80" rx="10" fill="rgba(20,34,78,0.55)" stroke="#6EE7A2" stroke-width="1.5"/>
+      <text x="60" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#6EE7A2" letter-spacing="2">NEXT TIME</text>
+      <foreignObject x="6" y="30" width="108" height="44">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:9px Inter; color:#F0F4FF; text-align:center; line-height:1.35;">Agent stays in scope. Mistake never returns.</div>
+      </foreignObject>
+    </g>
+
+    <text x="230" y="146" text-anchor="middle" font-size="9" fill="rgba(240,244,255,0.55)" font-family="Inter" letter-spacing="1">Write it once. Every future session gets it for free.</text>
+  </g>
+</svg>
+<figcaption>Every surprise is free training data — if you write the rule down.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>Every time you work with an AI coding agent, something small goes wrong. The agent modifies a file it should not have. It invents a function name that doesn't exist. It picks a library you don't use. It "cleans up" code you liked the way it was. It over-refactors. It renames things without being asked.</p>
 <p>Beginners react to each of these moments in isolation. They fix it, they sigh, they move on, and next week the same thing happens again. That is the trap.</p>
@@ -870,6 +2092,20 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">27</span> <span>Learn</span></div>
     <h1 class="pb-chapter__title">MAKE THE PROJECT BETTER AT WORKING WITH AI</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>A good project gets EASIER over time, not harder.</li>
+      <li>Every session, leave better docs, tests, rules behind.</li>
+      <li>Same AI + better project = way better results.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>There is a quiet, cumulative property to a well-run project that uses AI coding agents, and it is one of the most important ideas in this book. Stated plainly:</p>
 <p><strong>A project should get easier to work with over time, not harder.</strong></p>
@@ -898,6 +2134,142 @@ If the answer is "the whole app, and rolling back means restoring a backup I don
     <div class="pb-chapter__eyebrow"><span class="num">28</span> <span>The whole system</span></div>
     <h1 class="pb-chapter__title">THE COMPLETE AI CODING AGENT OPERATING SYSTEM</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>The whole system on one page.</li>
+      <li>8 stages. Each one prevents a specific failure.</li>
+      <li>When a task fails, look here to spot which stage you skipped.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure pb-figure--full">
+<svg viewBox="0 0 360 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eight-stage workflow">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    
+    <g transform="translate(0,20)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">01</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">DEFINE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What is the job?</text>
+    </g>
+
+    <line x1="42" y1="60" x2="42" y2="80" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,82 38,76 46,76" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,62)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">02</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">CONTEXT</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What is this project?</text>
+    </g>
+
+    <line x1="42" y1="102" x2="42" y2="122" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,124 38,118 46,118" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,104)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#4CE0D6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">03</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">INVESTIGATE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What's already there?</text>
+    </g>
+
+    <line x1="42" y1="144" x2="42" y2="164" stroke="#4CE0D6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,166 38,160 46,160" fill="#4CE0D6" opacity="0.9"/>
+
+    <g transform="translate(0,146)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#F5C453" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#F5C453" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#F5C453">04</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">BOUNDARIES</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">What must not change?</text>
+    </g>
+
+    <line x1="42" y1="186" x2="42" y2="206" stroke="#F5C453" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,208 38,202 46,202" fill="#F5C453" opacity="0.9"/>
+
+    <g transform="translate(0,188)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#7A5CFF" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#7A5CFF" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#7A5CFF">05</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">EXECUTE</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Small step. Look. Repeat.</text>
+    </g>
+
+    <line x1="42" y1="228" x2="42" y2="248" stroke="#7A5CFF" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,250 38,244 46,244" fill="#7A5CFF" opacity="0.9"/>
+
+    <g transform="translate(0,230)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#7A5CFF" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#7A5CFF" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#7A5CFF">06</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">VERIFY</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Prove it works.</text>
+    </g>
+
+    <line x1="42" y1="270" x2="42" y2="290" stroke="#7A5CFF" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,292 38,286 46,286" fill="#7A5CFF" opacity="0.9"/>
+
+    <g transform="translate(0,272)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#F58BB6" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#F58BB6" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#F58BB6">07</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">REVIEW</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Read every change.</text>
+    </g>
+
+    <line x1="42" y1="312" x2="42" y2="332" stroke="#F58BB6" stroke-width="2" stroke-dasharray="3 3" opacity="0.7"/>
+    <polygon points="42,334 38,328 46,328" fill="#F58BB6" opacity="0.9"/>
+
+    <g transform="translate(0,314)">
+      <line x1="60" y1="20" x2="80" y2="20" stroke="#6EE7A2" stroke-width="2"/>
+      <circle cx="42" cy="20" r="18" fill="rgba(20,34,78,0.55)" stroke="#6EE7A2" stroke-width="1.5"/>
+      <text x="42" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#6EE7A2">08</text>
+      <rect x="80" y="6" width="260" height="28" rx="6" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <text x="94" y="24" font-size="11" font-weight="800" fill="#F0F4FF">LEARN</text>
+      <text x="180" y="24" font-size="10" fill="rgba(240,244,255,0.72)">Turn surprise into rule.</text>
+    </g>
+
+  </g>
+</svg>
+<figcaption>The eight stages. Skipping one is almost always why a task falls apart.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>We started this book with a promise: that the difference between frustrating AI-assisted work and reliable AI-assisted work is not the prompt, but the workflow. It is now time to lay the full workflow out on one page, as an operating system rather than a list of tips.</p>
 <p>Each stage exists to prevent a specific failure. Read the whole thing once. Come back to it whenever a task falls apart, and diagnose which stage you skipped.</p>
@@ -939,6 +2311,134 @@ When something goes wrong, ask what rule, added to project memory, would have pr
     <div class="pb-chapter__eyebrow"><span class="num">29</span> <span>Walkthrough</span></div>
     <h1 class="pb-chapter__title">REAL-WORLD WALKTHROUGH</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>One real task. All 8 stages. Start to finish.</li>
+      <li>Watch how a vague wish becomes shipped code.</li>
+      <li>This is what &#x27;controlled autonomy&#x27; looks like in practice.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure">
+<svg viewBox="0 0 470 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One task, eight stops">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <text x="15" y="30" font-family="Inter" font-size="10" fill="rgba(240,244,255,0.55)" letter-spacing="3">ONE FEATURE · EIGHT STOPS</text>
+  
+    <g transform="translate(15,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">1</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Define</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Write objective + scope + done.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="51" y1="70" x2="74" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(70,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">2</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Context</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Point to project memory.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="106" y1="70" x2="129" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(125,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">3</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Investigate</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Ask agent to summarize first.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="161" y1="70" x2="184" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(180,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">4</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Boundaries</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Say what NOT to touch.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="216" y1="70" x2="239" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(235,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">5</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Execute</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Step 1, then step 2.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="271" y1="70" x2="294" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(290,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">6</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Verify</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Click. Test. Try edge case.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="326" y1="70" x2="349" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(345,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">7</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Review</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Read the diff line by line.</div>
+      </foreignObject>
+    </g>
+
+    <line x1="381" y1="70" x2="404" y2="70" stroke="#4CE0D6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+    <g transform="translate(400,50)">
+      <circle cx="20" cy="20" r="16" fill="rgba(20,34,78,0.55)" stroke="#4CE0D6" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="#4CE0D6">8</text>
+      <text x="20" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#F0F4FF" font-family="Inter">Learn</text>
+      <foreignObject x="-8" y="60" width="56" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font:7.5px Inter; color:rgba(240,244,255,0.65); text-align:center; line-height:1.3;">Add one new rule.</div>
+      </foreignObject>
+    </g>
+
+</svg>
+<figcaption>Each stage is small. Together they turn a wish into a shipped feature.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>To make the operating system concrete, here is one realistic task in the Student Job Tracker, worked all the way through. The task is small, deliberately. A small task, done well, teaches the workflow more clearly than a large task done impressively.</p>
 <p><strong>The task, as it might first appear in your head:</strong>
@@ -1007,6 +2507,113 @@ Reflecting on the session, one small thing surprised you: the agent's first prop
     <div class="pb-chapter__eyebrow"><span class="num">30</span> <span>Practice</span></div>
     <h1 class="pb-chapter__title">REUSABLE AI CODING TASK TEMPLATE</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>A fill-in-the-blanks template you can steal today.</li>
+      <li>Fill it before every task, until it&#x27;s automatic.</li>
+      <li>You&#x27;re building your own operating manual.</li>
+    </ul>
+  </div>
+</div>
+
+  
+<figure class="pb-figure pb-figure--full">
+<svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Task template as a form">
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CE0D6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A5CFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="gradWarn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5C453"/>
+      <stop offset="1" stop-color="#F58BB6"/>
+    </linearGradient>
+    <linearGradient id="gradGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7A2"/>
+      <stop offset="1" stop-color="#4CE0D6"/>
+    </linearGradient>
+  </defs>
+
+  <g font-family="Inter, sans-serif">
+    <text x="20" y="24" font-size="12" font-weight="800" fill="#F0F4FF">AI Coding Task · fill in the blanks</text>
+    
+    <g transform="translate(20,40)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">TASK</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">One-line name.</text>
+    </g>
+
+    <g transform="translate(20,70)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">GOAL</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">The outcome — why it matters.</text>
+    </g>
+
+    <g transform="translate(20,100)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">CONTEXT</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">Which folders / files.</text>
+    </g>
+
+    <g transform="translate(20,130)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">INSPECT FIRST</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">Ask the agent to look before it leaps.</text>
+    </g>
+
+    <g transform="translate(20,160)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">SCOPE</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">What may change.</text>
+    </g>
+
+    <g transform="translate(20,190)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">BOUNDARIES</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">What must NOT change.</text>
+    </g>
+
+    <g transform="translate(20,220)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">SUCCESS CRITERIA</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">Checkable list of what 'done' looks like.</text>
+    </g>
+
+    <g transform="translate(20,250)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">VALIDATION</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">How you'll prove it works.</text>
+    </g>
+
+    <g transform="translate(20,280)">
+      <rect width="420" height="24" rx="4" fill="rgba(20,34,78,0.55)" stroke="rgba(140,170,255,0.28)"/>
+      <rect width="6" height="24" rx="0" fill="url(#grad)"/>
+      <text x="16" y="16" font-size="9" font-weight="800" fill="#4CE0D6" letter-spacing="1">REVIEW</text>
+      <text x="130" y="16" font-size="9" fill="rgba(240,244,255,0.72)" font-style="italic">What you'll read in the diff.</text>
+    </g>
+
+  </g>
+</svg>
+<figcaption>Print it. Fill it. Do it before every task, until you don't need the form.</figcaption>
+</figure>
+
   <div class="pb-body">
     <p>The single most useful thing you can copy out of this book is a template. Not a prompt template — a <em>task</em> template. Something you fill in before every meaningful change, until doing so becomes automatic and you no longer need the form.</p>
 <p>Keep this template somewhere you can reach in ten seconds. Paste it into a note. Print it out. Whatever works.</p>
@@ -1068,6 +2675,20 @@ Example:
     <div class="pb-chapter__eyebrow"><span class="num">31</span> <span>Practice</span></div>
     <h1 class="pb-chapter__title">THE TWO FINAL CHECKLISTS</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Two checklists: before you ask, and before you accept.</li>
+      <li>Plus a list of RED FLAGS that mean &#x27;stop.&#x27;</li>
+      <li>Use them the way a pilot uses a pre-flight checklist.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>You have the operating system. You have the template. This page collects the two shortest possible checklists — one for before you ask the agent to work, one for before you accept its work.</p>
 <p>Use them the way a pilot uses a pre-flight checklist. Not because the pilot has forgotten how to fly, but because forgetting one small thing at speed is how accidents happen.</p>
@@ -1117,6 +2738,20 @@ Example:
     <div class="pb-chapter__eyebrow"><span class="num">32</span> <span>Close</span></div>
     <h1 class="pb-chapter__title">THE FINAL PRINCIPLE</h1>
   </header>
+  
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+      <li>Tools will change. Your habits will not.</li>
+      <li>The workflow is the only skill that compounds.</li>
+      <li>Don&#x27;t chase max autonomy. Aim for CONTROLLED autonomy.</li>
+    </ul>
+  </div>
+</div>
+
+  
   <div class="pb-body">
     <p>Tools change. Models change. The interface you use today will look old within a year, and the interface you use next year will look old the year after that. Whatever specific product name is on the tab in your browser right now — Claude Code, Cursor, Copilot, Codex, Gemini, something newer — will be joined, replaced, or subsumed by another.</p>
 <p>Almost nothing in this book depended on which one you use.</p>
@@ -1148,7 +2783,7 @@ Example:
   <h1 class="page-title">Glossary.</h1>
   <p class="page-lede">Plain-English definitions of every technical term used in this book.</p>
   <div class="pb-body pb-glossary">
-    <markdown.core.Markdown object at 0x7f12c0c1d410>
+    <markdown.core.Markdown object at 0x7f54f0f921d0>
   </div>
   <footer class="pb-foot"><span>The AI Coding Agent Playbook</span><span class="r">Glossary</span></footer>
 </section>

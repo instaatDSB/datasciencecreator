@@ -187,6 +187,85 @@
   color: var(--ink);
 }
 
+/* ============================================================
+   "IN THREE LINES" CHAPTER SUMMARY
+   Always sits directly under the chapter opener.
+   ============================================================ */
+.pb-tldr {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4mm;
+  align-items: center;
+  padding: 4mm 5mm;
+  margin: 0 0 6mm;
+  border-radius: 8px;
+  background: linear-gradient(120deg, rgba(76, 224, 214, 0.10), rgba(122, 92, 255, 0.10));
+  border: 1px solid rgba(76, 224, 214, 0.35);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pb-tldr__icon {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #4CE0D6, #7A5CFF);
+  color: #060B1C;
+  font-weight: 800;
+  font-size: 14px;
+}
+.pb-tldr__label {
+  font-size: 8.5px;
+  letter-spacing: 0.28em;
+  font-weight: 800;
+  color: var(--pb-accent-a);
+  text-transform: uppercase;
+  margin: 0 0 2mm;
+}
+.pb-tldr ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5mm;
+}
+.pb-tldr li {
+  font-size: 10.5pt;
+  color: var(--ink);
+  line-height: 1.35;
+  padding-left: 8mm;
+  position: relative;
+}
+.pb-tldr li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--pb-accent-a);
+  font-weight: 700;
+}
+
+/* ============================================================
+   FIGURES (SVG diagrams)
+   ============================================================ */
+.pb-figure {
+  margin: 5mm 0 6mm;
+  padding: 4mm 3mm 3mm;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(20, 34, 78, 0.35), rgba(20, 34, 78, 0.15));
+  border: 1px solid var(--line);
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pb-figure svg { max-width: 100%; height: auto; }
+.pb-figure figcaption {
+  margin-top: 2mm;
+  font-size: 8.5pt;
+  color: var(--ink-mute);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.pb-figure--full { padding: 5mm 2mm; }
+
 /* Chapter body typography */
 .pb-body {
   font-size: 10.5pt;

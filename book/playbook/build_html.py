@@ -22,6 +22,9 @@ from pathlib import Path
 
 import markdown
 
+from diagrams import DIAGRAMS_BY_CHAPTER
+from summaries import SUMMARIES
+
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent.parent
 MASTER = REPO / "book" / "MASTER_MANUSCRIPT.md"
@@ -265,16 +268,45 @@ def render_part(eyebrow: str, title: str, sub: str) -> str:
 """
 
 
+def render_summary(num: str) -> str:
+    lines = SUMMARIES.get(num)
+    if not lines:
+        return ""
+    items = "\n".join(f"      <li>{html.escape(l)}</li>" for l in lines)
+    return f"""
+<div class="pb-tldr">
+  <div class="pb-tldr__icon">i</div>
+  <div>
+    <div class="pb-tldr__label">In three lines</div>
+    <ul>
+{items}
+    </ul>
+  </div>
+</div>
+"""
+
+
+def render_diagram(num: str) -> str:
+    fn = DIAGRAMS_BY_CHAPTER.get(num)
+    if not fn:
+        return ""
+    return fn()
+
+
 def render_chapter(num: str, title: str, body_md: str) -> str:
     meta = CHAPTER_META.get(num, ("", None))
     eyebrow = meta[0]
     body_html = render_body_html(body_md)
+    summary = render_summary(num)
+    diagram = render_diagram(num)
     return f"""
 <section class="page pb-chapter" data-section="pb" id="ch-{num}">
   <header class="pb-chapter__opener">
     <div class="pb-chapter__eyebrow"><span class="num">{num}</span> <span>{html.escape(eyebrow)}</span></div>
     <h1 class="pb-chapter__title">{html.escape(title)}</h1>
   </header>
+  {summary}
+  {diagram}
   <div class="pb-body">
     {body_html}
   </div>
