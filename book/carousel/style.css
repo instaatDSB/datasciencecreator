@@ -520,30 +520,36 @@ body {
   line-height: 1.35;
 }
 
-/* Final CTA slide */
+/* Final CTA slide — layout as flex column so header + content + margin all fit */
+.slide.final {
+  display: flex;
+  flex-direction: column;
+}
+.final .slide__header { flex-shrink: 0; }
 .final .center {
   text-align: center;
-  padding: 0 72px;
-  height: 100%;
+  padding: 40px 72px 72px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 0;
 }
 .final .kicker {
-  font-size: 24px;
+  font-size: 22px;
   color: var(--teal);
   letter-spacing: 0.32em;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 .final .final-title {
-  font-size: 96px;
+  font-size: 76px;
   line-height: 1.02;
   font-weight: 900;
   letter-spacing: -0.02em;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 .final .final-title .hl {
   background: linear-gradient(120deg, #4CE0D6 0%, #7A5CFF 100%);
@@ -552,34 +558,37 @@ body {
   color: transparent;
 }
 .final .final-sub {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--ink-soft);
-  line-height: 1.45;
+  line-height: 1.4;
   max-width: 800px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .final .actions {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
-  max-width: 720px;
+  max-width: 780px;
 }
 .final .action {
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 24px 32px;
-  border-radius: 16px;
+  gap: 20px;
+  padding: 18px 26px;
+  border-radius: 14px;
   background: var(--card);
   border: 1px solid var(--line);
-  font-size: 26px;
+  font-size: 22px;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.35;
 }
 .final .action .emoji {
-  font-size: 40px;
-  width: 60px;
+  font-size: 32px;
+  width: 44px;
   text-align: center;
+  flex-shrink: 0;
 }
 .final .action .teal { color: var(--teal); font-weight: 800; }
 
