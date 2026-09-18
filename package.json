@@ -1,14 +1,19 @@
 {
   "name": "ds-interview-prep-ebook",
   "version": "2.1.0",
-  "description": "Data Science Interview Prep — Ebook 02 (revised). A focused revision guide for statistics & probability, Python, SQL, data cleaning & preprocessing, and machine learning fundamentals.",
+  "description": "Data Science Interview Prep \u2014 Ebook 02 (revised). A focused revision guide for statistics & probability, Python, SQL, data cleaning & preprocessing, and machine learning fundamentals.",
   "private": true,
   "scripts": {
     "start": "npx --yes serve .",
     "build:pdf": "node build/build-pdf.mjs",
-    "preview": "npx --yes serve ."
+    "build:playbook-pdf": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome node build/build-playbook-pdf.mjs",
+    "preview": "npx --yes serve .",
+    "build:carousel": "PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome node build/build-carousel.mjs"
   },
   "author": "@data.science.beginners",
   "license": "UNLICENSED",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
 }

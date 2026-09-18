@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The AI Coding Agent Playbook — Instagram carousel</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     SLIDE 01 · COVER · The hook
+     ============================================================ -->
+<section class="slide cover" id="s01">
+  <div class="brand-row">
+    <span class="badge">Ebook 01 · Playbook</span>
+    <span class="publisher">@data.science.beginners</span>
+  </div>
+
+  <div class="cover__mark">
+    <svg viewBox="0 0 220 120" width="240" height="140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#4CE0D6"/>
+          <stop offset="1" stop-color="#7A5CFF"/>
+        </linearGradient>
+      </defs>
+      <circle cx="30"  cy="60" r="9"  fill="url(#cg)"/>
+      <circle cx="55"  cy="30" r="7"  fill="url(#cg)" opacity="0.9"/>
+      <circle cx="90"  cy="20" r="7"  fill="url(#cg)" opacity="0.85"/>
+      <circle cx="125" cy="30" r="7"  fill="url(#cg)" opacity="0.8"/>
+      <circle cx="150" cy="60" r="7"  fill="url(#cg)" opacity="0.75"/>
+      <circle cx="125" cy="90" r="7"  fill="url(#cg)" opacity="0.7"/>
+      <circle cx="90"  cy="100" r="7" fill="url(#cg)" opacity="0.65"/>
+      <circle cx="55"  cy="90" r="7"  fill="url(#cg)" opacity="0.6"/>
+      <path d="M30 60 L55 30 L90 20 L125 30 L150 60 L125 90 L90 100 L55 90 Z"
+            stroke="#4CE0D6" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <h1 class="cover__title">The AI Coding<br/>Agent <span class="hl">Playbook.</span></h1>
+  <p class="cover__sub">Why AI writes 400 lines of code and still<br/>breaks your project — and how to fix it.</p>
+
+  <div class="cover__cta">
+    <span>11 slides · save this</span>
+    <span class="arrow">SWIPE →</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 02 · The problem
+     ============================================================ -->
+<section class="slide" id="s02">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>02 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">The problem</div>
+    <h2 class="headline">AI wrote<br/>400 lines.<br/><span class="hl">Nothing works.</span></h2>
+    <p class="sub">You typed a normal instruction. The agent worked confidently. Now your app is broken and you can't tell what changed.</p>
+    <div class="callout">
+      <div class="callout__label">The uncomfortable truth</div>
+      <div class="callout__body">It's <strong>almost never</strong> your prompt.<br/>It's everything <strong>missing around</strong> the prompt.</div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>The AI Coding Agent Playbook</span><span class="cta">Keep going →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 03 · Chatbot vs Assistant vs Agent
+     ============================================================ -->
+<section class="slide" id="s03">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>03 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">Know what you're using</div>
+    <h2 class="headline">Three tools.<br/>Big <span class="hl">difference.</span></h2>
+
+    <div class="three" style="margin-top: 32px;">
+      <div class="three-card">
+        <span class="icon">💬</span>
+        <div class="label">Chatbot</div>
+        <div class="body">Just talks.<br/>No files. No actions.</div>
+      </div>
+      <div class="three-card">
+        <span class="icon">⌨️</span>
+        <div class="label">Assistant</div>
+        <div class="body">Suggests as you type.<br/>You still drive.</div>
+      </div>
+      <div class="three-card three-card--good">
+        <span class="icon">⚙️</span>
+        <div class="label">Agent</div>
+        <div class="body">Edits files. Runs tests.<br/>Actually ships work.</div>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top: 40px;">The more it can do, the more your <strong style="color:var(--teal);">workflow</strong> matters.</p>
+  </div>
+  <footer class="slide__footer"><span>Chatbot ≠ Assistant ≠ Agent</span><span class="cta">Swipe →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 04 · Prompt ≠ Workflow
+     ============================================================ -->
+<section class="slide" id="s04">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>04 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">The one idea to remember</div>
+    <div class="big-quote" style="margin-top: 60px;">
+      A <span class="not">prompt</span><br/>
+      is not a<br/>
+      <span style="color: var(--teal);">WORKFLOW.</span>
+    </div>
+    <div class="callout" style="margin-top: 60px;">
+      <div class="callout__body" style="text-align: center;">
+        <strong>Prompt</strong> = one instruction. Life: minutes.<br/>
+        <strong>Workflow</strong> = the system around it. Life: the whole project.
+      </div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>Prompt ≠ Workflow</span><span class="cta">The system →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 05 · The 8-stage framework
+     ============================================================ -->
+<section class="slide" id="s05">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>05 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">The whole workflow</div>
+    <h2 class="headline" style="font-size: 68px;">The 8 stages.<br/><span class="hl">Skip one = trouble.</span></h2>
+    <div class="stages">
+      <div class="stage"><div class="stage__head"><div class="stage__num">1</div><div class="stage__name">DEFINE</div></div><div class="stage__desc">What is the job?</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">2</div><div class="stage__name">CONTEXT</div></div><div class="stage__desc">What is this project?</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">3</div><div class="stage__name">INVESTIGATE</div></div><div class="stage__desc">What's already there?</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">4</div><div class="stage__name">BOUNDARIES</div></div><div class="stage__desc">What must NOT change?</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">5</div><div class="stage__name">EXECUTE</div></div><div class="stage__desc">Small step. Look. Repeat.</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">6</div><div class="stage__name">VERIFY</div></div><div class="stage__desc">Prove it works.</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">7</div><div class="stage__name">REVIEW</div></div><div class="stage__desc">Read every change.</div></div>
+      <div class="stage"><div class="stage__head"><div class="stage__num">8</div><div class="stage__name">LEARN</div></div><div class="stage__desc">Turn surprise into rule.</div></div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>The 8-stage operating system</span><span class="cta">Zoom in →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 06 · Define the job (with example)
+     ============================================================ -->
+<section class="slide" id="s06">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>06 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">Stage 01 · Define</div>
+    <h2 class="headline">"Improve the<br/>dashboard" <span class="hl">is a trap.</span></h2>
+
+    <div class="pair" style="margin-top: 24px;">
+      <div class="pair-card pair-card--bad">
+        <div class="pair-card__label">Vague ✕</div>
+        <ul class="pair-card__list">
+          <li>"Fix the bug"</li>
+          <li>"Make it better"</li>
+          <li>"Add rejected status"</li>
+        </ul>
+      </div>
+      <div class="pair-card pair-card--good">
+        <div class="pair-card__label">Clear ✓</div>
+        <ul class="pair-card__list">
+          <li><strong style="color:var(--teal);">Objective</strong> · outcome</li>
+          <li><strong style="color:var(--teal);">Scope</strong> · which files</li>
+          <li><strong style="color:var(--teal);">Done</strong> · a checkable list</li>
+          <li><strong style="color:var(--teal);">Rules</strong> · what NOT to change</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top: 32px;">If a stranger took your instruction literally — would you be happy?</p>
+  </div>
+  <footer class="slide__footer"><span>Define · Context · Investigate</span><span class="cta">Swipe →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 07 · Boundaries — the stage people skip
+     ============================================================ -->
+<section class="slide" id="s07">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>07 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">Stage 04 · Boundaries</div>
+    <h2 class="headline">The half<br/>everyone <span class="hl">forgets.</span></h2>
+
+    <div class="split">
+      <div class="split__col split__col--change">
+        <div class="split__label">Change</div>
+        <ul class="split__list">
+          <li>Applications list page</li>
+          <li>Its stylesheet</li>
+        </ul>
+      </div>
+      <div class="split__col split__col--nope">
+        <div class="split__label">Do NOT change</div>
+        <ul class="split__list">
+          <li>Sign-in / auth</li>
+          <li>Database schema</li>
+          <li>The Add Application form</li>
+          <li>Anything not listed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule-box">
+      <div class="rule-box__label">Paste this in every task</div>
+      <div class="rule-box__text">"If you believe another file must change, STOP and tell me — do not change it yourself."</div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>One sentence · huge safety net</span><span class="cta">Next →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 08 · The feedback loop
+     ============================================================ -->
+<section class="slide" id="s08">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>08 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">Stages 05 – 06 · Execute + Verify</div>
+    <h2 class="headline">Code that <br/>looks right <span class="hl">can be wrong.</span></h2>
+
+    <div class="cycle">
+      <div class="cycle-step"><div class="n">1</div><div class="name">IMPLEMENT</div></div>
+      <div class="cycle-step"><div class="n">2</div><div class="name">TEST</div></div>
+      <div class="cycle-step"><div class="n">3</div><div class="name">FIX</div></div>
+      <div class="cycle-step"><div class="n">4</div><div class="name">TEST AGAIN</div></div>
+      <div class="cycle-step"><div class="n">5</div><div class="name">VALIDATE</div></div>
+    </div>
+
+    <div class="callout">
+      <div class="callout__label">A test is nothing scary</div>
+      <div class="callout__body">A test is just <strong>asking the software a question</strong> and getting an honest answer — passed, or failed.</div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>The feedback loop</span><span class="cta">Read the diff →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 09 · Review + Learn
+     ============================================================ -->
+<section class="slide" id="s09">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>09 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">Stages 07 – 08 · Review + Learn</div>
+    <h2 class="headline">Never ship a <br/>change you <span class="hl">didn't read.</span></h2>
+
+    <div class="pair" style="margin-top: 20px;">
+      <div class="pair-card">
+        <div class="pair-card__label" style="color: var(--teal);">Review the diff</div>
+        <ul class="pair-card__list" style="font-size: 22px;">
+          <li>What changed?</li>
+          <li>Why?</li>
+          <li>Anything unrelated?</li>
+          <li>Simpler than needed?</li>
+          <li>Unexpected files?</li>
+          <li>Actually solves it?</li>
+        </ul>
+      </div>
+      <div class="pair-card pair-card--good">
+        <div class="pair-card__label">Turn surprise into rule</div>
+        <ul class="pair-card__list" style="font-size: 22px;">
+          <li>Notice the mistake</li>
+          <li>Write the rule</li>
+          <li>Save it in project memory</li>
+          <li>Never happens again</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top: 32px;">Your project should get <strong style="color:var(--teal);">easier</strong> to work with over time — not harder.</p>
+  </div>
+  <footer class="slide__footer"><span>Own the change · learn from every one</span><span class="cta">Real example →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 10 · Walkthrough / real example
+     ============================================================ -->
+<section class="slide" id="s10">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>10 / 11</span></header>
+  <div class="slide__body">
+    <div class="eyebrow">One real task · Job Tracker app</div>
+    <h2 class="headline" style="font-size: 66px;">"Add a <span class="hl">status filter."</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-step"><div class="n">1</div><div class="name">DEFINE</div><div class="what">Objective, scope, done — in writing.</div></div>
+      <div class="timeline-step"><div class="n">2</div><div class="name">CONTEXT</div><div class="what">Agent reads project memory.</div></div>
+      <div class="timeline-step"><div class="n">3</div><div class="name">INVESTIGATE</div><div class="what">"Summarize how status works today."</div></div>
+      <div class="timeline-step"><div class="n">4</div><div class="name">BOUNDARIES</div><div class="what">Only the list page. Nothing else.</div></div>
+      <div class="timeline-step"><div class="n">5</div><div class="name">EXECUTE</div><div class="what">Step 1 buttons. Step 2 wire them up.</div></div>
+      <div class="timeline-step"><div class="n">6</div><div class="name">VERIFY</div><div class="what">Click every filter. Try edge cases.</div></div>
+      <div class="timeline-step"><div class="n">7</div><div class="name">REVIEW</div><div class="what">Two files. No stray edits. Approved.</div></div>
+      <div class="timeline-step"><div class="n">8</div><div class="name">LEARN</div><div class="what">One new naming rule → project memory.</div></div>
+    </div>
+  </div>
+  <footer class="slide__footer"><span>One feature · one afternoon · zero drama</span><span class="cta">Last slide →</span></footer>
+</section>
+
+<!-- ============================================================
+     SLIDE 11 · CTA / save
+     ============================================================ -->
+<section class="slide final" id="s11">
+  <header class="slide__header"><span class="brand">@data.science.beginners</span><span>11 / 11</span></header>
+  <div class="center">
+    <div class="kicker">The one line to remember</div>
+    <h2 class="final-title">Don't aim for<br/>max autonomy.<br/><span class="hl">Aim for control.</span></h2>
+    <p class="final-sub">A prompt is one instruction. A workflow is the system that surrounds it. Good results come from good systems — not clever sentences.</p>
+
+    <div class="actions">
+      <div class="action"><span class="emoji">🔖</span><span><span class="teal">Save</span> this so you can find it again on your next AI coding session.</span></div>
+      <div class="action"><span class="emoji">💬</span><span><span class="teal">Share</span> with a friend who's fighting their AI right now.</span></div>
+      <div class="action"><span class="emoji">📘</span><span>Full 32-page ebook — DM <span class="teal">"PLAYBOOK"</span> to @data.science.beginners.</span></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
